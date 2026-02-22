@@ -43651,6 +43651,131 @@ var CardComponent = class _CardComponent {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(CardComponent, { className: "CardComponent", filePath: "src/app/components/card/card.component.ts", lineNumber: 12 });
 })();
 
+// src/app/i18n/translations.ts
+var TRANSLATIONS2 = {
+  EN: {
+    greeting: "Hello {name}! Today brings new cosmic energy your way. Embrace the opportunities that unfold.",
+    colorTitle: "Your Color Today",
+    vibeTitle: "Your Vibe",
+    cautionTitle: "Watch Out For",
+    adTitle: "Advertisement",
+    adPlaceholder: "Your ad will appear here",
+    luckyTitle: "Lucky Number",
+    affirmationTitle: "\u{1F31F} Daily Affirmation",
+    donationTitle: "\u2615 Support Astro-Transition",
+    donationContent: "Love this cosmic experience? Consider supporting the creator with a coffee!",
+    actionLabel: "Buy Me a Coffee",
+    VIBES: [
+      "Energetic",
+      "Calm",
+      "Mysterious",
+      "Joyful",
+      "Introspective",
+      "Creative",
+      "Passionate",
+      "Peaceful",
+      "Bold",
+      "Thoughtful",
+      "Playful",
+      "Wise"
+    ],
+    CAUTIONS: [
+      "Rushing into decisions",
+      "Over-thinking details",
+      "Ignoring your intuition",
+      "Being too critical",
+      "Seeking validation",
+      "Avoiding confrontation",
+      "Taking on too much",
+      "Neglecting self-care",
+      "Dwelling on the past",
+      "Making hasty judgments",
+      "Isolating yourself",
+      "Perfectionism"
+    ],
+    AFFIRMATIONS: [
+      "I am capable of great things",
+      "Today brings new possibilities",
+      "I trust my journey",
+      "My energy is limitless",
+      "I attract positive vibes",
+      "I am worthy of success",
+      "My potential is infinite",
+      "I embrace my true self",
+      "I am a magnet for good fortune",
+      "My dreams are valid",
+      "I choose growth and progress",
+      "The universe supports me"
+    ],
+    settings: {
+      title: "\u2699\uFE0F Settings",
+      zodiacTypeLabel: "Zodiac Type:",
+      zodiacTypeOptions: { western: "Western Zodiac", indian: "Indian/Vedic Zodiac", chinese: "Chinese Zodiac" },
+      zodiacSignLabel: "Your Sign:",
+      infoText: "\u{1F31F} Your cosmic profile will update immediately!",
+      cancel: "Cancel",
+      save: "Save Changes"
+    }
+  },
+  ES: {
+    greeting: "\xA1Hola {name}! Hoy trae nueva energ\xEDa c\xF3smica. Abraza las oportunidades que se presenten.",
+    colorTitle: "Tu Color Hoy",
+    vibeTitle: "Tu Vibra",
+    cautionTitle: "Cuidado Con",
+    adTitle: "Publicidad",
+    adPlaceholder: "Tu anuncio aparecer\xE1 aqu\xED",
+    luckyTitle: "N\xFAmero de la Suerte",
+    affirmationTitle: "\u{1F31F} Afirmaci\xF3n Diaria",
+    donationTitle: "\u2615 Apoya Astro-Transition",
+    donationContent: "\xBFTe gusta esta experiencia c\xF3smica? Considera apoyar al creador con un caf\xE9.",
+    actionLabel: "Invitar a un caf\xE9",
+    VIBES: ["En\xE9rgico", "Calmo", "Misterioso", "Alegre", "Introspectivo", "Creativo", "Apasionado", "Pac\xEDfico", "Audaz", "Reflexivo", "Juguet\xF3n", "Sabio"],
+    CAUTIONS: ["Tomar decisiones apresuradas", "Pensar en exceso los detalles", "Ignorar tu intuici\xF3n", "Ser demasiado cr\xEDtico", "Buscar validaci\xF3n", "Evitar confrontaciones", "Asumir demasiado", "Descuidar el autocuidado", "Vivir en el pasado", "Juzgar apresuradamente", "Aislarte", "Perfeccionismo"],
+    AFFIRMATIONS: ["Soy capaz de grandes cosas", "Hoy trae nuevas posibilidades", "Conf\xEDo en mi camino", "Mi energ\xEDa es ilimitada", "Atraigo vibras positivas", "Merezco el \xE9xito", "Mi potencial es infinito", "Abrazo mi verdadero yo", "Soy un im\xE1n para la buena fortuna", "Mis sue\xF1os son v\xE1lidos", "Elijo el crecimiento y el progreso", "El universo me apoya"],
+    settings: { title: "\u2699\uFE0F Configuraci\xF3n", zodiacTypeLabel: "Tipo de Zod\xEDaco:", zodiacTypeOptions: { western: "Zod\xEDaco Occidental", indian: "Zod\xEDaco Indio/V\xE9dico", chinese: "Zod\xEDaco Chino" }, zodiacSignLabel: "Tu Signo:", infoText: "\u{1F31F} \xA1Tu perfil c\xF3smico se actualizar\xE1 inmediatamente!", cancel: "Cancelar", save: "Guardar Cambios" }
+  },
+  HI: {
+    greeting: "\u0928\u092E\u0938\u094D\u0924\u0947 {name}! \u0906\u091C \u0928\u0908 \u0916\u0917\u094B\u0932\u0940\u092F \u090A\u0930\u094D\u091C\u093E \u0932\u0947\u0915\u0930 \u0906\u0924\u093E \u0939\u0948\u0964 \u091C\u094B \u092E\u094C\u0915\u0947 \u0906\u090F\u0902 \u0909\u0928\u094D\u0939\u0947\u0902 \u0905\u092A\u0928\u093E\u0907\u090F\u0964",
+    colorTitle: "\u0906\u091C \u0906\u092A\u0915\u093E \u0930\u0902\u0917",
+    vibeTitle: "\u0906\u092A\u0915\u093E \u0935\u093E\u0907\u092C",
+    cautionTitle: "\u0938\u093E\u0935\u0927\u093E\u0928 \u0930\u0939\u0947\u0902",
+    adTitle: "\u0935\u093F\u091C\u094D\u091E\u093E\u092A\u0928",
+    adPlaceholder: "\u0906\u092A\u0915\u093E \u0935\u093F\u091C\u094D\u091E\u093E\u092A\u0928 \u092F\u0939\u093E\u0901 \u0926\u093F\u0916\u093E\u0908 \u0926\u0947\u0917\u093E",
+    luckyTitle: "\u0932\u0915\u0940 \u0928\u0902\u092C\u0930",
+    affirmationTitle: "\u{1F31F} \u0926\u0948\u0928\u093F\u0915 \u092A\u0941\u0937\u094D\u091F\u093F",
+    donationTitle: "\u2615 Astro-Transition \u0915\u093E \u0938\u092E\u0930\u094D\u0925\u0928 \u0915\u0930\u0947\u0902",
+    donationContent: "\u0915\u094D\u092F\u093E \u0906\u092A\u0915\u094B \u092F\u0939 \u0915\u0949\u0938\u094D\u092E\u093F\u0915 \u0905\u0928\u0941\u092D\u0935 \u092A\u0938\u0902\u0926 \u0939\u0948? \u0915\u0943\u092A\u092F\u093E \u0928\u093F\u0930\u094D\u092E\u093E\u0924\u093E \u0915\u093E \u0938\u092E\u0930\u094D\u0925\u0928 \u0915\u0930\u0947\u0902\u0964",
+    actionLabel: "\u0915\u0949\u092B\u0940 \u0916\u0930\u0940\u0926\u0947\u0902",
+    VIBES: ["\u090A\u0930\u094D\u091C\u093E\u0935\u093E\u0928", "\u0936\u093E\u0902\u0924", "\u0930\u0939\u0938\u094D\u092F\u092E\u092F\u0940", "\u0916\u0941\u0936", "\u0906\u0924\u094D\u092E\u0928\u093F\u0930\u0940\u0915\u094D\u0937\u0923", "\u0930\u091A\u0928\u093E\u0924\u094D\u092E\u0915", "\u091C\u0941\u0928\u0942\u0928\u0940", "\u0936\u093E\u0902\u0924\u093F\u092A\u0942\u0930\u094D\u0923", "\u0928\u093F\u0921\u0930", "\u0935\u093F\u091A\u093E\u0930\u0936\u0940\u0932", "\u0916\u093F\u0932\u0916\u093F\u0932\u093E\u0924\u093E", "\u092C\u0941\u0926\u094D\u0927\u093F\u092E\u093E\u0928"],
+    CAUTIONS: ["\u0928\u093F\u0930\u094D\u0923\u092F\u094B\u0902 \u092E\u0947\u0902 \u091C\u0932\u094D\u0926\u092C\u093E\u091C\u0940", "\u0935\u093F\u0935\u0930\u0923\u094B\u0902 \u092A\u0930 \u0905\u0927\u093F\u0915 \u0938\u094B\u091A\u0928\u093E", "\u0905\u092A\u0928\u0940 \u0938\u0939\u091C \u091C\u094D\u091E\u093E\u0928 \u0915\u094B \u0928\u091C\u0930\u0905\u0902\u0926\u093E\u091C \u0915\u0930\u0928\u093E", "\u0905\u0924\u094D\u092F\u0927\u093F\u0915 \u0906\u0932\u094B\u091A\u0928\u093E\u0924\u094D\u092E\u0915 \u0939\u094B\u0928\u093E", "\u092A\u094D\u0930\u092E\u093E\u0923 \u0915\u0947 \u0932\u093F\u090F \u0916\u094B\u091C", "\u092E\u0941\u0915\u093E\u092C\u0932\u093E \u091F\u093E\u0932\u0928\u093E", "\u092C\u0939\u0941\u0924 \u0915\u0941\u091B \u0932\u0947\u0928\u093E", "\u0938\u094D\u0935-\u0926\u0947\u0916\u092D\u093E\u0932 \u0915\u0940 \u0909\u092A\u0947\u0915\u094D\u0937\u093E", "\u0905\u0924\u0940\u0924 \u092E\u0947\u0902 \u092B\u0901\u0938\u0928\u093E", "\u091C\u0932\u094D\u0926\u0940 \u0928\u093F\u0930\u094D\u0923\u092F \u0932\u0947\u0928\u093E", "\u0916\u0941\u0926 \u0915\u094B \u0905\u0932\u0917 \u0915\u0930\u0928\u093E", "\u092A\u0930\u092B\u0947\u0915\u094D\u0936\u0928\u093F\u091C\u094D\u092E"],
+    AFFIRMATIONS: ["\u092E\u0948\u0902 \u092C\u0921\u093C\u0947 \u0915\u093E\u0930\u094D\u092F \u0915\u0930\u0928\u0947 \u092E\u0947\u0902 \u0938\u0915\u094D\u0937\u092E \u0939\u0942\u0901", "\u0906\u091C \u0928\u090F \u0905\u0935\u0938\u0930 \u0932\u093E\u0924\u093E \u0939\u0948", "\u092E\u0948\u0902 \u0905\u092A\u0928\u0947 \u0938\u092B\u0930 \u092A\u0930 \u092D\u0930\u094B\u0938\u093E \u0930\u0916\u0924\u093E \u0939\u0942\u0901", "\u092E\u0947\u0930\u0940 \u090A\u0930\u094D\u091C\u093E \u0905\u0938\u0940\u092E\u093F\u0924 \u0939\u0948", "\u092E\u0948\u0902 \u0938\u0915\u093E\u0930\u093E\u0924\u094D\u092E\u0915 \u0909\u0930\u094D\u091C\u093E\u090F\u0901 \u0906\u0915\u0930\u094D\u0937\u093F\u0924 \u0915\u0930\u0924\u093E \u0939\u0942\u0901", "\u092E\u0948\u0902 \u0938\u092B\u0932\u0924\u093E \u0915\u093E \u0939\u0915\u0926\u093E\u0930 \u0939\u0942\u0901", "\u092E\u0947\u0930\u0940 \u0915\u094D\u0937\u092E\u0924\u093E \u0905\u0928\u0902\u0924 \u0939\u0948", "\u092E\u0948\u0902 \u0905\u092A\u0928\u0947 \u0938\u091A\u094D\u091A\u0947 \u0906\u0924\u094D\u092E \u0915\u094B \u0905\u092A\u0928\u093E\u0924\u093E \u0939\u0942\u0901", "\u092E\u0948\u0902 \u0905\u091A\u094D\u091B\u0947 \u092D\u093E\u0917\u094D\u092F \u0915\u0947 \u0932\u093F\u090F \u091A\u0941\u0902\u092C\u0915 \u0939\u0942\u0901", "\u092E\u0947\u0930\u0947 \u0938\u092A\u0928\u0947 \u092E\u093E\u0928\u094D\u092F \u0939\u0948\u0902", "\u092E\u0948\u0902 \u0935\u093F\u0915\u093E\u0938 \u0914\u0930 \u092A\u094D\u0930\u0917\u0924\u093F \u091A\u0941\u0928\u0924\u093E \u0939\u0942\u0901", "\u092C\u094D\u0930\u0939\u094D\u092E\u093E\u0902\u0921 \u092E\u0947\u0930\u093E \u0938\u092E\u0930\u094D\u0925\u0928 \u0915\u0930\u0924\u093E \u0939\u0948"],
+    settings: { title: "\u2699\uFE0F \u0938\u0947\u091F\u093F\u0902\u0917\u094D\u0938", zodiacTypeLabel: "\u0930\u093E\u0936\u093F \u092A\u094D\u0930\u0915\u093E\u0930:", zodiacTypeOptions: { western: "\u092A\u0936\u094D\u091A\u093F\u092E\u0940 \u0930\u093E\u0936\u093F", indian: "\u092D\u093E\u0930\u0924\u0940\u092F/\u0935\u0948\u0926\u093F\u0915 \u0930\u093E\u0936\u093F", chinese: "\u091A\u0940\u0928\u0940 \u0930\u093E\u0936\u093F" }, zodiacSignLabel: "\u0906\u092A\u0915\u093E \u091A\u093F\u0928\u094D\u0939:", infoText: "\u{1F31F} \u0906\u092A\u0915\u093E \u0915\u0949\u0938\u094D\u092E\u093F\u0915 \u092A\u094D\u0930\u094B\u092B\u093C\u093E\u0907\u0932 \u0924\u0941\u0930\u0902\u0924 \u0905\u092A\u0921\u0947\u091F \u0939\u094B\u0917\u093E!", cancel: "\u0930\u0926\u094D\u0926 \u0915\u0930\u0947\u0902", save: "\u092A\u0930\u093F\u0935\u0930\u094D\u0924\u0928 \u0938\u0941\u0930\u0915\u094D\u0937\u093F\u0924 \u0915\u0930\u0947\u0902" }
+  },
+  ZH: {
+    greeting: "\u4F60\u597D\uFF0C{name}\uFF01\u4ECA\u5929\u5E26\u6765\u65B0\u7684\u5B87\u5B99\u80FD\u91CF\u3002\u62E5\u62B1\u5373\u5C06\u5230\u6765\u7684\u673A\u4F1A\u3002",
+    colorTitle: "\u4F60\u7684\u4ECA\u65E5\u8272\u5F69",
+    vibeTitle: "\u4F60\u7684\u6C1B\u56F4",
+    cautionTitle: "\u6CE8\u610F",
+    adTitle: "\u5E7F\u544A",
+    adPlaceholder: "\u5E7F\u544A\u5C06\u5728\u6B64\u5C55\u793A",
+    luckyTitle: "\u5E78\u8FD0\u6570\u5B57",
+    affirmationTitle: "\u{1F31F} \u6BCF\u65E5\u80AF\u5B9A",
+    donationTitle: "\u2615 \u652F\u6301 Astro-Transition",
+    donationContent: "\u559C\u6B22\u8FD9\u4E2A\u5B87\u5B99\u4F53\u9A8C\u5417\uFF1F\u8003\u8651\u8BF7\u4F5C\u8005\u559D\u676F\u5496\u5561\u652F\u6301\u4E00\u4E0B\u3002",
+    actionLabel: "\u652F\u6301\u4F5C\u8005",
+    VIBES: ["\u7CBE\u529B\u5145\u6C9B", "\u5E73\u9759", "\u795E\u79D8", "\u559C\u60A6", "\u5185\u7701", "\u6709\u521B\u610F", "\u70ED\u60C5", "\u5B81\u548C", "\u5927\u80C6", "\u6DF1\u601D", "\u987D\u76AE", "\u667A\u6167"],
+    CAUTIONS: ["\u4ED3\u4FC3\u505A\u51B3\u5B9A", "\u8FC7\u5EA6\u601D\u8003\u7EC6\u8282", "\u5FFD\u89C6\u4F60\u7684\u76F4\u89C9", "\u8FC7\u4E8E\u82DB\u8D23", "\u5BFB\u6C42\u8BA4\u53EF", "\u56DE\u907F\u5BF9\u6297", "\u627F\u62C5\u8FC7\u591A", "\u5FFD\u89C6\u81EA\u6211\u7167\u987E", "\u6C89\u6E4E\u4E8E\u8FC7\u53BB", "\u4ED3\u4FC3\u5224\u65AD", "\u4E0E\u4E16\u9694\u7EDD", "\u5B8C\u7F8E\u4E3B\u4E49"],
+    AFFIRMATIONS: ["\u6211\u6709\u5B9E\u73B0\u4F1F\u5927\u4E8B\u7269\u7684\u80FD\u529B", "\u4ECA\u5929\u5E26\u6765\u65B0\u7684\u53EF\u80FD\u6027", "\u6211\u76F8\u4FE1\u6211\u7684\u65C5\u7A0B", "\u6211\u7684\u80FD\u91CF\u662F\u65E0\u5C3D\u7684", "\u6211\u5438\u5F15\u79EF\u6781\u7684\u6C1B\u56F4", "\u6211\u914D\u5F97\u4E0A\u6210\u529F", "\u6211\u7684\u6F5C\u529B\u662F\u65E0\u9650\u7684", "\u6211\u62E5\u62B1\u771F\u5B9E\u7684\u81EA\u6211", "\u6211\u662F\u597D\u8FD0\u7684\u78C1\u77F3", "\u6211\u7684\u68A6\u60F3\u662F\u6709\u6548\u7684", "\u6211\u9009\u62E9\u6210\u957F\u548C\u8FDB\u6B65", "\u5B87\u5B99\u652F\u6301\u6211"],
+    settings: { title: "\u2699\uFE0F \u8BBE\u7F6E", zodiacTypeLabel: "\u661F\u5EA7\u7C7B\u578B\uFF1A", zodiacTypeOptions: { western: "\u897F\u65B9\u661F\u5EA7", indian: "\u5370\u5EA6/\u5420\u9640\u661F\u5EA7", chinese: "\u4E2D\u56FD\u5341\u4E8C\u751F\u8096" }, zodiacSignLabel: "\u4F60\u7684\u661F\u5EA7\uFF1A", infoText: "\u{1F31F} \u4F60\u7684\u5B87\u5B99\u8D44\u6599\u5C06\u7ACB\u5373\u66F4\u65B0\uFF01", cancel: "\u53D6\u6D88", save: "\u4FDD\u5B58\u66F4\u6539" }
+  }
+};
+var NAV_LABELS = {
+  EN: { prev: "\u2190 PREV", next: "NEXT \u2192", swipeHint: "\u2190 Swipe or click buttons \u2192" },
+  ES: { prev: "\u2190 ANTERIOR", next: "SIGUIENTE \u2192", swipeHint: "\u2190 Desliza o pulsa botones \u2192" },
+  HI: { prev: "\u2190 \u092A\u0939\u0932\u0947", next: "\u0905\u0917\u0932\u093E \u2192", swipeHint: "\u2190 \u0938\u094D\u0935\u093E\u0907\u092A \u0915\u0930\u0947\u0902 \u092F\u093E \u092C\u091F\u0928 \u0926\u092C\u093E\u090F\u0901 \u2192" },
+  ZH: { prev: "\u2190 \u4E0A\u4E00\u5F20", next: "\u4E0B\u4E00\u5F20 \u2192", swipeHint: "\u2190 \u5212\u52A8\u6216\u70B9\u51FB\u6309\u94AE \u2192" }
+};
+
 // src/app/constants/zodiac.constants.ts
 var WESTERN_ZODIAC_SIGNS = [
   "Aries",
@@ -43907,125 +44032,6 @@ var ZodiacService = class _ZodiacService {
   }], () => [{ type: HttpClient }], null);
 })();
 
-// src/app/i18n/translations.ts
-var TRANSLATIONS2 = {
-  EN: {
-    greeting: "Hello {name}! Today brings new cosmic energy your way. Embrace the opportunities that unfold.",
-    colorTitle: "Your Color Today",
-    vibeTitle: "Your Vibe",
-    cautionTitle: "Watch Out For",
-    adTitle: "Advertisement",
-    adPlaceholder: "Your ad will appear here",
-    luckyTitle: "Lucky Number",
-    affirmationTitle: "\u{1F31F} Daily Affirmation",
-    donationTitle: "\u2615 Support Astro-Transition",
-    donationContent: "Love this cosmic experience? Consider supporting the creator with a coffee!",
-    actionLabel: "Buy Me a Coffee",
-    VIBES: [
-      "Energetic",
-      "Calm",
-      "Mysterious",
-      "Joyful",
-      "Introspective",
-      "Creative",
-      "Passionate",
-      "Peaceful",
-      "Bold",
-      "Thoughtful",
-      "Playful",
-      "Wise"
-    ],
-    CAUTIONS: [
-      "Rushing into decisions",
-      "Over-thinking details",
-      "Ignoring your intuition",
-      "Being too critical",
-      "Seeking validation",
-      "Avoiding confrontation",
-      "Taking on too much",
-      "Neglecting self-care",
-      "Dwelling on the past",
-      "Making hasty judgments",
-      "Isolating yourself",
-      "Perfectionism"
-    ],
-    AFFIRMATIONS: [
-      "I am capable of great things",
-      "Today brings new possibilities",
-      "I trust my journey",
-      "My energy is limitless",
-      "I attract positive vibes",
-      "I am worthy of success",
-      "My potential is infinite",
-      "I embrace my true self",
-      "I am a magnet for good fortune",
-      "My dreams are valid",
-      "I choose growth and progress",
-      "The universe supports me"
-    ],
-    settings: {
-      title: "\u2699\uFE0F Settings",
-      zodiacTypeLabel: "Zodiac Type:",
-      zodiacTypeOptions: { western: "Western Zodiac", indian: "Indian/Vedic Zodiac", chinese: "Chinese Zodiac" },
-      zodiacSignLabel: "Your Sign:",
-      infoText: "\u{1F31F} Your cosmic profile will update immediately!",
-      cancel: "Cancel",
-      save: "Save Changes"
-    }
-  },
-  ES: {
-    greeting: "\xA1Hola {name}! Hoy trae nueva energ\xEDa c\xF3smica. Abraza las oportunidades que se presenten.",
-    colorTitle: "Tu Color Hoy",
-    vibeTitle: "Tu Vibra",
-    cautionTitle: "Cuidado Con",
-    adTitle: "Publicidad",
-    adPlaceholder: "Tu anuncio aparecer\xE1 aqu\xED",
-    luckyTitle: "N\xFAmero de la Suerte",
-    affirmationTitle: "\u{1F31F} Afirmaci\xF3n Diaria",
-    donationTitle: "\u2615 Apoya Astro-Transition",
-    donationContent: "\xBFTe gusta esta experiencia c\xF3smica? Considera apoyar al creador con un caf\xE9.",
-    actionLabel: "Invitar a un caf\xE9",
-    VIBES: ["En\xE9rgico", "Calmo", "Misterioso", "Alegre", "Introspectivo", "Creativo", "Apasionado", "Pac\xEDfico", "Audaz", "Reflexivo", "Juguet\xF3n", "Sabio"],
-    CAUTIONS: ["Tomar decisiones apresuradas", "Pensar en exceso los detalles", "Ignorar tu intuici\xF3n", "Ser demasiado cr\xEDtico", "Buscar validaci\xF3n", "Evitar confrontaciones", "Asumir demasiado", "Descuidar el autocuidado", "Vivir en el pasado", "Juzgar apresuradamente", "Aislarte", "Perfeccionismo"],
-    AFFIRMATIONS: ["Soy capaz de grandes cosas", "Hoy trae nuevas posibilidades", "Conf\xEDo en mi camino", "Mi energ\xEDa es ilimitada", "Atraigo vibras positivas", "Merezco el \xE9xito", "Mi potencial es infinito", "Abrazo mi verdadero yo", "Soy un im\xE1n para la buena fortuna", "Mis sue\xF1os son v\xE1lidos", "Elijo el crecimiento y el progreso", "El universo me apoya"],
-    settings: { title: "\u2699\uFE0F Configuraci\xF3n", zodiacTypeLabel: "Tipo de Zod\xEDaco:", zodiacTypeOptions: { western: "Zod\xEDaco Occidental", indian: "Zod\xEDaco Indio/V\xE9dico", chinese: "Zod\xEDaco Chino" }, zodiacSignLabel: "Tu Signo:", infoText: "\u{1F31F} \xA1Tu perfil c\xF3smico se actualizar\xE1 inmediatamente!", cancel: "Cancelar", save: "Guardar Cambios" }
-  },
-  HI: {
-    greeting: "\u0928\u092E\u0938\u094D\u0924\u0947 {name}! \u0906\u091C \u0928\u0908 \u0916\u0917\u094B\u0932\u0940\u092F \u090A\u0930\u094D\u091C\u093E \u0932\u0947\u0915\u0930 \u0906\u0924\u093E \u0939\u0948\u0964 \u091C\u094B \u092E\u094C\u0915\u0947 \u0906\u090F\u0902 \u0909\u0928\u094D\u0939\u0947\u0902 \u0905\u092A\u0928\u093E\u0907\u090F\u0964",
-    colorTitle: "\u0906\u091C \u0906\u092A\u0915\u093E \u0930\u0902\u0917",
-    vibeTitle: "\u0906\u092A\u0915\u093E \u0935\u093E\u0907\u092C",
-    cautionTitle: "\u0938\u093E\u0935\u0927\u093E\u0928 \u0930\u0939\u0947\u0902",
-    adTitle: "\u0935\u093F\u091C\u094D\u091E\u093E\u092A\u0928",
-    adPlaceholder: "\u0906\u092A\u0915\u093E \u0935\u093F\u091C\u094D\u091E\u093E\u092A\u0928 \u092F\u0939\u093E\u0901 \u0926\u093F\u0916\u093E\u0908 \u0926\u0947\u0917\u093E",
-    luckyTitle: "\u0932\u0915\u0940 \u0928\u0902\u092C\u0930",
-    affirmationTitle: "\u{1F31F} \u0926\u0948\u0928\u093F\u0915 \u092A\u0941\u0937\u094D\u091F\u093F",
-    donationTitle: "\u2615 Astro-Transition \u0915\u093E \u0938\u092E\u0930\u094D\u0925\u0928 \u0915\u0930\u0947\u0902",
-    donationContent: "\u0915\u094D\u092F\u093E \u0906\u092A\u0915\u094B \u092F\u0939 \u0915\u0949\u0938\u094D\u092E\u093F\u0915 \u0905\u0928\u0941\u092D\u0935 \u092A\u0938\u0902\u0926 \u0939\u0948? \u0915\u0943\u092A\u092F\u093E \u0928\u093F\u0930\u094D\u092E\u093E\u0924\u093E \u0915\u093E \u0938\u092E\u0930\u094D\u0925\u0928 \u0915\u0930\u0947\u0902\u0964",
-    actionLabel: "\u0915\u0949\u092B\u0940 \u0916\u0930\u0940\u0926\u0947\u0902",
-    VIBES: ["\u090A\u0930\u094D\u091C\u093E\u0935\u093E\u0928", "\u0936\u093E\u0902\u0924", "\u0930\u0939\u0938\u094D\u092F\u092E\u092F\u0940", "\u0916\u0941\u0936", "\u0906\u0924\u094D\u092E\u0928\u093F\u0930\u0940\u0915\u094D\u0937\u0923", "\u0930\u091A\u0928\u093E\u0924\u094D\u092E\u0915", "\u091C\u0941\u0928\u0942\u0928\u0940", "\u0936\u093E\u0902\u0924\u093F\u092A\u0942\u0930\u094D\u0923", "\u0928\u093F\u0921\u0930", "\u0935\u093F\u091A\u093E\u0930\u0936\u0940\u0932", "\u0916\u093F\u0932\u0916\u093F\u0932\u093E\u0924\u093E", "\u092C\u0941\u0926\u094D\u0927\u093F\u092E\u093E\u0928"],
-    CAUTIONS: ["\u0928\u093F\u0930\u094D\u0923\u092F\u094B\u0902 \u092E\u0947\u0902 \u091C\u0932\u094D\u0926\u092C\u093E\u091C\u0940", "\u0935\u093F\u0935\u0930\u0923\u094B\u0902 \u092A\u0930 \u0905\u0927\u093F\u0915 \u0938\u094B\u091A\u0928\u093E", "\u0905\u092A\u0928\u0940 \u0938\u0939\u091C \u091C\u094D\u091E\u093E\u0928 \u0915\u094B \u0928\u091C\u0930\u0905\u0902\u0926\u093E\u091C \u0915\u0930\u0928\u093E", "\u0905\u0924\u094D\u092F\u0927\u093F\u0915 \u0906\u0932\u094B\u091A\u0928\u093E\u0924\u094D\u092E\u0915 \u0939\u094B\u0928\u093E", "\u092A\u094D\u0930\u092E\u093E\u0923 \u0915\u0947 \u0932\u093F\u090F \u0916\u094B\u091C", "\u092E\u0941\u0915\u093E\u092C\u0932\u093E \u091F\u093E\u0932\u0928\u093E", "\u092C\u0939\u0941\u0924 \u0915\u0941\u091B \u0932\u0947\u0928\u093E", "\u0938\u094D\u0935-\u0926\u0947\u0916\u092D\u093E\u0932 \u0915\u0940 \u0909\u092A\u0947\u0915\u094D\u0937\u093E", "\u0905\u0924\u0940\u0924 \u092E\u0947\u0902 \u092B\u0901\u0938\u0928\u093E", "\u091C\u0932\u094D\u0926\u0940 \u0928\u093F\u0930\u094D\u0923\u092F \u0932\u0947\u0928\u093E", "\u0916\u0941\u0926 \u0915\u094B \u0905\u0932\u0917 \u0915\u0930\u0928\u093E", "\u092A\u0930\u092B\u0947\u0915\u094D\u0936\u0928\u093F\u091C\u094D\u092E"],
-    AFFIRMATIONS: ["\u092E\u0948\u0902 \u092C\u0921\u093C\u0947 \u0915\u093E\u0930\u094D\u092F \u0915\u0930\u0928\u0947 \u092E\u0947\u0902 \u0938\u0915\u094D\u0937\u092E \u0939\u0942\u0901", "\u0906\u091C \u0928\u090F \u0905\u0935\u0938\u0930 \u0932\u093E\u0924\u093E \u0939\u0948", "\u092E\u0948\u0902 \u0905\u092A\u0928\u0947 \u0938\u092B\u0930 \u092A\u0930 \u092D\u0930\u094B\u0938\u093E \u0930\u0916\u0924\u093E \u0939\u0942\u0901", "\u092E\u0947\u0930\u0940 \u090A\u0930\u094D\u091C\u093E \u0905\u0938\u0940\u092E\u093F\u0924 \u0939\u0948", "\u092E\u0948\u0902 \u0938\u0915\u093E\u0930\u093E\u0924\u094D\u092E\u0915 \u0909\u0930\u094D\u091C\u093E\u090F\u0901 \u0906\u0915\u0930\u094D\u0937\u093F\u0924 \u0915\u0930\u0924\u093E \u0939\u0942\u0901", "\u092E\u0948\u0902 \u0938\u092B\u0932\u0924\u093E \u0915\u093E \u0939\u0915\u0926\u093E\u0930 \u0939\u0942\u0901", "\u092E\u0947\u0930\u0940 \u0915\u094D\u0937\u092E\u0924\u093E \u0905\u0928\u0902\u0924 \u0939\u0948", "\u092E\u0948\u0902 \u0905\u092A\u0928\u0947 \u0938\u091A\u094D\u091A\u0947 \u0906\u0924\u094D\u092E \u0915\u094B \u0905\u092A\u0928\u093E\u0924\u093E \u0939\u0942\u0901", "\u092E\u0948\u0902 \u0905\u091A\u094D\u091B\u0947 \u092D\u093E\u0917\u094D\u092F \u0915\u0947 \u0932\u093F\u090F \u091A\u0941\u0902\u092C\u0915 \u0939\u0942\u0901", "\u092E\u0947\u0930\u0947 \u0938\u092A\u0928\u0947 \u092E\u093E\u0928\u094D\u092F \u0939\u0948\u0902", "\u092E\u0948\u0902 \u0935\u093F\u0915\u093E\u0938 \u0914\u0930 \u092A\u094D\u0930\u0917\u0924\u093F \u091A\u0941\u0928\u0924\u093E \u0939\u0942\u0901", "\u092C\u094D\u0930\u0939\u094D\u092E\u093E\u0902\u0921 \u092E\u0947\u0930\u093E \u0938\u092E\u0930\u094D\u0925\u0928 \u0915\u0930\u0924\u093E \u0939\u0948"],
-    settings: { title: "\u2699\uFE0F \u0938\u0947\u091F\u093F\u0902\u0917\u094D\u0938", zodiacTypeLabel: "\u0930\u093E\u0936\u093F \u092A\u094D\u0930\u0915\u093E\u0930:", zodiacTypeOptions: { western: "\u092A\u0936\u094D\u091A\u093F\u092E\u0940 \u0930\u093E\u0936\u093F", indian: "\u092D\u093E\u0930\u0924\u0940\u092F/\u0935\u0948\u0926\u093F\u0915 \u0930\u093E\u0936\u093F", chinese: "\u091A\u0940\u0928\u0940 \u0930\u093E\u0936\u093F" }, zodiacSignLabel: "\u0906\u092A\u0915\u093E \u091A\u093F\u0928\u094D\u0939:", infoText: "\u{1F31F} \u0906\u092A\u0915\u093E \u0915\u0949\u0938\u094D\u092E\u093F\u0915 \u092A\u094D\u0930\u094B\u092B\u093C\u093E\u0907\u0932 \u0924\u0941\u0930\u0902\u0924 \u0905\u092A\u0921\u0947\u091F \u0939\u094B\u0917\u093E!", cancel: "\u0930\u0926\u094D\u0926 \u0915\u0930\u0947\u0902", save: "\u092A\u0930\u093F\u0935\u0930\u094D\u0924\u0928 \u0938\u0941\u0930\u0915\u094D\u0937\u093F\u0924 \u0915\u0930\u0947\u0902" }
-  },
-  ZH: {
-    greeting: "\u4F60\u597D\uFF0C{name}\uFF01\u4ECA\u5929\u5E26\u6765\u65B0\u7684\u5B87\u5B99\u80FD\u91CF\u3002\u62E5\u62B1\u5373\u5C06\u5230\u6765\u7684\u673A\u4F1A\u3002",
-    colorTitle: "\u4F60\u7684\u4ECA\u65E5\u8272\u5F69",
-    vibeTitle: "\u4F60\u7684\u6C1B\u56F4",
-    cautionTitle: "\u6CE8\u610F",
-    adTitle: "\u5E7F\u544A",
-    adPlaceholder: "\u5E7F\u544A\u5C06\u5728\u6B64\u5C55\u793A",
-    luckyTitle: "\u5E78\u8FD0\u6570\u5B57",
-    affirmationTitle: "\u{1F31F} \u6BCF\u65E5\u80AF\u5B9A",
-    donationTitle: "\u2615 \u652F\u6301 Astro-Transition",
-    donationContent: "\u559C\u6B22\u8FD9\u4E2A\u5B87\u5B99\u4F53\u9A8C\u5417\uFF1F\u8003\u8651\u8BF7\u4F5C\u8005\u559D\u676F\u5496\u5561\u652F\u6301\u4E00\u4E0B\u3002",
-    actionLabel: "\u652F\u6301\u4F5C\u8005",
-    VIBES: ["\u7CBE\u529B\u5145\u6C9B", "\u5E73\u9759", "\u795E\u79D8", "\u559C\u60A6", "\u5185\u7701", "\u6709\u521B\u610F", "\u70ED\u60C5", "\u5B81\u548C", "\u5927\u80C6", "\u6DF1\u601D", "\u987D\u76AE", "\u667A\u6167"],
-    CAUTIONS: ["\u4ED3\u4FC3\u505A\u51B3\u5B9A", "\u8FC7\u5EA6\u601D\u8003\u7EC6\u8282", "\u5FFD\u89C6\u4F60\u7684\u76F4\u89C9", "\u8FC7\u4E8E\u82DB\u8D23", "\u5BFB\u6C42\u8BA4\u53EF", "\u56DE\u907F\u5BF9\u6297", "\u627F\u62C5\u8FC7\u591A", "\u5FFD\u89C6\u81EA\u6211\u7167\u987E", "\u6C89\u6E4E\u4E8E\u8FC7\u53BB", "\u4ED3\u4FC3\u5224\u65AD", "\u4E0E\u4E16\u9694\u7EDD", "\u5B8C\u7F8E\u4E3B\u4E49"],
-    AFFIRMATIONS: ["\u6211\u6709\u5B9E\u73B0\u4F1F\u5927\u4E8B\u7269\u7684\u80FD\u529B", "\u4ECA\u5929\u5E26\u6765\u65B0\u7684\u53EF\u80FD\u6027", "\u6211\u76F8\u4FE1\u6211\u7684\u65C5\u7A0B", "\u6211\u7684\u80FD\u91CF\u662F\u65E0\u5C3D\u7684", "\u6211\u5438\u5F15\u79EF\u6781\u7684\u6C1B\u56F4", "\u6211\u914D\u5F97\u4E0A\u6210\u529F", "\u6211\u7684\u6F5C\u529B\u662F\u65E0\u9650\u7684", "\u6211\u62E5\u62B1\u771F\u5B9E\u7684\u81EA\u6211", "\u6211\u662F\u597D\u8FD0\u7684\u78C1\u77F3", "\u6211\u7684\u68A6\u60F3\u662F\u6709\u6548\u7684", "\u6211\u9009\u62E9\u6210\u957F\u548C\u8FDB\u6B65", "\u5B87\u5B99\u652F\u6301\u6211"],
-    settings: { title: "\u2699\uFE0F \u8BBE\u7F6E", zodiacTypeLabel: "\u661F\u5EA7\u7C7B\u578B\uFF1A", zodiacTypeOptions: { western: "\u897F\u65B9\u661F\u5EA7", indian: "\u5370\u5EA6/\u5420\u9640\u661F\u5EA7", chinese: "\u4E2D\u56FD\u5341\u4E8C\u751F\u8096" }, zodiacSignLabel: "\u4F60\u7684\u661F\u5EA7\uFF1A", infoText: "\u{1F31F} \u4F60\u7684\u5B87\u5B99\u8D44\u6599\u5C06\u7ACB\u5373\u66F4\u65B0\uFF01", cancel: "\u53D6\u6D88", save: "\u4FDD\u5B58\u66F4\u6539" }
-  }
-};
-
 // src/app/services/language.service.ts
 var LanguageService = class _LanguageService {
   STORAGE_KEY = "astro_lang";
@@ -44274,11 +44280,9 @@ var ContentService = class _ContentService {
 // src/app/components/card-deck/card-deck.component.ts
 function CardDeckComponent_div_1_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 8);
-    \u0275\u0275elementContainerStart(1);
-    \u0275\u0275element(2, "app-card", 9);
-    \u0275\u0275elementContainerEnd();
-    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(0, "div", 8)(1, "div", 9);
+    \u0275\u0275element(2, "app-card", 10);
+    \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
     const ctx_r0 = \u0275\u0275nextContext();
@@ -44291,7 +44295,7 @@ function CardDeckComponent_div_1_Template(rf, ctx) {
 function CardDeckComponent_button_6_Template(rf, ctx) {
   if (rf & 1) {
     const _r2 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "button", 10);
+    \u0275\u0275elementStart(0, "button", 11);
     \u0275\u0275listener("click", function CardDeckComponent_button_6_Template_button_click_0_listener() {
       const i_r3 = \u0275\u0275restoreView(_r2).$implicit;
       const ctx_r0 = \u0275\u0275nextContext();
@@ -44316,6 +44320,8 @@ var CardDeckComponent = class _CardDeckComponent {
   destroy$ = new Subject();
   touchStartX = 0;
   touchEndX = 0;
+  currentLang = "EN";
+  uiNav = {};
   constructor(zodiacService, contentService, languageService) {
     this.zodiacService = zodiacService;
     this.contentService = contentService;
@@ -44331,7 +44337,11 @@ var CardDeckComponent = class _CardDeckComponent {
     this.languageService.language$.pipe(takeUntil(this.destroy$)).subscribe(() => {
       if (this.zodiac)
         this.generateCards();
+      this.currentLang = this.languageService.getCurrentLanguage();
+      this.uiNav = NAV_LABELS[this.currentLang] || NAV_LABELS["EN"];
     });
+    this.currentLang = this.languageService.getCurrentLanguage();
+    this.uiNav = NAV_LABELS[this.currentLang] || NAV_LABELS["EN"];
   }
   ngOnDestroy() {
     this.destroy$.next();
@@ -44399,7 +44409,7 @@ var CardDeckComponent = class _CardDeckComponent {
   static \u0275fac = function CardDeckComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _CardDeckComponent)(\u0275\u0275directiveInject(ZodiacService), \u0275\u0275directiveInject(ContentService), \u0275\u0275directiveInject(LanguageService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _CardDeckComponent, selectors: [["app-card-deck"]], decls: 11, vars: 3, consts: [[1, "deck-container", 3, "keydown", "touchstart", "touchend"], ["class", "card-wrapper", 4, "ngIf"], [1, "controls"], ["title", "Previous card (\u2190 or swipe right)", 1, "nav-btn", "prev-btn", 3, "click"], [1, "progress-dots"], ["class", "dot", 3, "active", "click", 4, "ngFor", "ngForOf"], ["title", "Next card (\u2192 or swipe left)", 1, "nav-btn", "next-btn", 3, "click"], [1, "swipe-hint"], [1, "card-wrapper"], [3, "card", "progress"], [1, "dot", 3, "click"]], template: function CardDeckComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _CardDeckComponent, selectors: [["app-card-deck"]], decls: 11, vars: 8, consts: [[1, "deck-container", 3, "keydown", "touchstart", "touchend"], ["class", "card-wrapper", 4, "ngIf"], [1, "controls"], [1, "nav-btn", "prev-btn", 3, "click", "title"], [1, "progress-dots"], ["class", "dot", 3, "active", "click", 4, "ngFor", "ngForOf"], [1, "nav-btn", "next-btn", 3, "click", "title"], [1, "swipe-hint"], [1, "card-wrapper"], [1, "animated-card"], [3, "card", "progress"], [1, "dot", 3, "click"]], template: function CardDeckComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 0);
       \u0275\u0275listener("keydown", function CardDeckComponent_Template_div_keydown_0_listener($event) {
@@ -44414,7 +44424,7 @@ var CardDeckComponent = class _CardDeckComponent {
       \u0275\u0275listener("click", function CardDeckComponent_Template_button_click_3_listener() {
         return ctx.prevCard();
       });
-      \u0275\u0275text(4, " \u2190 PREV ");
+      \u0275\u0275text(4);
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(5, "div", 4);
       \u0275\u0275template(6, CardDeckComponent_button_6_Template, 1, 3, "button", 5);
@@ -44423,18 +44433,28 @@ var CardDeckComponent = class _CardDeckComponent {
       \u0275\u0275listener("click", function CardDeckComponent_Template_button_click_7_listener() {
         return ctx.nextCard();
       });
-      \u0275\u0275text(8, " NEXT \u2192 ");
+      \u0275\u0275text(8);
       \u0275\u0275elementEnd()();
       \u0275\u0275elementStart(9, "p", 7);
-      \u0275\u0275text(10, "\u2190 Swipe or click buttons \u2192");
+      \u0275\u0275text(10);
       \u0275\u0275elementEnd()();
     }
     if (rf & 2) {
       \u0275\u0275attribute("tabindex", 0);
       \u0275\u0275advance();
       \u0275\u0275property("ngIf", ctx.cards.length > 0);
-      \u0275\u0275advance(5);
+      \u0275\u0275advance(2);
+      \u0275\u0275property("title", (ctx.uiNav == null ? null : ctx.uiNav.prev) || "Previous");
+      \u0275\u0275advance();
+      \u0275\u0275textInterpolate1(" ", (ctx.uiNav == null ? null : ctx.uiNav.prev) || "\u2190 PREV", " ");
+      \u0275\u0275advance(2);
       \u0275\u0275property("ngForOf", ctx.getDotIndices());
+      \u0275\u0275advance();
+      \u0275\u0275property("title", (ctx.uiNav == null ? null : ctx.uiNav.next) || "Next");
+      \u0275\u0275advance();
+      \u0275\u0275textInterpolate1(" ", (ctx.uiNav == null ? null : ctx.uiNav.next) || "NEXT \u2192", " ");
+      \u0275\u0275advance(2);
+      \u0275\u0275textInterpolate((ctx.uiNav == null ? null : ctx.uiNav.swipeHint) || "\u2190 Swipe or click buttons \u2192");
     }
   }, dependencies: [CommonModule, NgForOf, NgIf, CardComponent], styles: ["\n\n  .deck-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width: 100%;\n  padding: 20px;\n  gap: 20px;\n  outline: none;\n}\n@media (max-width: 768px) {\n    .deck-container {\n    padding: 15px;\n    gap: 15px;\n  }\n}\n@media (max-width: 480px) {\n    .deck-container {\n    padding: 10px;\n    gap: 10px;\n  }\n}\n  .card-wrapper {\n  width: 100%;\n  height: 60vh;\n  max-width: 600px;\n  min-height: 400px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n@media (max-width: 768px) {\n    .card-wrapper {\n    height: 55vh;\n    min-height: 350px;\n  }\n}\n@media (max-width: 480px) {\n    .card-wrapper {\n    height: 50vh;\n    min-height: 300px;\n  }\n}\n  .card-wrapper app-card {\n  width: 100%;\n  height: 100%;\n}\n  .controls {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 20px;\n  width: 100%;\n  max-width: 600px;\n  flex-wrap: wrap;\n}\n@media (max-width: 768px) {\n    .controls {\n    gap: 15px;\n  }\n}\n@media (max-width: 480px) {\n    .controls {\n    gap: 10px;\n  }\n}\n  .nav-btn {\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  border: none;\n  color: white;\n  padding: 12px 24px;\n  border-radius: 25px;\n  font-size: 14px;\n  font-weight: 600;\n  cursor: pointer;\n  transition: all 0.3s ease;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);\n}\n  .nav-btn:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);\n}\n  .nav-btn:active {\n  transform: translateY(0);\n}\n@media (max-width: 768px) {\n    .nav-btn {\n    padding: 10px 18px;\n    font-size: 12px;\n  }\n}\n@media (max-width: 480px) {\n    .nav-btn {\n    padding: 8px 14px;\n    font-size: 11px;\n    flex: 1;\n    min-width: 70px;\n  }\n}\n  .prev-btn {\n  order: 1;\n}\n@media (max-width: 480px) {\n    .prev-btn {\n    order: 1;\n  }\n}\n  .next-btn {\n  order: 3;\n}\n@media (max-width: 480px) {\n    .next-btn {\n    order: 3;\n  }\n}\n  .progress-dots {\n  display: flex;\n  gap: 8px;\n  justify-content: center;\n  flex-wrap: wrap;\n  flex: 1;\n  order: 2;\n  min-width: 150px;\n}\n@media (max-width: 480px) {\n    .progress-dots {\n    gap: 6px;\n    order: 2;\n    min-width: auto;\n    flex: 0 1 auto;\n  }\n}\n  .dot {\n  width: 12px;\n  height: 12px;\n  border-radius: 50%;\n  border: 2px solid rgba(255, 255, 255, 0.5);\n  background: transparent;\n  cursor: pointer;\n  transition: all 0.3s ease;\n}\n  .dot:hover {\n  border-color: rgba(255, 255, 255, 0.8);\n  transform: scale(1.2);\n}\n  .dot.active {\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  border-color: #667eea;\n  box-shadow: 0 0 10px rgba(102, 126, 234, 0.6);\n}\n@media (max-width: 480px) {\n    .dot {\n    width: 10px;\n    height: 10px;\n  }\n}\n  .swipe-hint {\n  color: rgba(255, 255, 255, 0.6);\n  font-size: 12px;\n  text-align: center;\n  margin: 0;\n  font-style: italic;\n  animation: _ngcontent-%COMP%_fadeInOut 3s ease-in-out infinite;\n}\n@media (min-width: 769px) {\n    .swipe-hint {\n    display: none;\n  }\n}\n@media (max-width: 480px) {\n    .swipe-hint {\n    font-size: 11px;\n  }\n}\n@keyframes _ngcontent-%COMP%_fadeInOut {\n  0%, 100% {\n    opacity: 0.4;\n  }\n  50% {\n    opacity: 0.8;\n  }\n}\n/*# sourceMappingURL=card-deck.component.css.map */"], data: { animation: [
     trigger("deckAnimation", [
@@ -44470,18 +44490,18 @@ var CardDeckComponent = class _CardDeckComponent {
 >
   <!-- Card Display -->
   <div class="card-wrapper" *ngIf="cards.length > 0">
-    <ng-container [@deckAnimation]>
+    <div class="animated-card" [@deckAnimation]>
       <app-card
         [card]="getCurrentCard()"
         [progress]="getProgress()"
       ></app-card>
-    </ng-container>
+    </div>
   </div>
 
   <!-- Navigation Controls -->
   <div class="controls">
-    <button class="nav-btn prev-btn" (click)="prevCard()" title="Previous card (\u2190 or swipe right)">
-      \u2190 PREV
+    <button class="nav-btn prev-btn" (click)="prevCard()" [title]="uiNav?.prev || 'Previous'">
+      {{ uiNav?.prev || '\u2190 PREV' }}
     </button>
 
     <div class="progress-dots">
@@ -44494,19 +44514,19 @@ var CardDeckComponent = class _CardDeckComponent {
       ></button>
     </div>
 
-    <button class="nav-btn next-btn" (click)="nextCard()" title="Next card (\u2192 or swipe left)">
-      NEXT \u2192
+    <button class="nav-btn next-btn" (click)="nextCard()" [title]="uiNav?.next || 'Next'">
+      {{ uiNav?.next || 'NEXT \u2192' }}
     </button>
   </div>
 
   <!-- Mobile Hint -->
-  <p class="swipe-hint">\u2190 Swipe or click buttons \u2192</p>
+  <p class="swipe-hint">{{ uiNav?.swipeHint || '\u2190 Swipe or click buttons \u2192' }}</p>
 </div>
 `, styles: ["/* src/app/components/card-deck/card-deck.component.scss */\n::ng-deep .deck-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width: 100%;\n  padding: 20px;\n  gap: 20px;\n  outline: none;\n}\n@media (max-width: 768px) {\n  ::ng-deep .deck-container {\n    padding: 15px;\n    gap: 15px;\n  }\n}\n@media (max-width: 480px) {\n  ::ng-deep .deck-container {\n    padding: 10px;\n    gap: 10px;\n  }\n}\n::ng-deep .card-wrapper {\n  width: 100%;\n  height: 60vh;\n  max-width: 600px;\n  min-height: 400px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n@media (max-width: 768px) {\n  ::ng-deep .card-wrapper {\n    height: 55vh;\n    min-height: 350px;\n  }\n}\n@media (max-width: 480px) {\n  ::ng-deep .card-wrapper {\n    height: 50vh;\n    min-height: 300px;\n  }\n}\n::ng-deep .card-wrapper app-card {\n  width: 100%;\n  height: 100%;\n}\n::ng-deep .controls {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 20px;\n  width: 100%;\n  max-width: 600px;\n  flex-wrap: wrap;\n}\n@media (max-width: 768px) {\n  ::ng-deep .controls {\n    gap: 15px;\n  }\n}\n@media (max-width: 480px) {\n  ::ng-deep .controls {\n    gap: 10px;\n  }\n}\n::ng-deep .nav-btn {\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  border: none;\n  color: white;\n  padding: 12px 24px;\n  border-radius: 25px;\n  font-size: 14px;\n  font-weight: 600;\n  cursor: pointer;\n  transition: all 0.3s ease;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);\n}\n::ng-deep .nav-btn:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);\n}\n::ng-deep .nav-btn:active {\n  transform: translateY(0);\n}\n@media (max-width: 768px) {\n  ::ng-deep .nav-btn {\n    padding: 10px 18px;\n    font-size: 12px;\n  }\n}\n@media (max-width: 480px) {\n  ::ng-deep .nav-btn {\n    padding: 8px 14px;\n    font-size: 11px;\n    flex: 1;\n    min-width: 70px;\n  }\n}\n::ng-deep .prev-btn {\n  order: 1;\n}\n@media (max-width: 480px) {\n  ::ng-deep .prev-btn {\n    order: 1;\n  }\n}\n::ng-deep .next-btn {\n  order: 3;\n}\n@media (max-width: 480px) {\n  ::ng-deep .next-btn {\n    order: 3;\n  }\n}\n::ng-deep .progress-dots {\n  display: flex;\n  gap: 8px;\n  justify-content: center;\n  flex-wrap: wrap;\n  flex: 1;\n  order: 2;\n  min-width: 150px;\n}\n@media (max-width: 480px) {\n  ::ng-deep .progress-dots {\n    gap: 6px;\n    order: 2;\n    min-width: auto;\n    flex: 0 1 auto;\n  }\n}\n::ng-deep .dot {\n  width: 12px;\n  height: 12px;\n  border-radius: 50%;\n  border: 2px solid rgba(255, 255, 255, 0.5);\n  background: transparent;\n  cursor: pointer;\n  transition: all 0.3s ease;\n}\n::ng-deep .dot:hover {\n  border-color: rgba(255, 255, 255, 0.8);\n  transform: scale(1.2);\n}\n::ng-deep .dot.active {\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  border-color: #667eea;\n  box-shadow: 0 0 10px rgba(102, 126, 234, 0.6);\n}\n@media (max-width: 480px) {\n  ::ng-deep .dot {\n    width: 10px;\n    height: 10px;\n  }\n}\n::ng-deep .swipe-hint {\n  color: rgba(255, 255, 255, 0.6);\n  font-size: 12px;\n  text-align: center;\n  margin: 0;\n  font-style: italic;\n  animation: fadeInOut 3s ease-in-out infinite;\n}\n@media (min-width: 769px) {\n  ::ng-deep .swipe-hint {\n    display: none;\n  }\n}\n@media (max-width: 480px) {\n  ::ng-deep .swipe-hint {\n    font-size: 11px;\n  }\n}\n@keyframes fadeInOut {\n  0%, 100% {\n    opacity: 0.4;\n  }\n  50% {\n    opacity: 0.8;\n  }\n}\n/*# sourceMappingURL=card-deck.component.css.map */\n"] }]
   }], () => [{ type: ZodiacService }, { type: ContentService }, { type: LanguageService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(CardDeckComponent, { className: "CardDeckComponent", filePath: "src/app/components/card-deck/card-deck.component.ts", lineNumber: 30 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(CardDeckComponent, { className: "CardDeckComponent", filePath: "src/app/components/card-deck/card-deck.component.ts", lineNumber: 31 });
 })();
 
 // node_modules/@angular/forms/fesm2022/forms.mjs
@@ -49355,26 +49375,59 @@ var SettingsModalComponent = class _SettingsModalComponent {
 })();
 
 // src/app/app.ts
-function App_option_8_Template(rf, ctx) {
+function App_ng_container_6_option_3_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "option", 11);
+    \u0275\u0275elementStart(0, "option", 12);
     \u0275\u0275text(1);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const code_r1 = ctx.$implicit;
-    const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275property("value", code_r1);
+    const code_r3 = ctx.$implicit;
+    const ctx_r1 = \u0275\u0275nextContext(2);
+    \u0275\u0275property("value", code_r3);
     \u0275\u0275advance();
-    \u0275\u0275textInterpolate1(" ", ctx_r1.languageService.getDisplayName(code_r1), " ");
+    \u0275\u0275textInterpolate1(" ", ctx_r1.languageService.getDisplayName(code_r3), " ");
   }
 }
-function App_app_settings_modal_13_Template(rf, ctx) {
+function App_ng_container_6_Template(rf, ctx) {
   if (rf & 1) {
-    const _r3 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "app-settings-modal", 12);
-    \u0275\u0275listener("close", function App_app_settings_modal_13_Template_app_settings_modal_close_0_listener() {
-      \u0275\u0275restoreView(_r3);
+    const _r1 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementContainerStart(0);
+    \u0275\u0275elementStart(1, "label", 8)(2, "select", 9);
+    \u0275\u0275listener("change", function App_ng_container_6_Template_select_change_2_listener($event) {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.setLanguage($event.target.value));
+    });
+    \u0275\u0275template(3, App_ng_container_6_option_3_Template, 2, 2, "option", 10);
+    \u0275\u0275elementEnd()();
+    \u0275\u0275elementStart(4, "button", 11);
+    \u0275\u0275listener("click", function App_ng_container_6_Template_button_click_4_listener() {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.openSettings());
+    });
+    \u0275\u0275text(5, " \u2699\uFE0F ");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementContainerEnd();
+  }
+  if (rf & 2) {
+    const lang_r4 = ctx.ngIf;
+    const ctx_r1 = \u0275\u0275nextContext();
+    \u0275\u0275advance(2);
+    \u0275\u0275property("value", lang_r4);
+    \u0275\u0275advance();
+    \u0275\u0275property("ngForOf", ctx_r1.availableLanguages);
+    \u0275\u0275advance();
+    \u0275\u0275property("title", (ctx_r1.translations[lang_r4] == null ? null : ctx_r1.translations[lang_r4].settings == null ? null : ctx_r1.translations[lang_r4].settings.title) || "Settings");
+  }
+}
+function App_app_settings_modal_10_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r5 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "app-settings-modal", 13);
+    \u0275\u0275listener("close", function App_app_settings_modal_10_Template_app_settings_modal_close_0_listener() {
+      \u0275\u0275restoreView(_r5);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.closeSettings());
     });
@@ -49388,11 +49441,14 @@ var App = class _App {
   currentLanguage = "EN";
   availableLanguages = [];
   settingsLabel = "Settings";
+  language$;
+  translations = TRANSLATIONS2;
   constructor(languageService) {
     this.languageService = languageService;
     this.languageService.language$.subscribe((l) => this.currentLanguage = l);
   }
   ngOnInit() {
+    this.language$ = this.languageService.language$;
     this.availableLanguages = this.languageService.getAvailable();
     this.settingsLabel = TRANSLATIONS2[this.currentLanguage]?.settings?.title || "Settings";
     this.languageService.language$.subscribe((l) => {
@@ -49414,38 +49470,26 @@ var App = class _App {
   static \u0275fac = function App_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _App)(\u0275\u0275directiveInject(LanguageService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _App, selectors: [["app-root"]], decls: 16, vars: 4, consts: [[1, "app-container"], [1, "app-header"], [1, "header-logo"], [1, "logo-text"], [1, "header-actions"], [1, "lang-select"], [3, "change", "value"], [3, "value", 4, "ngFor", "ngForOf"], [1, "settings-btn", 3, "click", "title"], [1, "app-main"], [3, "close", 4, "ngIf"], [3, "value"], [3, "close"]], template: function App_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _App, selectors: [["app-root"]], decls: 13, vars: 4, consts: [[1, "app-container"], [1, "app-header"], [1, "header-logo"], [1, "logo-text"], [1, "header-actions"], [4, "ngIf"], [1, "app-main"], [3, "close", 4, "ngIf"], [1, "lang-select"], [3, "change", "value"], [3, "value", 4, "ngFor", "ngForOf"], [1, "settings-btn", 3, "click", "title"], [3, "value"], [3, "close"]], template: function App_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 0)(1, "header", 1)(2, "div", 2)(3, "h1", 3);
       \u0275\u0275text(4, "\u2728 Astro-Transition \u2728");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(5, "div", 4)(6, "label", 5)(7, "select", 6);
-      \u0275\u0275listener("change", function App_Template_select_change_7_listener($event) {
-        return ctx.setLanguage($event.target.value);
-      });
-      \u0275\u0275template(8, App_option_8_Template, 2, 2, "option", 7);
+      \u0275\u0275elementStart(5, "div", 4);
+      \u0275\u0275template(6, App_ng_container_6_Template, 6, 3, "ng-container", 5);
+      \u0275\u0275pipe(7, "async");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(9, "button", 8);
-      \u0275\u0275listener("click", function App_Template_button_click_9_listener() {
-        return ctx.openSettings();
-      });
-      \u0275\u0275text(10, " \u2699\uFE0F ");
-      \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(11, "main", 9);
-      \u0275\u0275element(12, "app-card-deck");
+      \u0275\u0275elementStart(8, "main", 6);
+      \u0275\u0275element(9, "app-card-deck");
       \u0275\u0275elementEnd();
-      \u0275\u0275template(13, App_app_settings_modal_13_Template, 1, 0, "app-settings-modal", 10);
-      \u0275\u0275element(14, "router-outlet");
+      \u0275\u0275template(10, App_app_settings_modal_10_Template, 1, 0, "app-settings-modal", 7);
+      \u0275\u0275element(11, "router-outlet");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(15, "router-outlet");
+      \u0275\u0275element(12, "router-outlet");
     }
     if (rf & 2) {
-      \u0275\u0275advance(7);
-      \u0275\u0275property("value", ctx.currentLanguage);
-      \u0275\u0275advance();
-      \u0275\u0275property("ngForOf", ctx.availableLanguages);
-      \u0275\u0275advance();
-      \u0275\u0275property("title", ctx.settingsLabel);
+      \u0275\u0275advance(6);
+      \u0275\u0275property("ngIf", \u0275\u0275pipeBind1(7, 2, ctx.language$));
       \u0275\u0275advance(4);
       \u0275\u0275property("ngIf", ctx.showSettings);
     }
@@ -49455,7 +49499,8 @@ var App = class _App {
     NgIf,
     RouterOutlet,
     CardDeckComponent,
-    SettingsModalComponent
+    SettingsModalComponent,
+    AsyncPipe
   ], styles: ['\n\n  * {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n  html, \n  body {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n}\n  body {\n  background:\n    linear-gradient(\n      135deg,\n      #0f0c29 0%,\n      #302b63 50%,\n      #24243e 100%);\n  background-attachment: fixed;\n  font-family: "Poppins", sans-serif;\n  color: #ffffff;\n  overflow: hidden;\n}\n  app-root {\n  display: flex;\n  width: 100%;\n  height: 100%;\n}\n  .app-container {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  height: 100vh;\n  background:\n    linear-gradient(\n      135deg,\n      #0f0c29 0%,\n      #302b63 50%,\n      #24243e 100%);\n}\n  .app-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 20px 30px;\n  background: rgba(0, 0, 0, 0.3);\n  border-bottom: 1px solid rgba(255, 255, 255, 0.1);\n  -webkit-backdrop-filter: blur(10px);\n  backdrop-filter: blur(10px);\n  position: relative;\n  z-index: 100;\n}\n@media (max-width: 768px) {\n    .app-header {\n    padding: 15px 20px;\n  }\n}\n@media (max-width: 480px) {\n    .app-header {\n    padding: 12px 15px;\n  }\n}\n  .header-logo {\n  flex: 1;\n}\n  .logo-text {\n  font-size: 28px;\n  font-family: "Orbitron", sans-serif;\n  font-weight: 700;\n  letter-spacing: 2px;\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n  margin: 0;\n  text-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);\n}\n@media (max-width: 768px) {\n    .logo-text {\n    font-size: 20px;\n    letter-spacing: 1px;\n  }\n}\n@media (max-width: 480px) {\n    .logo-text {\n    font-size: 16px;\n    letter-spacing: 0.5px;\n  }\n}\n  .settings-btn {\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  border: none;\n  border-radius: 50%;\n  width: 50px;\n  height: 50px;\n  font-size: 24px;\n  cursor: pointer;\n  transition: all 0.3s ease;\n  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n  .settings-btn:hover {\n  transform: scale(1.1) rotate(20deg);\n  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);\n}\n  .settings-btn:active {\n  transform: scale(0.95);\n}\n@media (max-width: 480px) {\n    .settings-btn {\n    width: 42px;\n    height: 42px;\n    font-size: 20px;\n  }\n}\n  .header-actions {\n  display: flex;\n  gap: 12px;\n  align-items: center;\n  margin-left: auto;\n}\n  .lang-btn {\n  background: transparent;\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  color: #fff;\n  padding: 8px 12px;\n  border-radius: 999px;\n  font-weight: 600;\n  cursor: pointer;\n  transition: transform 0.18s ease, box-shadow 0.18s ease;\n}\n  .lang-btn:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);\n}\n@media (max-width: 480px) {\n    .lang-btn {\n    padding: 6px 8px;\n    font-size: 12px;\n  }\n}\n  .lang-select select {\n  background: #ffffff;\n  color: #111827;\n  border: 1px solid rgba(0, 0, 0, 0.08);\n  padding: 8px 12px;\n  border-radius: 999px;\n  font-weight: 600;\n  cursor: pointer;\n  appearance: none;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);\n}\n  .lang-select {\n  display: inline-block;\n  overflow: hidden;\n  border-radius: 999px;\n}\n  .app-main {\n  flex: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 20px;\n  overflow: hidden;\n}\n@media (max-width: 768px) {\n    .app-main {\n    padding: 15px;\n  }\n}\n@media (max-width: 480px) {\n    .app-main {\n    padding: 10px;\n  }\n}\n  .app-main app-card-deck {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n/*# sourceMappingURL=app.css.map */', '\n\n[_nghost-%COMP%] {\n  --bright-blue: oklch(51.01% 0.274 263.83);\n  --electric-violet: oklch(53.18% 0.28 296.97);\n  --french-violet: oklch(47.66% 0.246 305.88);\n  --vivid-pink: oklch(69.02% 0.277 332.77);\n  --hot-red: oklch(61.42% 0.238 15.34);\n  --orange-red: oklch(63.32% 0.24 31.68);\n  --gray-900: oklch(19.37% 0.006 300.98);\n  --gray-700: oklch(36.98% 0.014 302.71);\n  --gray-400: oklch(70.9% 0.015 304.04);\n  --red-to-pink-to-purple-vertical-gradient:\n    linear-gradient(\n      \n      180deg,\n      var(--orange-red) 0%,\n      var(--vivid-pink) 50%,\n      var(--electric-violet) 100% );\n  --red-to-pink-to-purple-horizontal-gradient:\n    linear-gradient(\n      \n      90deg,\n      var(--orange-red) 0%,\n      var(--vivid-pink) 50%,\n      var(--electric-violet) 100% );\n  --pill-accent: var(--bright-blue);\n  font-family:\n    "Inter",\n    -apple-system,\n    BlinkMacSystemFont,\n    "Segoe UI",\n    Roboto,\n    Helvetica,\n    Arial,\n    sans-serif,\n    "Apple Color Emoji",\n    "Segoe UI Emoji",\n    "Segoe UI Symbol";\n  box-sizing: border-box;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\nh1[_ngcontent-%COMP%] {\n  font-size: 3.125rem;\n  color: var(--gray-900);\n  font-weight: 500;\n  line-height: 100%;\n  letter-spacing: -0.125rem;\n  margin: 0;\n  font-family:\n    "Inter Tight",\n    -apple-system,\n    BlinkMacSystemFont,\n    "Segoe UI",\n    Roboto,\n    Helvetica,\n    Arial,\n    sans-serif,\n    "Apple Color Emoji",\n    "Segoe UI Emoji",\n    "Segoe UI Symbol";\n}\np[_ngcontent-%COMP%] {\n  margin: 0;\n  color: var(--gray-700);\n}\nmain[_ngcontent-%COMP%] {\n  width: 100%;\n  min-height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 1rem;\n  box-sizing: inherit;\n  position: relative;\n}\n.angular-logo[_ngcontent-%COMP%] {\n  max-width: 9.2rem;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-around;\n  width: 100%;\n  max-width: 700px;\n  margin-bottom: 3rem;\n}\n.content[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  margin-top: 1.75rem;\n}\n.content[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  margin-top: 1.5rem;\n}\n.divider[_ngcontent-%COMP%] {\n  width: 1px;\n  background: var(--red-to-pink-to-purple-vertical-gradient);\n  margin-inline: 0.5rem;\n}\n.pill-group[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: start;\n  flex-wrap: wrap;\n  gap: 1.25rem;\n}\n.pill[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  --pill-accent: var(--bright-blue);\n  background: color-mix(in srgb, var(--pill-accent) 5%, transparent);\n  color: var(--pill-accent);\n  padding-inline: 0.75rem;\n  padding-block: 0.375rem;\n  border-radius: 2.75rem;\n  border: 0;\n  transition: background 0.3s ease;\n  font-family: var(--inter-font);\n  font-size: 0.875rem;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 1.4rem;\n  letter-spacing: -0.00875rem;\n  text-decoration: none;\n  white-space: nowrap;\n}\n.pill[_ngcontent-%COMP%]:hover {\n  background: color-mix(in srgb, var(--pill-accent) 15%, transparent);\n}\n.pill-group[_ngcontent-%COMP%]   .pill[_ngcontent-%COMP%]:nth-child(6n+1) {\n  --pill-accent: var(--bright-blue);\n}\n.pill-group[_ngcontent-%COMP%]   .pill[_ngcontent-%COMP%]:nth-child(6n+2) {\n  --pill-accent: var(--electric-violet);\n}\n.pill-group[_ngcontent-%COMP%]   .pill[_ngcontent-%COMP%]:nth-child(6n+3) {\n  --pill-accent: var(--french-violet);\n}\n.pill-group[_ngcontent-%COMP%]   .pill[_ngcontent-%COMP%]:nth-child(6n+4), \n.pill-group[_ngcontent-%COMP%]   .pill[_ngcontent-%COMP%]:nth-child(6n+5), \n.pill-group[_ngcontent-%COMP%]   .pill[_ngcontent-%COMP%]:nth-child(6n+6) {\n  --pill-accent: var(--hot-red);\n}\n.pill-group[_ngcontent-%COMP%]   svg[_ngcontent-%COMP%] {\n  margin-inline-start: 0.25rem;\n}\n.social-links[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 0.73rem;\n  margin-top: 1.5rem;\n}\n.social-links[_ngcontent-%COMP%]   path[_ngcontent-%COMP%] {\n  transition: fill 0.3s ease;\n  fill: var(--gray-400);\n}\n.social-links[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover   svg[_ngcontent-%COMP%]   path[_ngcontent-%COMP%] {\n  fill: var(--gray-900);\n}\n@media screen and (max-width: 650px) {\n  .content[_ngcontent-%COMP%] {\n    flex-direction: column;\n    width: max-content;\n  }\n  .divider[_ngcontent-%COMP%] {\n    height: 1px;\n    width: 100%;\n    background: var(--red-to-pink-to-purple-horizontal-gradient);\n    margin-block: 1.5rem;\n  }\n}\n/*# sourceMappingURL=app.css.map */'] });
 };
 (() => {
@@ -49648,17 +49693,19 @@ var App = class _App {
       <h1 class="logo-text">\u2728 Astro-Transition \u2728</h1>
     </div>
     <div class="header-actions">
-      <label class="lang-select">
-        <select [value]="currentLanguage" (change)="setLanguage($any($event.target).value)">
-          <option *ngFor="let code of availableLanguages" [value]="code">
-            {{ languageService.getDisplayName(code) }}
-          </option>
-        </select>
-      </label>
+      <ng-container *ngIf="language$ | async as lang">
+        <label class="lang-select">
+          <select [value]="lang" (change)="setLanguage($any($event.target).value)">
+            <option *ngFor="let code of availableLanguages" [value]="code">
+              {{ languageService.getDisplayName(code) }}
+            </option>
+          </select>
+        </label>
 
-      <button class="settings-btn" (click)="openSettings()" [title]="settingsLabel">
-        \u2699\uFE0F
-      </button>
+        <button class="settings-btn" (click)="openSettings()" [title]="translations[lang]?.settings?.title || 'Settings'">
+          \u2699\uFE0F
+        </button>
+      </ng-container>
     </div>
   </header>
 
