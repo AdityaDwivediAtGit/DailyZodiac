@@ -49473,7 +49473,7 @@ var App = class _App {
   static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _App, selectors: [["app-root"]], decls: 13, vars: 4, consts: [[1, "app-container"], [1, "app-header"], [1, "header-logo"], [1, "logo-text"], [1, "header-actions"], [4, "ngIf"], [1, "app-main"], [3, "close", 4, "ngIf"], [1, "lang-select"], [3, "change", "value"], [3, "value", 4, "ngFor", "ngForOf"], [1, "settings-btn", 3, "click", "title"], [3, "value"], [3, "close"]], template: function App_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 0)(1, "header", 1)(2, "div", 2)(3, "h1", 3);
-      \u0275\u0275text(4, "\u2728 Astro-Transition \u2728");
+      \u0275\u0275text(4, "\u2728 Daily Zodiac \u2728");
       \u0275\u0275elementEnd()();
       \u0275\u0275elementStart(5, "div", 4);
       \u0275\u0275template(6, App_ng_container_6_Template, 6, 3, "ng-container", 5);
@@ -49690,7 +49690,7 @@ var App = class _App {
   <!-- Header -->
   <header class="app-header">
     <div class="header-logo">
-      <h1 class="logo-text">\u2728 Astro-Transition \u2728</h1>
+      <h1 class="logo-text">\u2728 Daily Zodiac \u2728</h1>
     </div>
     <div class="header-actions">
       <ng-container *ngIf="language$ | async as lang">
