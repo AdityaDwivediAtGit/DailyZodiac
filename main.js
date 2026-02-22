@@ -44111,6 +44111,20 @@ var ContentService = class _ContentService {
     // constellation
   ];
   currentLang = "EN";
+  COLOR_PALETTE = [
+    { name: "Coral", hex: "#FF6B6B" },
+    { name: "Turquoise", hex: "#4ECDC4" },
+    { name: "Aqua", hex: "#45B7D1" },
+    { name: "Salmon", hex: "#FFA07A" },
+    { name: "Seafoam", hex: "#98D8C8" },
+    { name: "Gold", hex: "#F7DC6F" },
+    { name: "Lavender", hex: "#BB8FCE" },
+    { name: "Sky", hex: "#85C1E2" },
+    { name: "Peach", hex: "#F8B88B" },
+    { name: "Rose", hex: "#F5A9D0" },
+    { name: "Light Blue", hex: "#A9CCE3" },
+    { name: "Cream", hex: "#F9E79F" }
+  ];
   constructor(languageService) {
     this.languageService = languageService;
     this.currentLang = this.languageService.getCurrentLanguage();
@@ -44136,15 +44150,18 @@ var ContentService = class _ContentService {
         imageUrl: this.UNSPLASH_IMAGES[this.seededRandom(seed, this.UNSPLASH_IMAGES.length)]
       },
       // Card 2: Color
-      {
-        id: `${zodiac.name}-color-${today}`,
-        title: TRANSLATIONS2[this.currentLang]?.colorTitle || "Your Color Today",
-        content: `${this.getSeededColor(zodiac.index, today)}`,
-        icon: "\u{1F3A8}",
-        backgroundColor: this.getSeededColor(zodiac.index, today),
-        textColor: "#ffffff",
-        type: "color"
-      },
+      (() => {
+        const seeded = this.getSeededColor(zodiac.index, today);
+        return {
+          id: `${zodiac.name}-color-${today}`,
+          title: TRANSLATIONS2[this.currentLang]?.colorTitle || "Your Color Today",
+          content: seeded.name,
+          icon: "\u{1F3A8}",
+          backgroundColor: seeded.hex,
+          textColor: "#ffffff",
+          type: "color"
+        };
+      })(),
       // Card 3: Vibe
       {
         id: `${zodiac.name}-vibe-${today}`,
@@ -44228,21 +44245,7 @@ var ContentService = class _ContentService {
   }
   getSeededColor(signIndex, date) {
     const seed = this.hashCode(`color-${signIndex}-${date}`);
-    const colors = [
-      "#FF6B6B",
-      "#4ECDC4",
-      "#45B7D1",
-      "#FFA07A",
-      "#98D8C8",
-      "#F7DC6F",
-      "#BB8FCE",
-      "#85C1E2",
-      "#F8B88B",
-      "#F5A9D0",
-      "#A9CCE3",
-      "#F9E79F"
-    ];
-    return colors[this.seededRandom(seed, colors.length)];
+    return this.COLOR_PALETTE[this.seededRandom(seed, this.COLOR_PALETTE.length)];
   }
   getSeededVibe(signIndex, date) {
     const seed = this.hashCode(`vibe-${signIndex}-${date}`);
