@@ -1,0 +1,722 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>AstroTransition</title>
+  <base href="/DailyZodiac/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.css"><link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap" as="style"><link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&amp;display=swap" as="style"><style ng-app-id="ng">
+
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  html, 
+  body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+  body {
+  background:
+    linear-gradient(
+      135deg,
+      #0f0c29 0%,
+      #302b63 50%,
+      #24243e 100%);
+  background-attachment: fixed;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  overflow: hidden;
+}
+  app-root {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+  .app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background:
+    linear-gradient(
+      135deg,
+      #0f0c29 0%,
+      #302b63 50%,
+      #24243e 100%);
+}
+  .app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 100;
+}
+@media (max-width: 768px) {
+    .app-header {
+    padding: 15px 20px;
+  }
+}
+@media (max-width: 480px) {
+    .app-header {
+    padding: 12px 15px;
+  }
+}
+  .header-logo {
+  flex: 1;
+}
+  .logo-text {
+  font-size: 28px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background:
+    linear-gradient(
+      135deg,
+      #667eea 0%,
+      #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+}
+@media (max-width: 768px) {
+    .logo-text {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+}
+@media (max-width: 480px) {
+    .logo-text {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+}
+  .settings-btn {
+  background:
+    linear-gradient(
+      135deg,
+      #667eea 0%,
+      #764ba2 100%);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  .settings-btn:hover {
+  transform: scale(1.1) rotate(20deg);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+  .settings-btn:active {
+  transform: scale(0.95);
+}
+@media (max-width: 480px) {
+    .settings-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+}
+  .app-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+    .app-main {
+    padding: 15px;
+  }
+}
+@media (max-width: 480px) {
+    .app-main {
+    padding: 10px;
+  }
+}
+  .app-main app-card-deck {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*# sourceMappingURL=/DailyZodiac/app.css.map */</style><style ng-app-id="ng">
+
+[_nghost-ng-c874911564] {
+  --bright-blue: oklch(51.01% 0.274 263.83);
+  --electric-violet: oklch(53.18% 0.28 296.97);
+  --french-violet: oklch(47.66% 0.246 305.88);
+  --vivid-pink: oklch(69.02% 0.277 332.77);
+  --hot-red: oklch(61.42% 0.238 15.34);
+  --orange-red: oklch(63.32% 0.24 31.68);
+  --gray-900: oklch(19.37% 0.006 300.98);
+  --gray-700: oklch(36.98% 0.014 302.71);
+  --gray-400: oklch(70.9% 0.015 304.04);
+  --red-to-pink-to-purple-vertical-gradient:
+    linear-gradient(
+      
+      180deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100% );
+  --red-to-pink-to-purple-horizontal-gradient:
+    linear-gradient(
+      
+      90deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100% );
+  --pill-accent: var(--bright-blue);
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1[_ngcontent-ng-c874911564] {
+  font-size: 3.125rem;
+  color: var(--gray-900);
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.125rem;
+  margin: 0;
+  font-family:
+    "Inter Tight",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+p[_ngcontent-ng-c874911564] {
+  margin: 0;
+  color: var(--gray-700);
+}
+main[_ngcontent-ng-c874911564] {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: inherit;
+  position: relative;
+}
+.angular-logo[_ngcontent-ng-c874911564] {
+  max-width: 9.2rem;
+}
+.content[_ngcontent-ng-c874911564] {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 3rem;
+}
+.content[_ngcontent-ng-c874911564]   h1[_ngcontent-ng-c874911564] {
+  margin-top: 1.75rem;
+}
+.content[_ngcontent-ng-c874911564]   p[_ngcontent-ng-c874911564] {
+  margin-top: 1.5rem;
+}
+.divider[_ngcontent-ng-c874911564] {
+  width: 1px;
+  background: var(--red-to-pink-to-purple-vertical-gradient);
+  margin-inline: 0.5rem;
+}
+.pill-group[_ngcontent-ng-c874911564] {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+.pill[_ngcontent-ng-c874911564] {
+  display: flex;
+  align-items: center;
+  --pill-accent: var(--bright-blue);
+  background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
+  color: var(--pill-accent);
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 2.75rem;
+  border: 0;
+  transition: background 0.3s ease;
+  font-family: var(--inter-font);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.4rem;
+  letter-spacing: -0.00875rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.pill[_ngcontent-ng-c874911564]:hover {
+  background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
+}
+.pill-group[_ngcontent-ng-c874911564]   .pill[_ngcontent-ng-c874911564]:nth-child(6n+1) {
+  --pill-accent: var(--bright-blue);
+}
+.pill-group[_ngcontent-ng-c874911564]   .pill[_ngcontent-ng-c874911564]:nth-child(6n+2) {
+  --pill-accent: var(--electric-violet);
+}
+.pill-group[_ngcontent-ng-c874911564]   .pill[_ngcontent-ng-c874911564]:nth-child(6n+3) {
+  --pill-accent: var(--french-violet);
+}
+.pill-group[_ngcontent-ng-c874911564]   .pill[_ngcontent-ng-c874911564]:nth-child(6n+4), 
+.pill-group[_ngcontent-ng-c874911564]   .pill[_ngcontent-ng-c874911564]:nth-child(6n+5), 
+.pill-group[_ngcontent-ng-c874911564]   .pill[_ngcontent-ng-c874911564]:nth-child(6n+6) {
+  --pill-accent: var(--hot-red);
+}
+.pill-group[_ngcontent-ng-c874911564]   svg[_ngcontent-ng-c874911564] {
+  margin-inline-start: 0.25rem;
+}
+.social-links[_ngcontent-ng-c874911564] {
+  display: flex;
+  align-items: center;
+  gap: 0.73rem;
+  margin-top: 1.5rem;
+}
+.social-links[_ngcontent-ng-c874911564]   path[_ngcontent-ng-c874911564] {
+  transition: fill 0.3s ease;
+  fill: var(--gray-400);
+}
+.social-links[_ngcontent-ng-c874911564]   a[_ngcontent-ng-c874911564]:hover   svg[_ngcontent-ng-c874911564]   path[_ngcontent-ng-c874911564] {
+  fill: var(--gray-900);
+}
+@media screen and (max-width: 650px) {
+  .content[_ngcontent-ng-c874911564] {
+    flex-direction: column;
+    width: max-content;
+  }
+  .divider[_ngcontent-ng-c874911564] {
+    height: 1px;
+    width: 100%;
+    background: var(--red-to-pink-to-purple-horizontal-gradient);
+    margin-block: 1.5rem;
+  }
+}
+/*# sourceMappingURL=/DailyZodiac/app.css.map */</style><style ng-app-id="ng">
+
+  .deck-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+  outline: none;
+}
+@media (max-width: 768px) {
+    .deck-container {
+    padding: 15px;
+    gap: 15px;
+  }
+}
+@media (max-width: 480px) {
+    .deck-container {
+    padding: 10px;
+    gap: 10px;
+  }
+}
+  .card-wrapper {
+  width: 100%;
+  height: 60vh;
+  max-width: 600px;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+    .card-wrapper {
+    height: 55vh;
+    min-height: 350px;
+  }
+}
+@media (max-width: 480px) {
+    .card-wrapper {
+    height: 50vh;
+    min-height: 300px;
+  }
+}
+  .card-wrapper app-card {
+  width: 100%;
+  height: 100%;
+}
+  .controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+    .controls {
+    gap: 15px;
+  }
+}
+@media (max-width: 480px) {
+    .controls {
+    gap: 10px;
+  }
+}
+  .nav-btn {
+  background:
+    linear-gradient(
+      135deg,
+      #667eea 0%,
+      #764ba2 100%);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+  .nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+  .nav-btn:active {
+  transform: translateY(0);
+}
+@media (max-width: 768px) {
+    .nav-btn {
+    padding: 10px 18px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+    .nav-btn {
+    padding: 8px 14px;
+    font-size: 11px;
+    flex: 1;
+    min-width: 70px;
+  }
+}
+  .prev-btn {
+  order: 1;
+}
+@media (max-width: 480px) {
+    .prev-btn {
+    order: 1;
+  }
+}
+  .next-btn {
+  order: 3;
+}
+@media (max-width: 480px) {
+    .next-btn {
+    order: 3;
+  }
+}
+  .progress-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 1;
+  order: 2;
+  min-width: 150px;
+}
+@media (max-width: 480px) {
+    .progress-dots {
+    gap: 6px;
+    order: 2;
+    min-width: auto;
+    flex: 0 1 auto;
+  }
+}
+  .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+  .dot:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+  .dot.active {
+  background:
+    linear-gradient(
+      135deg,
+      #667eea 0%,
+      #764ba2 100%);
+  border-color: #667eea;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.6);
+}
+@media (max-width: 480px) {
+    .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+  .swipe-hint {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  text-align: center;
+  margin: 0;
+  font-style: italic;
+  animation: _ngcontent-ng-c2063496966_fadeInOut 3s ease-in-out infinite;
+}
+@media (min-width: 769px) {
+    .swipe-hint {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+    .swipe-hint {
+    font-size: 11px;
+  }
+}
+@keyframes _ngcontent-ng-c2063496966_fadeInOut {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+/*# sourceMappingURL=/DailyZodiac/card-deck.component.css.map */</style><style ng-app-id="ng">
+
+  .card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  animation: _ngcontent-ng-c3171206121_slideIn 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+    .card-container {
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+@media (max-width: 480px) {
+    .card-container {
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+  .card-content {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+    .card-content {
+    padding: 30px;
+  }
+}
+@media (max-width: 480px) {
+    .card-content {
+    padding: 20px;
+  }
+}
+  .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+  .progress-indicator {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+}
+  .card-icon {
+  font-size: 32px;
+  animation: _ngcontent-ng-c3171206121_float 3s ease-in-out infinite;
+}
+@media (max-width: 768px) {
+    .card-icon {
+    font-size: 28px;
+  }
+}
+  .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+  .card-title {
+  font-size: 32px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+    .card-title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 480px) {
+    .card-title {
+    font-size: 20px;
+    margin: 0 0 15px 0;
+  }
+}
+  .card-text {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 90%;
+}
+@media (max-width: 768px) {
+    .card-text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+    .card-text {
+    font-size: 14px;
+  }
+}
+  .ad-placeholder {
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px dashed rgba(255, 255, 255, 0.5);
+  padding: 40px 20px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  text-align: center;
+}
+  .ad-placeholder p {
+  margin: 10px 0;
+}
+  .ad-placeholder .ad-note {
+  font-size: 12px;
+  font-family: "Courier New", monospace;
+  opacity: 0.7;
+}
+  .donation-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+  .donation-content p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+@media (max-width: 480px) {
+    .donation-content p {
+    font-size: 16px;
+  }
+}
+  .donation-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+  .donation-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.05);
+}
+  .donation-btn:active {
+  transform: scale(0.98);
+}
+@media (max-width: 480px) {
+    .donation-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+@keyframes _ngcontent-ng-c3171206121_slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes _ngcontent-ng-c3171206121_float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+/*# sourceMappingURL=/DailyZodiac/card.component.css.map */</style></head>
+<body><!--nghm--><script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
+</script><script>window.__jsaction_bootstrap(document.body,"ng",["click","keydown","touchstart","touchend"],[]);</script>
+  <app-root ng-version="21.1.5" _nghost-ng-c874911564="" ngh="2" ng-server-context="ssg"><div _ngcontent-ng-c874911564="" class="app-container"><header _ngcontent-ng-c874911564="" class="app-header"><div _ngcontent-ng-c874911564="" class="header-logo"><h1 _ngcontent-ng-c874911564="" class="logo-text">✨ Astro-Transition ✨</h1></div><button _ngcontent-ng-c874911564="" title="Settings" class="settings-btn" jsaction="click:;"> ⚙️ </button></header><main _ngcontent-ng-c874911564="" class="app-main"><app-card-deck _ngcontent-ng-c874911564="" _nghost-ng-c2063496966="" class="ng-tns-c2063496966-0" ngh="1"><div _ngcontent-ng-c2063496966="" class="deck-container ng-tns-c2063496966-0" tabindex="0" jsaction="keydown:;touchstart:;touchend:;"><div _ngcontent-ng-c2063496966="" class="card-wrapper ng-tns-c2063496966-0 ng-star-inserted"><app-card _ngcontent-ng-c2063496966="" class="ng-tns-c2063496966-0" _nghost-ng-c3171206121="" ngh="0"><div _ngcontent-ng-c3171206121="" class="card-container" style="background-color: #A9CCE3; background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1462332420958-a05d1e7413413?auto=format&amp;fit=crop&amp;w=400&amp;q=80'); background-size: cover; background-position: center;"><div _ngcontent-ng-c3171206121="" class="card-content"><div _ngcontent-ng-c3171206121="" class="card-header"><span _ngcontent-ng-c3171206121="" class="progress-indicator">1/8</span><span _ngcontent-ng-c3171206121="" class="card-icon ng-star-inserted">✨</span><!--container--></div><div _ngcontent-ng-c3171206121="" class="card-body"><h2 _ngcontent-ng-c3171206121="" class="card-title" style="color: #ffffff;"> Welcome, ♈ </h2><p _ngcontent-ng-c3171206121="" class="card-text ng-star-inserted" style="color: #ffffff;"> Hello Libra! Today brings new cosmic energy your way. Embrace the opportunities that unfold. </p><!--container--><!--container--><!--container--></div></div></div></app-card><!--ng-container--></div><!--container--><div _ngcontent-ng-c2063496966="" class="controls ng-tns-c2063496966-0"><button _ngcontent-ng-c2063496966="" title="Previous card (← or swipe right)" class="nav-btn prev-btn ng-tns-c2063496966-0" jsaction="click:;"> ← PREV </button><div _ngcontent-ng-c2063496966="" class="progress-dots ng-tns-c2063496966-0"><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 active ng-star-inserted" aria-label="Go to card 1" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 2" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 3" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 4" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 5" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 6" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 7" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 8" jsaction="click:;"></button><!--container--></div><button _ngcontent-ng-c2063496966="" title="Next card (→ or swipe left)" class="nav-btn next-btn ng-tns-c2063496966-0" jsaction="click:;"> NEXT → </button></div><p _ngcontent-ng-c2063496966="" class="swipe-hint ng-tns-c2063496966-0">← Swipe or click buttons →</p></div></app-card-deck></main><!--container--><router-outlet _ngcontent-ng-c874911564=""></router-outlet><!--container--></div><router-outlet _ngcontent-ng-c874911564=""></router-outlet><!--container--></app-root>
+<script src="main.js" type="module"></script>
+
+<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"5":"t1","9":"t2","10":"t3","11":"t4"},"c":{"5":[{"i":"t1","r":1}],"9":[{"i":"t2","r":1}],"10":[],"11":[]}},{"t":{"1":"t0","6":"t5"},"c":{"1":[{"i":"t0","r":1,"e":{"1":1}}],"6":[{"i":"t5","r":1,"x":8}]}},{"t":{"9":"t6"},"c":{"9":[],"10":[],"11":[]}}]}</script></body></html>
