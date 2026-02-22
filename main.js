@@ -44190,7 +44190,7 @@ var ContentService = class _ContentService {
         backgroundColor: "#BB8FCE",
         textColor: "#ffffff",
         type: "donation",
-        actionUrl: "https://www.buymeacoffee.com/yourusername",
+        actionUrl: "https://buymeacoffee.com/artisticadi",
         actionLabel: TRANSLATIONS2[this.currentLang]?.actionLabel || "Buy Me a Coffee"
       }
     ];
