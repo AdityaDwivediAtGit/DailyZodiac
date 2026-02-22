@@ -49391,6 +49391,48 @@ var SettingsModalComponent = class _SettingsModalComponent {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(SettingsModalComponent, { className: "SettingsModalComponent", filePath: "src/app/components/settings-modal/settings-modal.component.ts", lineNumber: 16 });
 })();
 
+// src/app/services/seo.service.ts
+var SeoService = class _SeoService {
+  title;
+  meta;
+  constructor(title, meta) {
+    this.title = title;
+    this.meta = meta;
+  }
+  setTitle(titleText) {
+    this.title.setTitle(titleText);
+  }
+  updateMeta(tags) {
+    for (const t of tags) {
+      if (t.name)
+        this.meta.updateTag({ name: t.name, content: t.content });
+      else if (t.property)
+        this.meta.updateTag({ property: t.property, content: t.content });
+    }
+  }
+  injectJSONLD(json) {
+    const scriptId = "ld-json-script";
+    let el = document.getElementById(scriptId);
+    if (!el) {
+      el = document.createElement("script");
+      el.type = "application/ld+json";
+      el.id = scriptId;
+      document.head.appendChild(el);
+    }
+    el.text = JSON.stringify(json);
+  }
+  static \u0275fac = function SeoService_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _SeoService)(\u0275\u0275inject(Title), \u0275\u0275inject(Meta));
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _SeoService, factory: _SeoService.\u0275fac, providedIn: "root" });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(SeoService, [{
+    type: Injectable,
+    args: [{ providedIn: "root" }]
+  }], () => [{ type: Title }, { type: Meta }], null);
+})();
+
 // src/app/app.ts
 function App_ng_container_6_option_3_Template(rf, ctx) {
   if (rf & 1) {
@@ -49452,6 +49494,7 @@ function App_app_settings_modal_10_Template(rf, ctx) {
   }
 }
 var App = class _App {
+  seo;
   languageService;
   title = signal("astro-transition", ...ngDevMode ? [{ debugName: "title" }] : []);
   showSettings = false;
@@ -49460,7 +49503,8 @@ var App = class _App {
   settingsLabel = "Settings";
   language$;
   translations = TRANSLATIONS2;
-  constructor(languageService) {
+  constructor(seo, languageService) {
+    this.seo = seo;
     this.languageService = languageService;
     this.languageService.language$.subscribe((l) => this.currentLanguage = l);
   }
@@ -49471,6 +49515,13 @@ var App = class _App {
     this.languageService.language$.subscribe((l) => {
       this.settingsLabel = TRANSLATIONS2[l]?.settings?.title || "Settings";
     });
+    this.seo.setTitle("DailyZodiac \u2014 Daily Horoscope & Personalized Astrology");
+    this.seo.updateMeta([
+      { name: "description", content: "DailyZodiac: personalized daily horoscopes, birth-chart tool, and zodiac compatibility \u2014 updated daily and optimized for mobile." },
+      { property: "og:title", content: "DailyZodiac \u2014 Daily Horoscope & Personalized Astrology" },
+      { property: "og:description", content: "Get your free personalized daily horoscope, birth-chart readings, and zodiac compatibility tools at DailyZodiac." },
+      { property: "og:url", content: "https://adityadwivediatgit.github.io/DailyZodiac/" }
+    ]);
   }
   openSettings() {
     this.showSettings = true;
@@ -49485,7 +49536,7 @@ var App = class _App {
     this.languageService.setLanguage(code);
   }
   static \u0275fac = function App_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _App)(\u0275\u0275directiveInject(LanguageService));
+    return new (__ngFactoryType__ || _App)(\u0275\u0275directiveInject(SeoService), \u0275\u0275directiveInject(LanguageService));
   };
   static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _App, selectors: [["app-root"]], decls: 13, vars: 4, consts: [[1, "app-container"], [1, "app-header"], [1, "header-logo"], [1, "logo-text"], [1, "header-actions"], [4, "ngIf"], [1, "app-main"], [3, "close", 4, "ngIf"], [1, "lang-select"], [3, "change", "value"], [3, "value", 4, "ngFor", "ngForOf"], [1, "settings-btn", 3, "click", "title"], [3, "value"], [3, "close"]], template: function App_Template(rf, ctx) {
     if (rf & 1) {
@@ -49897,10 +49948,10 @@ var App = class _App {
 
 <router-outlet />
 `, styles: ['/* src/app/app.scss */\n::ng-deep * {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n::ng-deep html,\n::ng-deep body {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n}\n::ng-deep body {\n  background:\n    linear-gradient(\n      135deg,\n      #0f0c29 0%,\n      #302b63 50%,\n      #24243e 100%);\n  background-attachment: fixed;\n  font-family: "Poppins", sans-serif;\n  color: #ffffff;\n  overflow: hidden;\n}\n::ng-deep app-root {\n  display: flex;\n  width: 100%;\n  height: 100%;\n}\n::ng-deep .app-container {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  height: 100vh;\n  background:\n    linear-gradient(\n      135deg,\n      #0f0c29 0%,\n      #302b63 50%,\n      #24243e 100%);\n}\n::ng-deep .app-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 20px 30px;\n  background: rgba(0, 0, 0, 0.3);\n  border-bottom: 1px solid rgba(255, 255, 255, 0.1);\n  -webkit-backdrop-filter: blur(10px);\n  backdrop-filter: blur(10px);\n  position: relative;\n  z-index: 100;\n}\n@media (max-width: 768px) {\n  ::ng-deep .app-header {\n    padding: 15px 20px;\n  }\n}\n@media (max-width: 480px) {\n  ::ng-deep .app-header {\n    padding: 12px 15px;\n  }\n}\n::ng-deep .header-logo {\n  flex: 1;\n}\n::ng-deep .logo-text {\n  font-size: clamp(16px, 6vw, 28px);\n  font-family: "Orbitron", sans-serif;\n  font-weight: 700;\n  letter-spacing: clamp(0.5px, 0.8vw, 2px);\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n  margin: 0;\n  text-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);\n}\n::ng-deep .settings-btn {\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  border: none;\n  border-radius: 50%;\n  width: 50px;\n  height: 50px;\n  font-size: 24px;\n  cursor: pointer;\n  transition: all 0.3s ease;\n  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n::ng-deep .settings-btn:hover {\n  transform: scale(1.1) rotate(20deg);\n  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);\n}\n::ng-deep .settings-btn:active {\n  transform: scale(0.95);\n}\n@media (max-width: 480px) {\n  ::ng-deep .settings-btn {\n    width: 42px;\n    height: 42px;\n    font-size: 20px;\n  }\n}\n::ng-deep .header-actions {\n  display: flex;\n  gap: 12px;\n  align-items: center;\n  margin-left: auto;\n}\n::ng-deep .lang-btn {\n  background: transparent;\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  color: #fff;\n  padding: 8px 12px;\n  border-radius: 999px;\n  font-weight: 600;\n  cursor: pointer;\n  transition: transform 0.18s ease, box-shadow 0.18s ease;\n}\n::ng-deep .lang-btn:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);\n}\n@media (max-width: 480px) {\n  ::ng-deep .lang-btn {\n    padding: 6px 8px;\n    font-size: 12px;\n  }\n}\n::ng-deep .lang-select select {\n  background: #ffffff;\n  color: #111827;\n  border: 1px solid rgba(0, 0, 0, 0.08);\n  padding: 8px 12px;\n  border-radius: 999px;\n  font-weight: 600;\n  cursor: pointer;\n  appearance: none;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);\n}\n::ng-deep .lang-select {\n  display: inline-block;\n  overflow: hidden;\n  border-radius: 999px;\n}\n::ng-deep .app-main {\n  flex: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 20px;\n  overflow: hidden;\n}\n@media (max-width: 768px) {\n  ::ng-deep .app-main {\n    padding: 15px;\n  }\n}\n@media (max-width: 480px) {\n  ::ng-deep .app-main {\n    padding: 10px;\n  }\n}\n::ng-deep .app-main app-card-deck {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n/*# sourceMappingURL=app.css.map */\n', '/* angular:styles/component:css;d8fe8198e65b0c18131230681389a0914ddda9b27b7aad5d0d266afa6da26f01;/home/runner/work/DailySign_Angular/DailySign_Angular/astro-transition/src/app/app.html */\n:host {\n  --bright-blue: oklch(51.01% 0.274 263.83);\n  --electric-violet: oklch(53.18% 0.28 296.97);\n  --french-violet: oklch(47.66% 0.246 305.88);\n  --vivid-pink: oklch(69.02% 0.277 332.77);\n  --hot-red: oklch(61.42% 0.238 15.34);\n  --orange-red: oklch(63.32% 0.24 31.68);\n  --gray-900: oklch(19.37% 0.006 300.98);\n  --gray-700: oklch(36.98% 0.014 302.71);\n  --gray-400: oklch(70.9% 0.015 304.04);\n  --red-to-pink-to-purple-vertical-gradient:\n    linear-gradient(\n      \n      180deg,\n      var(--orange-red) 0%,\n      var(--vivid-pink) 50%,\n      var(--electric-violet) 100% );\n  --red-to-pink-to-purple-horizontal-gradient:\n    linear-gradient(\n      \n      90deg,\n      var(--orange-red) 0%,\n      var(--vivid-pink) 50%,\n      var(--electric-violet) 100% );\n  --pill-accent: var(--bright-blue);\n  font-family:\n    "Inter",\n    -apple-system,\n    BlinkMacSystemFont,\n    "Segoe UI",\n    Roboto,\n    Helvetica,\n    Arial,\n    sans-serif,\n    "Apple Color Emoji",\n    "Segoe UI Emoji",\n    "Segoe UI Symbol";\n  box-sizing: border-box;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\nh1 {\n  font-size: 3.125rem;\n  color: var(--gray-900);\n  font-weight: 500;\n  line-height: 100%;\n  letter-spacing: -0.125rem;\n  margin: 0;\n  font-family:\n    "Inter Tight",\n    -apple-system,\n    BlinkMacSystemFont,\n    "Segoe UI",\n    Roboto,\n    Helvetica,\n    Arial,\n    sans-serif,\n    "Apple Color Emoji",\n    "Segoe UI Emoji",\n    "Segoe UI Symbol";\n}\np {\n  margin: 0;\n  color: var(--gray-700);\n}\nmain {\n  width: 100%;\n  min-height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 1rem;\n  box-sizing: inherit;\n  position: relative;\n}\n.angular-logo {\n  max-width: 9.2rem;\n}\n.content {\n  display: flex;\n  justify-content: space-around;\n  width: 100%;\n  max-width: 700px;\n  margin-bottom: 3rem;\n}\n.content h1 {\n  margin-top: 1.75rem;\n}\n.content p {\n  margin-top: 1.5rem;\n}\n.divider {\n  width: 1px;\n  background: var(--red-to-pink-to-purple-vertical-gradient);\n  margin-inline: 0.5rem;\n}\n.pill-group {\n  display: flex;\n  flex-direction: column;\n  align-items: start;\n  flex-wrap: wrap;\n  gap: 1.25rem;\n}\n.pill {\n  display: flex;\n  align-items: center;\n  --pill-accent: var(--bright-blue);\n  background: color-mix(in srgb, var(--pill-accent) 5%, transparent);\n  color: var(--pill-accent);\n  padding-inline: 0.75rem;\n  padding-block: 0.375rem;\n  border-radius: 2.75rem;\n  border: 0;\n  transition: background 0.3s ease;\n  font-family: var(--inter-font);\n  font-size: 0.875rem;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 1.4rem;\n  letter-spacing: -0.00875rem;\n  text-decoration: none;\n  white-space: nowrap;\n}\n.pill:hover {\n  background: color-mix(in srgb, var(--pill-accent) 15%, transparent);\n}\n.pill-group .pill:nth-child(6n+1) {\n  --pill-accent: var(--bright-blue);\n}\n.pill-group .pill:nth-child(6n+2) {\n  --pill-accent: var(--electric-violet);\n}\n.pill-group .pill:nth-child(6n+3) {\n  --pill-accent: var(--french-violet);\n}\n.pill-group .pill:nth-child(6n+4),\n.pill-group .pill:nth-child(6n+5),\n.pill-group .pill:nth-child(6n+6) {\n  --pill-accent: var(--hot-red);\n}\n.pill-group svg {\n  margin-inline-start: 0.25rem;\n}\n.social-links {\n  display: flex;\n  align-items: center;\n  gap: 0.73rem;\n  margin-top: 1.5rem;\n}\n.social-links path {\n  transition: fill 0.3s ease;\n  fill: var(--gray-400);\n}\n.social-links a:hover svg path {\n  fill: var(--gray-900);\n}\n@media screen and (max-width: 650px) {\n  .content {\n    flex-direction: column;\n    width: max-content;\n  }\n  .divider {\n    height: 1px;\n    width: 100%;\n    background: var(--red-to-pink-to-purple-horizontal-gradient);\n    margin-block: 1.5rem;\n  }\n}\n/*# sourceMappingURL=app.css.map */\n'] }]
-  }], () => [{ type: LanguageService }], null);
+  }], () => [{ type: SeoService }, { type: LanguageService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(App, { className: "App", filePath: "src/app/app.ts", lineNumber: 20 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(App, { className: "App", filePath: "src/app/app.ts", lineNumber: 21 });
 })();
 
 // src/main.ts
