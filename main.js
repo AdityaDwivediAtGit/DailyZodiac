@@ -43899,8 +43899,189 @@ var ZodiacService = class _ZodiacService {
   }], () => [{ type: HttpClient }], null);
 })();
 
+// src/app/i18n/translations.ts
+var TRANSLATIONS2 = {
+  EN: {
+    greeting: "Hello {name}! Today brings new cosmic energy your way. Embrace the opportunities that unfold.",
+    colorTitle: "Your Color Today",
+    vibeTitle: "Your Vibe",
+    cautionTitle: "Watch Out For",
+    adTitle: "Advertisement",
+    adPlaceholder: "Your ad will appear here",
+    luckyTitle: "Lucky Number",
+    affirmationTitle: "\u{1F31F} Daily Affirmation",
+    donationTitle: "\u2615 Support Astro-Transition",
+    donationContent: "Love this cosmic experience? Consider supporting the creator with a coffee!",
+    actionLabel: "Buy Me a Coffee",
+    VIBES: [
+      "Energetic",
+      "Calm",
+      "Mysterious",
+      "Joyful",
+      "Introspective",
+      "Creative",
+      "Passionate",
+      "Peaceful",
+      "Bold",
+      "Thoughtful",
+      "Playful",
+      "Wise"
+    ],
+    CAUTIONS: [
+      "Rushing into decisions",
+      "Over-thinking details",
+      "Ignoring your intuition",
+      "Being too critical",
+      "Seeking validation",
+      "Avoiding confrontation",
+      "Taking on too much",
+      "Neglecting self-care",
+      "Dwelling on the past",
+      "Making hasty judgments",
+      "Isolating yourself",
+      "Perfectionism"
+    ],
+    AFFIRMATIONS: [
+      "I am capable of great things",
+      "Today brings new possibilities",
+      "I trust my journey",
+      "My energy is limitless",
+      "I attract positive vibes",
+      "I am worthy of success",
+      "My potential is infinite",
+      "I embrace my true self",
+      "I am a magnet for good fortune",
+      "My dreams are valid",
+      "I choose growth and progress",
+      "The universe supports me"
+    ],
+    settings: {
+      title: "\u2699\uFE0F Settings",
+      zodiacTypeLabel: "Zodiac Type:",
+      zodiacTypeOptions: { western: "Western Zodiac", indian: "Indian/Vedic Zodiac", chinese: "Chinese Zodiac" },
+      zodiacSignLabel: "Your Sign:",
+      infoText: "\u{1F31F} Your cosmic profile will update immediately!",
+      cancel: "Cancel",
+      save: "Save Changes"
+    }
+  },
+  ES: {
+    greeting: "\xA1Hola {name}! Hoy trae nueva energ\xEDa c\xF3smica. Abraza las oportunidades que se presenten.",
+    colorTitle: "Tu Color Hoy",
+    vibeTitle: "Tu Vibra",
+    cautionTitle: "Cuidado Con",
+    adTitle: "Publicidad",
+    adPlaceholder: "Tu anuncio aparecer\xE1 aqu\xED",
+    luckyTitle: "N\xFAmero de la Suerte",
+    affirmationTitle: "\u{1F31F} Afirmaci\xF3n Diaria",
+    donationTitle: "\u2615 Apoya Astro-Transition",
+    donationContent: "\xBFTe gusta esta experiencia c\xF3smica? Considera apoyar al creador con un caf\xE9.",
+    actionLabel: "Invitar a un caf\xE9",
+    VIBES: ["En\xE9rgico", "Calmo", "Misterioso", "Alegre", "Introspectivo", "Creativo", "Apasionado", "Pac\xEDfico", "Audaz", "Reflexivo", "Juguet\xF3n", "Sabio"],
+    CAUTIONS: ["Tomar decisiones apresuradas", "Pensar en exceso los detalles", "Ignorar tu intuici\xF3n", "Ser demasiado cr\xEDtico", "Buscar validaci\xF3n", "Evitar confrontaciones", "Asumir demasiado", "Descuidar el autocuidado", "Vivir en el pasado", "Juzgar apresuradamente", "Aislarte", "Perfeccionismo"],
+    AFFIRMATIONS: ["Soy capaz de grandes cosas", "Hoy trae nuevas posibilidades", "Conf\xEDo en mi camino", "Mi energ\xEDa es ilimitada", "Atraigo vibras positivas", "Merezco el \xE9xito", "Mi potencial es infinito", "Abrazo mi verdadero yo", "Soy un im\xE1n para la buena fortuna", "Mis sue\xF1os son v\xE1lidos", "Elijo el crecimiento y el progreso", "El universo me apoya"],
+    settings: { title: "\u2699\uFE0F Configuraci\xF3n", zodiacTypeLabel: "Tipo de Zod\xEDaco:", zodiacTypeOptions: { western: "Zod\xEDaco Occidental", indian: "Zod\xEDaco Indio/V\xE9dico", chinese: "Zod\xEDaco Chino" }, zodiacSignLabel: "Tu Signo:", infoText: "\u{1F31F} \xA1Tu perfil c\xF3smico se actualizar\xE1 inmediatamente!", cancel: "Cancelar", save: "Guardar Cambios" }
+  },
+  HI: {
+    greeting: "\u0928\u092E\u0938\u094D\u0924\u0947 {name}! \u0906\u091C \u0928\u0908 \u0916\u0917\u094B\u0932\u0940\u092F \u090A\u0930\u094D\u091C\u093E \u0932\u0947\u0915\u0930 \u0906\u0924\u093E \u0939\u0948\u0964 \u091C\u094B \u092E\u094C\u0915\u0947 \u0906\u090F\u0902 \u0909\u0928\u094D\u0939\u0947\u0902 \u0905\u092A\u0928\u093E\u0907\u090F\u0964",
+    colorTitle: "\u0906\u091C \u0906\u092A\u0915\u093E \u0930\u0902\u0917",
+    vibeTitle: "\u0906\u092A\u0915\u093E \u0935\u093E\u0907\u092C",
+    cautionTitle: "\u0938\u093E\u0935\u0927\u093E\u0928 \u0930\u0939\u0947\u0902",
+    adTitle: "\u0935\u093F\u091C\u094D\u091E\u093E\u092A\u0928",
+    adPlaceholder: "\u0906\u092A\u0915\u093E \u0935\u093F\u091C\u094D\u091E\u093E\u092A\u0928 \u092F\u0939\u093E\u0901 \u0926\u093F\u0916\u093E\u0908 \u0926\u0947\u0917\u093E",
+    luckyTitle: "\u0932\u0915\u0940 \u0928\u0902\u092C\u0930",
+    affirmationTitle: "\u{1F31F} \u0926\u0948\u0928\u093F\u0915 \u092A\u0941\u0937\u094D\u091F\u093F",
+    donationTitle: "\u2615 Astro-Transition \u0915\u093E \u0938\u092E\u0930\u094D\u0925\u0928 \u0915\u0930\u0947\u0902",
+    donationContent: "\u0915\u094D\u092F\u093E \u0906\u092A\u0915\u094B \u092F\u0939 \u0915\u0949\u0938\u094D\u092E\u093F\u0915 \u0905\u0928\u0941\u092D\u0935 \u092A\u0938\u0902\u0926 \u0939\u0948? \u0915\u0943\u092A\u092F\u093E \u0928\u093F\u0930\u094D\u092E\u093E\u0924\u093E \u0915\u093E \u0938\u092E\u0930\u094D\u0925\u0928 \u0915\u0930\u0947\u0902\u0964",
+    actionLabel: "\u0915\u0949\u092B\u0940 \u0916\u0930\u0940\u0926\u0947\u0902",
+    VIBES: ["\u090A\u0930\u094D\u091C\u093E\u0935\u093E\u0928", "\u0936\u093E\u0902\u0924", "\u0930\u0939\u0938\u094D\u092F\u092E\u092F\u0940", "\u0916\u0941\u0936", "\u0906\u0924\u094D\u092E\u0928\u093F\u0930\u0940\u0915\u094D\u0937\u0923", "\u0930\u091A\u0928\u093E\u0924\u094D\u092E\u0915", "\u091C\u0941\u0928\u0942\u0928\u0940", "\u0936\u093E\u0902\u0924\u093F\u092A\u0942\u0930\u094D\u0923", "\u0928\u093F\u0921\u0930", "\u0935\u093F\u091A\u093E\u0930\u0936\u0940\u0932", "\u0916\u093F\u0932\u0916\u093F\u0932\u093E\u0924\u093E", "\u092C\u0941\u0926\u094D\u0927\u093F\u092E\u093E\u0928"],
+    CAUTIONS: ["\u0928\u093F\u0930\u094D\u0923\u092F\u094B\u0902 \u092E\u0947\u0902 \u091C\u0932\u094D\u0926\u092C\u093E\u091C\u0940", "\u0935\u093F\u0935\u0930\u0923\u094B\u0902 \u092A\u0930 \u0905\u0927\u093F\u0915 \u0938\u094B\u091A\u0928\u093E", "\u0905\u092A\u0928\u0940 \u0938\u0939\u091C \u091C\u094D\u091E\u093E\u0928 \u0915\u094B \u0928\u091C\u0930\u0905\u0902\u0926\u093E\u091C \u0915\u0930\u0928\u093E", "\u0905\u0924\u094D\u092F\u0927\u093F\u0915 \u0906\u0932\u094B\u091A\u0928\u093E\u0924\u094D\u092E\u0915 \u0939\u094B\u0928\u093E", "\u092A\u094D\u0930\u092E\u093E\u0923 \u0915\u0947 \u0932\u093F\u090F \u0916\u094B\u091C", "\u092E\u0941\u0915\u093E\u092C\u0932\u093E \u091F\u093E\u0932\u0928\u093E", "\u092C\u0939\u0941\u0924 \u0915\u0941\u091B \u0932\u0947\u0928\u093E", "\u0938\u094D\u0935-\u0926\u0947\u0916\u092D\u093E\u0932 \u0915\u0940 \u0909\u092A\u0947\u0915\u094D\u0937\u093E", "\u0905\u0924\u0940\u0924 \u092E\u0947\u0902 \u092B\u0901\u0938\u0928\u093E", "\u091C\u0932\u094D\u0926\u0940 \u0928\u093F\u0930\u094D\u0923\u092F \u0932\u0947\u0928\u093E", "\u0916\u0941\u0926 \u0915\u094B \u0905\u0932\u0917 \u0915\u0930\u0928\u093E", "\u092A\u0930\u092B\u0947\u0915\u094D\u0936\u0928\u093F\u091C\u094D\u092E"],
+    AFFIRMATIONS: ["\u092E\u0948\u0902 \u092C\u0921\u093C\u0947 \u0915\u093E\u0930\u094D\u092F \u0915\u0930\u0928\u0947 \u092E\u0947\u0902 \u0938\u0915\u094D\u0937\u092E \u0939\u0942\u0901", "\u0906\u091C \u0928\u090F \u0905\u0935\u0938\u0930 \u0932\u093E\u0924\u093E \u0939\u0948", "\u092E\u0948\u0902 \u0905\u092A\u0928\u0947 \u0938\u092B\u0930 \u092A\u0930 \u092D\u0930\u094B\u0938\u093E \u0930\u0916\u0924\u093E \u0939\u0942\u0901", "\u092E\u0947\u0930\u0940 \u090A\u0930\u094D\u091C\u093E \u0905\u0938\u0940\u092E\u093F\u0924 \u0939\u0948", "\u092E\u0948\u0902 \u0938\u0915\u093E\u0930\u093E\u0924\u094D\u092E\u0915 \u0909\u0930\u094D\u091C\u093E\u090F\u0901 \u0906\u0915\u0930\u094D\u0937\u093F\u0924 \u0915\u0930\u0924\u093E \u0939\u0942\u0901", "\u092E\u0948\u0902 \u0938\u092B\u0932\u0924\u093E \u0915\u093E \u0939\u0915\u0926\u093E\u0930 \u0939\u0942\u0901", "\u092E\u0947\u0930\u0940 \u0915\u094D\u0937\u092E\u0924\u093E \u0905\u0928\u0902\u0924 \u0939\u0948", "\u092E\u0948\u0902 \u0905\u092A\u0928\u0947 \u0938\u091A\u094D\u091A\u0947 \u0906\u0924\u094D\u092E \u0915\u094B \u0905\u092A\u0928\u093E\u0924\u093E \u0939\u0942\u0901", "\u092E\u0948\u0902 \u0905\u091A\u094D\u091B\u0947 \u092D\u093E\u0917\u094D\u092F \u0915\u0947 \u0932\u093F\u090F \u091A\u0941\u0902\u092C\u0915 \u0939\u0942\u0901", "\u092E\u0947\u0930\u0947 \u0938\u092A\u0928\u0947 \u092E\u093E\u0928\u094D\u092F \u0939\u0948\u0902", "\u092E\u0948\u0902 \u0935\u093F\u0915\u093E\u0938 \u0914\u0930 \u092A\u094D\u0930\u0917\u0924\u093F \u091A\u0941\u0928\u0924\u093E \u0939\u0942\u0901", "\u092C\u094D\u0930\u0939\u094D\u092E\u093E\u0902\u0921 \u092E\u0947\u0930\u093E \u0938\u092E\u0930\u094D\u0925\u0928 \u0915\u0930\u0924\u093E \u0939\u0948"],
+    settings: { title: "\u2699\uFE0F \u0938\u0947\u091F\u093F\u0902\u0917\u094D\u0938", zodiacTypeLabel: "\u0930\u093E\u0936\u093F \u092A\u094D\u0930\u0915\u093E\u0930:", zodiacTypeOptions: { western: "\u092A\u0936\u094D\u091A\u093F\u092E\u0940 \u0930\u093E\u0936\u093F", indian: "\u092D\u093E\u0930\u0924\u0940\u092F/\u0935\u0948\u0926\u093F\u0915 \u0930\u093E\u0936\u093F", chinese: "\u091A\u0940\u0928\u0940 \u0930\u093E\u0936\u093F" }, zodiacSignLabel: "\u0906\u092A\u0915\u093E \u091A\u093F\u0928\u094D\u0939:", infoText: "\u{1F31F} \u0906\u092A\u0915\u093E \u0915\u0949\u0938\u094D\u092E\u093F\u0915 \u092A\u094D\u0930\u094B\u092B\u093C\u093E\u0907\u0932 \u0924\u0941\u0930\u0902\u0924 \u0905\u092A\u0921\u0947\u091F \u0939\u094B\u0917\u093E!", cancel: "\u0930\u0926\u094D\u0926 \u0915\u0930\u0947\u0902", save: "\u092A\u0930\u093F\u0935\u0930\u094D\u0924\u0928 \u0938\u0941\u0930\u0915\u094D\u0937\u093F\u0924 \u0915\u0930\u0947\u0902" }
+  },
+  ZH: {
+    greeting: "\u4F60\u597D\uFF0C{name}\uFF01\u4ECA\u5929\u5E26\u6765\u65B0\u7684\u5B87\u5B99\u80FD\u91CF\u3002\u62E5\u62B1\u5373\u5C06\u5230\u6765\u7684\u673A\u4F1A\u3002",
+    colorTitle: "\u4F60\u7684\u4ECA\u65E5\u8272\u5F69",
+    vibeTitle: "\u4F60\u7684\u6C1B\u56F4",
+    cautionTitle: "\u6CE8\u610F",
+    adTitle: "\u5E7F\u544A",
+    adPlaceholder: "\u5E7F\u544A\u5C06\u5728\u6B64\u5C55\u793A",
+    luckyTitle: "\u5E78\u8FD0\u6570\u5B57",
+    affirmationTitle: "\u{1F31F} \u6BCF\u65E5\u80AF\u5B9A",
+    donationTitle: "\u2615 \u652F\u6301 Astro-Transition",
+    donationContent: "\u559C\u6B22\u8FD9\u4E2A\u5B87\u5B99\u4F53\u9A8C\u5417\uFF1F\u8003\u8651\u8BF7\u4F5C\u8005\u559D\u676F\u5496\u5561\u652F\u6301\u4E00\u4E0B\u3002",
+    actionLabel: "\u652F\u6301\u4F5C\u8005",
+    VIBES: ["\u7CBE\u529B\u5145\u6C9B", "\u5E73\u9759", "\u795E\u79D8", "\u559C\u60A6", "\u5185\u7701", "\u6709\u521B\u610F", "\u70ED\u60C5", "\u5B81\u548C", "\u5927\u80C6", "\u6DF1\u601D", "\u987D\u76AE", "\u667A\u6167"],
+    CAUTIONS: ["\u4ED3\u4FC3\u505A\u51B3\u5B9A", "\u8FC7\u5EA6\u601D\u8003\u7EC6\u8282", "\u5FFD\u89C6\u4F60\u7684\u76F4\u89C9", "\u8FC7\u4E8E\u82DB\u8D23", "\u5BFB\u6C42\u8BA4\u53EF", "\u56DE\u907F\u5BF9\u6297", "\u627F\u62C5\u8FC7\u591A", "\u5FFD\u89C6\u81EA\u6211\u7167\u987E", "\u6C89\u6E4E\u4E8E\u8FC7\u53BB", "\u4ED3\u4FC3\u5224\u65AD", "\u4E0E\u4E16\u9694\u7EDD", "\u5B8C\u7F8E\u4E3B\u4E49"],
+    AFFIRMATIONS: ["\u6211\u6709\u5B9E\u73B0\u4F1F\u5927\u4E8B\u7269\u7684\u80FD\u529B", "\u4ECA\u5929\u5E26\u6765\u65B0\u7684\u53EF\u80FD\u6027", "\u6211\u76F8\u4FE1\u6211\u7684\u65C5\u7A0B", "\u6211\u7684\u80FD\u91CF\u662F\u65E0\u5C3D\u7684", "\u6211\u5438\u5F15\u79EF\u6781\u7684\u6C1B\u56F4", "\u6211\u914D\u5F97\u4E0A\u6210\u529F", "\u6211\u7684\u6F5C\u529B\u662F\u65E0\u9650\u7684", "\u6211\u62E5\u62B1\u771F\u5B9E\u7684\u81EA\u6211", "\u6211\u662F\u597D\u8FD0\u7684\u78C1\u77F3", "\u6211\u7684\u68A6\u60F3\u662F\u6709\u6548\u7684", "\u6211\u9009\u62E9\u6210\u957F\u548C\u8FDB\u6B65", "\u5B87\u5B99\u652F\u6301\u6211"],
+    settings: { title: "\u2699\uFE0F \u8BBE\u7F6E", zodiacTypeLabel: "\u661F\u5EA7\u7C7B\u578B\uFF1A", zodiacTypeOptions: { western: "\u897F\u65B9\u661F\u5EA7", indian: "\u5370\u5EA6/\u5420\u9640\u661F\u5EA7", chinese: "\u4E2D\u56FD\u5341\u4E8C\u751F\u8096" }, zodiacSignLabel: "\u4F60\u7684\u661F\u5EA7\uFF1A", infoText: "\u{1F31F} \u4F60\u7684\u5B87\u5B99\u8D44\u6599\u5C06\u7ACB\u5373\u66F4\u65B0\uFF01", cancel: "\u53D6\u6D88", save: "\u4FDD\u5B58\u66F4\u6539" }
+  }
+};
+
+// src/app/services/language.service.ts
+var LanguageService = class _LanguageService {
+  STORAGE_KEY = "astro_lang";
+  languages = ["EN", "ES", "HI", "ZH"];
+  displayNames = {
+    EN: "English",
+    ES: "Espa\xF1ol",
+    HI: "\u0939\u093F\u0928\u094D\u0926\u0940",
+    ZH: "\u4E2D\u6587"
+  };
+  current$ = new BehaviorSubject(this.loadInitial());
+  language$ = this.current$.asObservable();
+  loadInitial() {
+    try {
+      if (typeof window !== "undefined" && window.localStorage) {
+        const stored = localStorage.getItem(this.STORAGE_KEY);
+        if (stored && this.languages.includes(stored))
+          return stored;
+      }
+    } catch {
+    }
+    return this.languages[0];
+  }
+  setLanguage(lang) {
+    if (!this.languages.includes(lang))
+      return;
+    this.current$.next(lang);
+    try {
+      if (typeof window !== "undefined" && window.localStorage) {
+        localStorage.setItem(this.STORAGE_KEY, lang);
+      }
+    } catch {
+    }
+  }
+  cycleLanguage() {
+    const cur = this.current$.value;
+    const idx = this.languages.indexOf(cur);
+    const next = this.languages[(idx + 1) % this.languages.length];
+    this.setLanguage(next);
+  }
+  getAvailable() {
+    return [...this.languages];
+  }
+  getDisplayName(code) {
+    return this.displayNames[code] || code;
+  }
+  getCurrentLanguage() {
+    return this.current$.value;
+  }
+  static \u0275fac = function LanguageService_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _LanguageService)();
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _LanguageService, factory: _LanguageService.\u0275fac, providedIn: "root" });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(LanguageService, [{
+    type: Injectable,
+    args: [{ providedIn: "root" }]
+  }], null, null);
+})();
+
 // src/app/services/content.service.ts
 var ContentService = class _ContentService {
+  languageService;
   UNSPLASH_IMAGES = [
     "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=400&q=80",
     // space
@@ -43915,7 +44096,11 @@ var ContentService = class _ContentService {
     "https://images.unsplash.com/photo-1543722530-d2c3201371e7?auto=format&fit=crop&w=400&q=80"
     // constellation
   ];
-  constructor() {
+  currentLang = "EN";
+  constructor(languageService) {
+    this.languageService = languageService;
+    this.currentLang = this.languageService.getCurrentLanguage();
+    this.languageService.language$.subscribe((l) => this.currentLang = l);
   }
   /**
    * Generate cards for a given zodiac sign and date
@@ -43929,7 +44114,7 @@ var ContentService = class _ContentService {
       {
         id: `${zodiac.name}-greeting-${today}`,
         title: `Welcome, ${zodiac.type === "western" ? "\u2648" : ""}`,
-        content: `Hello ${zodiac.name}! Today brings new cosmic energy your way. Embrace the opportunities that unfold.`,
+        content: TRANSLATIONS2[this.currentLang]?.greeting.replace("{name}", zodiac.name),
         icon: "\u2728",
         backgroundColor: zodiac.color,
         textColor: "#ffffff",
@@ -43939,7 +44124,7 @@ var ContentService = class _ContentService {
       // Card 2: Color
       {
         id: `${zodiac.name}-color-${today}`,
-        title: "Your Color Today",
+        title: TRANSLATIONS2[this.currentLang]?.colorTitle || "Your Color Today",
         content: `${this.getSeededColor(zodiac.index, today)}`,
         icon: "\u{1F3A8}",
         backgroundColor: this.getSeededColor(zodiac.index, today),
@@ -43949,7 +44134,7 @@ var ContentService = class _ContentService {
       // Card 3: Vibe
       {
         id: `${zodiac.name}-vibe-${today}`,
-        title: "Your Vibe",
+        title: TRANSLATIONS2[this.currentLang]?.vibeTitle || "Your Vibe",
         content: this.getSeededVibe(zodiac.index, today),
         icon: "\u26A1",
         backgroundColor: zodiac.color,
@@ -43959,7 +44144,7 @@ var ContentService = class _ContentService {
       // Card 4: Caution (placeholder before ads)
       {
         id: `${zodiac.name}-caution-${today}`,
-        title: "Watch Out For",
+        title: TRANSLATIONS2[this.currentLang]?.cautionTitle || "Watch Out For",
         content: this.getSeededCaution(zodiac.index, today),
         icon: "\u26A0\uFE0F",
         backgroundColor: "#FF6B6B",
@@ -43969,8 +44154,8 @@ var ContentService = class _ContentService {
       // Card 5: Ad Placeholder
       {
         id: `${zodiac.name}-ad-${today}`,
-        title: "Advertisement",
-        content: "Your ad will appear here",
+        title: TRANSLATIONS2[this.currentLang]?.adTitle || "Advertisement",
+        content: TRANSLATIONS2[this.currentLang]?.adPlaceholder || "Your ad will appear here",
         icon: "\u{1F4E2}",
         backgroundColor: "#2C3E50",
         textColor: "#ffffff",
@@ -43979,7 +44164,7 @@ var ContentService = class _ContentService {
       // Card 6: Lucky Number
       {
         id: `${zodiac.name}-lucky-${today}`,
-        title: "Lucky Number",
+        title: TRANSLATIONS2[this.currentLang]?.luckyTitle || "Lucky Number",
         content: String(this.getSeededLuckyNumber(zodiac.index, today)),
         icon: "\u{1F340}",
         backgroundColor: zodiac.color,
@@ -43989,7 +44174,7 @@ var ContentService = class _ContentService {
       // Card 7: Affirmation
       {
         id: `${zodiac.name}-affirmation-${today}`,
-        title: "\u{1F31F} Daily Affirmation",
+        title: TRANSLATIONS2[this.currentLang]?.affirmationTitle || "\u{1F31F} Daily Affirmation",
         content: this.getSeededAffirmation(zodiac.index, today),
         icon: "\u{1F4AB}",
         backgroundColor: zodiac.color,
@@ -43999,14 +44184,14 @@ var ContentService = class _ContentService {
       // Card 8: Donation/Support
       {
         id: `${zodiac.name}-donation-${today}`,
-        title: "\u2615 Support Astro-Transition",
-        content: "Love this cosmic experience? Consider supporting the creator with a coffee!",
+        title: TRANSLATIONS2[this.currentLang]?.donationTitle || "\u2615 Support Astro-Transition",
+        content: TRANSLATIONS2[this.currentLang]?.donationContent || "Love this cosmic experience? Consider supporting the creator with a coffee!",
         icon: "\u{1F49D}",
         backgroundColor: "#BB8FCE",
         textColor: "#ffffff",
         type: "donation",
         actionUrl: "https://www.buymeacoffee.com/yourusername",
-        actionLabel: "Buy Me a Coffee"
+        actionLabel: TRANSLATIONS2[this.currentLang]?.actionLabel || "Buy Me a Coffee"
       }
     ];
     return cards;
@@ -44047,11 +44232,13 @@ var ContentService = class _ContentService {
   }
   getSeededVibe(signIndex, date) {
     const seed = this.hashCode(`vibe-${signIndex}-${date}`);
-    return VIBES[this.seededRandom(seed, VIBES.length)];
+    const list = TRANSLATIONS2[this.currentLang] && TRANSLATIONS2[this.currentLang].VIBES || VIBES;
+    return list[this.seededRandom(seed, list.length)];
   }
   getSeededCaution(signIndex, date) {
     const seed = this.hashCode(`caution-${signIndex}-${date}`);
-    return CAUTIONS[this.seededRandom(seed, CAUTIONS.length)];
+    const list = TRANSLATIONS2[this.currentLang] && TRANSLATIONS2[this.currentLang].CAUTIONS || CAUTIONS;
+    return list[this.seededRandom(seed, list.length)];
   }
   getSeededLuckyNumber(signIndex, date) {
     const seed = this.hashCode(`lucky-${signIndex}-${date}`);
@@ -44059,10 +44246,11 @@ var ContentService = class _ContentService {
   }
   getSeededAffirmation(signIndex, date) {
     const seed = this.hashCode(`affirmation-${signIndex}-${date}`);
-    return AFFIRMATIONS[this.seededRandom(seed, AFFIRMATIONS.length)];
+    const list = TRANSLATIONS2[this.currentLang] && TRANSLATIONS2[this.currentLang].AFFIRMATIONS || AFFIRMATIONS;
+    return list[this.seededRandom(seed, list.length)];
   }
   static \u0275fac = function ContentService_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _ContentService)();
+    return new (__ngFactoryType__ || _ContentService)(\u0275\u0275inject(LanguageService));
   };
   static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _ContentService, factory: _ContentService.\u0275fac, providedIn: "root" });
 };
@@ -44072,7 +44260,7 @@ var ContentService = class _ContentService {
     args: [{
       providedIn: "root"
     }]
-  }], () => [], null);
+  }], () => [{ type: LanguageService }], null);
 })();
 
 // src/app/components/card-deck/card-deck.component.ts
@@ -48947,14 +49135,27 @@ function SettingsModalComponent_option_22_Template(rf, ctx) {
 }
 var SettingsModalComponent = class _SettingsModalComponent {
   zodiacService;
+  languageService;
   close = new EventEmitter();
   zodiacType = "western";
   selectedSign = "";
   zodiacOptions = [];
-  constructor(zodiacService) {
+  currentLang = "EN";
+  ui = {};
+  constructor(zodiacService, languageService) {
     this.zodiacService = zodiacService;
+    this.languageService = languageService;
   }
   ngOnInit() {
+    try {
+    } catch {
+    }
+    this.currentLang = this.languageService.getCurrentLanguage();
+    this.ui = TRANSLATIONS2[this.currentLang] || {};
+    this.languageService.language$.subscribe((l) => {
+      this.currentLang = l;
+      this.ui = TRANSLATIONS2[this.currentLang] || {};
+    });
     const current = this.zodiacService.getCurrentZodiac();
     if (current) {
       this.zodiacType = current.type;
@@ -48986,9 +49187,9 @@ var SettingsModalComponent = class _SettingsModalComponent {
     this.close.emit();
   }
   static \u0275fac = function SettingsModalComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _SettingsModalComponent)(\u0275\u0275directiveInject(ZodiacService));
+    return new (__ngFactoryType__ || _SettingsModalComponent)(\u0275\u0275directiveInject(ZodiacService), \u0275\u0275directiveInject(LanguageService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _SettingsModalComponent, selectors: [["app-settings-modal"]], outputs: { close: "close" }, decls: 31, vars: 3, consts: [[1, "modal-overlay", 3, "click"], [1, "modal-content", 3, "click"], [1, "modal-header"], [1, "close-btn", 3, "click"], [1, "modal-body"], [1, "form-group"], ["for", "zodiacType"], ["id", "zodiacType", 1, "form-control", 3, "ngModelChange", "change", "ngModel"], ["value", "western"], ["value", "indian"], ["value", "chinese"], ["for", "zodiacSign"], ["id", "zodiacSign", 1, "form-control", 3, "ngModelChange", "ngModel"], [3, "value", 4, "ngFor", "ngForOf"], [1, "info-text"], [1, "modal-footer"], [1, "btn", "btn-secondary", 3, "click"], [1, "btn", "btn-primary", 3, "click"], [3, "value"]], template: function SettingsModalComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _SettingsModalComponent, selectors: [["app-settings-modal"]], outputs: { close: "close" }, decls: 31, vars: 12, consts: [[1, "modal-overlay", 3, "click"], [1, "modal-content", 3, "click"], [1, "modal-header"], [1, "close-btn", 3, "click"], [1, "modal-body"], [1, "form-group"], ["for", "zodiacType"], ["id", "zodiacType", 1, "form-control", 3, "ngModelChange", "change", "ngModel"], ["value", "western"], ["value", "indian"], ["value", "chinese"], ["for", "zodiacSign"], ["id", "zodiacSign", 1, "form-control", 3, "ngModelChange", "ngModel"], [3, "value", 4, "ngFor", "ngForOf"], [1, "info-text"], [1, "modal-footer"], [1, "btn", "btn-secondary", 3, "click"], [1, "btn", "btn-primary", 3, "click"], [3, "value"]], template: function SettingsModalComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 0);
       \u0275\u0275listener("click", function SettingsModalComponent_Template_div_click_0_listener() {
@@ -48999,7 +49200,7 @@ var SettingsModalComponent = class _SettingsModalComponent {
         return $event.stopPropagation();
       });
       \u0275\u0275elementStart(2, "div", 2)(3, "h2");
-      \u0275\u0275text(4, "\u2699\uFE0F Settings");
+      \u0275\u0275text(4);
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(5, "button", 3);
       \u0275\u0275listener("click", function SettingsModalComponent_Template_button_click_5_listener() {
@@ -49008,7 +49209,7 @@ var SettingsModalComponent = class _SettingsModalComponent {
       \u0275\u0275text(6, "\u2715");
       \u0275\u0275elementEnd()();
       \u0275\u0275elementStart(7, "div", 4)(8, "div", 5)(9, "label", 6);
-      \u0275\u0275text(10, "Zodiac Type:");
+      \u0275\u0275text(10);
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(11, "select", 7);
       \u0275\u0275twoWayListener("ngModelChange", function SettingsModalComponent_Template_select_ngModelChange_11_listener($event) {
@@ -49019,16 +49220,16 @@ var SettingsModalComponent = class _SettingsModalComponent {
         return ctx.onZodiacTypeChange();
       });
       \u0275\u0275elementStart(12, "option", 8);
-      \u0275\u0275text(13, "Western Zodiac");
+      \u0275\u0275text(13);
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(14, "option", 9);
-      \u0275\u0275text(15, "Indian/Vedic Zodiac");
+      \u0275\u0275text(15);
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(16, "option", 10);
-      \u0275\u0275text(17, "Chinese Zodiac");
+      \u0275\u0275text(17);
       \u0275\u0275elementEnd()()();
       \u0275\u0275elementStart(18, "div", 5)(19, "label", 11);
-      \u0275\u0275text(20, "Your Sign:");
+      \u0275\u0275text(20);
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(21, "select", 12);
       \u0275\u0275twoWayListener("ngModelChange", function SettingsModalComponent_Template_select_ngModelChange_21_listener($event) {
@@ -49038,50 +49239,128 @@ var SettingsModalComponent = class _SettingsModalComponent {
       \u0275\u0275template(22, SettingsModalComponent_option_22_Template, 2, 2, "option", 13);
       \u0275\u0275elementEnd()();
       \u0275\u0275elementStart(23, "div", 14)(24, "p");
-      \u0275\u0275text(25, "\u{1F31F} Your cosmic profile will update immediately!");
+      \u0275\u0275text(25);
       \u0275\u0275elementEnd()()();
       \u0275\u0275elementStart(26, "div", 15)(27, "button", 16);
       \u0275\u0275listener("click", function SettingsModalComponent_Template_button_click_27_listener() {
         return ctx.closeModal();
       });
-      \u0275\u0275text(28, "Cancel");
+      \u0275\u0275text(28);
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(29, "button", 17);
       \u0275\u0275listener("click", function SettingsModalComponent_Template_button_click_29_listener() {
         return ctx.saveSelection();
       });
-      \u0275\u0275text(30, "Save Changes");
+      \u0275\u0275text(30);
       \u0275\u0275elementEnd()()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(11);
+      \u0275\u0275advance(4);
+      \u0275\u0275textInterpolate((ctx.ui == null ? null : ctx.ui.settings == null ? null : ctx.ui.settings.title) || "\u2699\uFE0F Settings");
+      \u0275\u0275advance(6);
+      \u0275\u0275textInterpolate((ctx.ui == null ? null : ctx.ui.settings == null ? null : ctx.ui.settings.zodiacTypeLabel) || "Zodiac Type:");
+      \u0275\u0275advance();
       \u0275\u0275twoWayProperty("ngModel", ctx.zodiacType);
-      \u0275\u0275advance(10);
+      \u0275\u0275advance(2);
+      \u0275\u0275textInterpolate((ctx.ui == null ? null : ctx.ui.settings == null ? null : ctx.ui.settings.zodiacTypeOptions == null ? null : ctx.ui.settings.zodiacTypeOptions.western) || "Western Zodiac");
+      \u0275\u0275advance(2);
+      \u0275\u0275textInterpolate((ctx.ui == null ? null : ctx.ui.settings == null ? null : ctx.ui.settings.zodiacTypeOptions == null ? null : ctx.ui.settings.zodiacTypeOptions.indian) || "Indian/Vedic Zodiac");
+      \u0275\u0275advance(2);
+      \u0275\u0275textInterpolate((ctx.ui == null ? null : ctx.ui.settings == null ? null : ctx.ui.settings.zodiacTypeOptions == null ? null : ctx.ui.settings.zodiacTypeOptions.chinese) || "Chinese Zodiac");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate((ctx.ui == null ? null : ctx.ui.settings == null ? null : ctx.ui.settings.zodiacSignLabel) || "Your Sign:");
+      \u0275\u0275advance();
       \u0275\u0275twoWayProperty("ngModel", ctx.selectedSign);
       \u0275\u0275advance();
       \u0275\u0275property("ngForOf", ctx.zodiacOptions);
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate((ctx.ui == null ? null : ctx.ui.settings == null ? null : ctx.ui.settings.infoText) || "\u{1F31F} Your cosmic profile will update immediately!");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate((ctx.ui == null ? null : ctx.ui.settings == null ? null : ctx.ui.settings.cancel) || "Cancel");
+      \u0275\u0275advance(2);
+      \u0275\u0275textInterpolate((ctx.ui == null ? null : ctx.ui.settings == null ? null : ctx.ui.settings.save) || "Save Changes");
     }
   }, dependencies: [CommonModule, NgForOf, FormsModule, NgSelectOption, \u0275NgSelectMultipleOption, SelectControlValueAccessor, NgControlStatus, NgModel], styles: ['\n\n  .modal-overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: rgba(0, 0, 0, 0.7);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  z-index: 1000;\n  animation: _ngcontent-%COMP%_fadeIn 0.3s ease;\n}\n  .modal-content {\n  background:\n    linear-gradient(\n      135deg,\n      #1a1a2e 0%,\n      #16213e 100%);\n  border-radius: 20px;\n  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);\n  max-width: 500px;\n  width: 90%;\n  animation: _ngcontent-%COMP%_slideUp 0.3s ease;\n  border: 1px solid rgba(255, 255, 255, 0.1);\n}\n@media (max-width: 480px) {\n    .modal-content {\n    border-radius: 15px;\n    width: 95%;\n  }\n}\n  .modal-header {\n  padding: 30px;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.1);\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n  .modal-header h2 {\n  margin: 0;\n  font-size: 24px;\n  font-family: "Orbitron", sans-serif;\n  color: #ffffff;\n}\n@media (max-width: 480px) {\n    .modal-header h2 {\n    font-size: 20px;\n  }\n}\n@media (max-width: 480px) {\n    .modal-header {\n    padding: 20px;\n  }\n}\n  .close-btn {\n  background: none;\n  border: none;\n  color: rgba(255, 255, 255, 0.6);\n  font-size: 24px;\n  cursor: pointer;\n  transition: all 0.3s ease;\n}\n  .close-btn:hover {\n  color: #ffffff;\n  transform: rotate(90deg);\n}\n  .modal-body {\n  padding: 30px;\n}\n@media (max-width: 480px) {\n    .modal-body {\n    padding: 20px;\n  }\n}\n  .form-group {\n  margin-bottom: 20px;\n}\n  .form-group label {\n  display: block;\n  color: rgba(255, 255, 255, 0.8);\n  font-size: 14px;\n  font-weight: 600;\n  margin-bottom: 8px;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n}\n  .form-group .form-control {\n  width: 100%;\n  padding: 12px 15px;\n  background: rgba(255, 255, 255, 0.05);\n  border: 2px solid rgba(102, 126, 234, 0.3);\n  border-radius: 8px;\n  color: #ffffff;\n  font-family: "Poppins", sans-serif;\n  font-size: 14px;\n  transition: all 0.3s ease;\n}\n  .form-group .form-control:focus {\n  outline: none;\n  border-color: #667eea;\n  background: rgba(102, 126, 234, 0.1);\n  box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);\n}\n  .form-group .form-control option {\n  background: #1a1a2e;\n  color: #ffffff;\n}\n  .info-text {\n  background: rgba(102, 126, 234, 0.1);\n  border-left: 4px solid #667eea;\n  padding: 15px;\n  border-radius: 8px;\n  margin-top: 20px;\n}\n  .info-text p {\n  margin: 0;\n  color: rgba(255, 255, 255, 0.8);\n  font-size: 14px;\n  line-height: 1.5;\n}\n  .modal-footer {\n  padding: 20px 30px;\n  border-top: 1px solid rgba(255, 255, 255, 0.1);\n  display: flex;\n  justify-content: flex-end;\n  gap: 10px;\n}\n@media (max-width: 480px) {\n    .modal-footer {\n    padding: 15px 20px;\n    gap: 8px;\n  }\n}\n  .btn {\n  padding: 10px 24px;\n  border-radius: 8px;\n  font-family: "Poppins", sans-serif;\n  font-size: 14px;\n  font-weight: 600;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  border: none;\n  cursor: pointer;\n  transition: all 0.3s ease;\n}\n  .btn:hover {\n  transform: translateY(-2px);\n}\n  .btn:active {\n  transform: translateY(0);\n}\n@media (max-width: 480px) {\n    .btn {\n    padding: 8px 16px;\n    font-size: 12px;\n    flex: 1;\n  }\n}\n  .btn-primary {\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  color: #ffffff;\n  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);\n}\n  .btn-primary:hover {\n  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);\n}\n  .btn-secondary {\n  background: rgba(255, 255, 255, 0.1);\n  color: rgba(255, 255, 255, 0.8);\n  border: 1px solid rgba(255, 255, 255, 0.3);\n}\n  .btn-secondary:hover {\n  background: rgba(255, 255, 255, 0.15);\n  border-color: rgba(255, 255, 255, 0.5);\n}\n@keyframes _ngcontent-%COMP%_fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes _ngcontent-%COMP%_slideUp {\n  from {\n    opacity: 0;\n    transform: translateY(20px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n/*# sourceMappingURL=settings-modal.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(SettingsModalComponent, [{
     type: Component,
-    args: [{ selector: "app-settings-modal", standalone: true, imports: [CommonModule, FormsModule], template: '<div class="modal-overlay" (click)="closeModal()">\n  <div class="modal-content" (click)="$event.stopPropagation()">\n    <div class="modal-header">\n      <h2>\u2699\uFE0F Settings</h2>\n      <button class="close-btn" (click)="closeModal()">\u2715</button>\n    </div>\n\n    <div class="modal-body">\n      <div class="form-group">\n        <label for="zodiacType">Zodiac Type:</label>\n        <select\n          id="zodiacType"\n          [(ngModel)]="zodiacType"\n          (change)="onZodiacTypeChange()"\n          class="form-control"\n        >\n          <option value="western">Western Zodiac</option>\n          <option value="indian">Indian/Vedic Zodiac</option>\n          <option value="chinese">Chinese Zodiac</option>\n        </select>\n      </div>\n\n      <div class="form-group">\n        <label for="zodiacSign">Your Sign:</label>\n        <select\n          id="zodiacSign"\n          [(ngModel)]="selectedSign"\n          class="form-control"\n        >\n          <option *ngFor="let sign of zodiacOptions" [value]="sign">\n            {{ sign }}\n          </option>\n        </select>\n      </div>\n\n      <div class="info-text">\n        <p>\u{1F31F} Your cosmic profile will update immediately!</p>\n      </div>\n    </div>\n\n    <div class="modal-footer">\n      <button class="btn btn-secondary" (click)="closeModal()">Cancel</button>\n      <button class="btn btn-primary" (click)="saveSelection()">Save Changes</button>\n    </div>\n  </div>\n</div>\n', styles: ['/* src/app/components/settings-modal/settings-modal.component.scss */\n::ng-deep .modal-overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: rgba(0, 0, 0, 0.7);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  z-index: 1000;\n  animation: fadeIn 0.3s ease;\n}\n::ng-deep .modal-content {\n  background:\n    linear-gradient(\n      135deg,\n      #1a1a2e 0%,\n      #16213e 100%);\n  border-radius: 20px;\n  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);\n  max-width: 500px;\n  width: 90%;\n  animation: slideUp 0.3s ease;\n  border: 1px solid rgba(255, 255, 255, 0.1);\n}\n@media (max-width: 480px) {\n  ::ng-deep .modal-content {\n    border-radius: 15px;\n    width: 95%;\n  }\n}\n::ng-deep .modal-header {\n  padding: 30px;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.1);\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n::ng-deep .modal-header h2 {\n  margin: 0;\n  font-size: 24px;\n  font-family: "Orbitron", sans-serif;\n  color: #ffffff;\n}\n@media (max-width: 480px) {\n  ::ng-deep .modal-header h2 {\n    font-size: 20px;\n  }\n}\n@media (max-width: 480px) {\n  ::ng-deep .modal-header {\n    padding: 20px;\n  }\n}\n::ng-deep .close-btn {\n  background: none;\n  border: none;\n  color: rgba(255, 255, 255, 0.6);\n  font-size: 24px;\n  cursor: pointer;\n  transition: all 0.3s ease;\n}\n::ng-deep .close-btn:hover {\n  color: #ffffff;\n  transform: rotate(90deg);\n}\n::ng-deep .modal-body {\n  padding: 30px;\n}\n@media (max-width: 480px) {\n  ::ng-deep .modal-body {\n    padding: 20px;\n  }\n}\n::ng-deep .form-group {\n  margin-bottom: 20px;\n}\n::ng-deep .form-group label {\n  display: block;\n  color: rgba(255, 255, 255, 0.8);\n  font-size: 14px;\n  font-weight: 600;\n  margin-bottom: 8px;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n}\n::ng-deep .form-group .form-control {\n  width: 100%;\n  padding: 12px 15px;\n  background: rgba(255, 255, 255, 0.05);\n  border: 2px solid rgba(102, 126, 234, 0.3);\n  border-radius: 8px;\n  color: #ffffff;\n  font-family: "Poppins", sans-serif;\n  font-size: 14px;\n  transition: all 0.3s ease;\n}\n::ng-deep .form-group .form-control:focus {\n  outline: none;\n  border-color: #667eea;\n  background: rgba(102, 126, 234, 0.1);\n  box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);\n}\n::ng-deep .form-group .form-control option {\n  background: #1a1a2e;\n  color: #ffffff;\n}\n::ng-deep .info-text {\n  background: rgba(102, 126, 234, 0.1);\n  border-left: 4px solid #667eea;\n  padding: 15px;\n  border-radius: 8px;\n  margin-top: 20px;\n}\n::ng-deep .info-text p {\n  margin: 0;\n  color: rgba(255, 255, 255, 0.8);\n  font-size: 14px;\n  line-height: 1.5;\n}\n::ng-deep .modal-footer {\n  padding: 20px 30px;\n  border-top: 1px solid rgba(255, 255, 255, 0.1);\n  display: flex;\n  justify-content: flex-end;\n  gap: 10px;\n}\n@media (max-width: 480px) {\n  ::ng-deep .modal-footer {\n    padding: 15px 20px;\n    gap: 8px;\n  }\n}\n::ng-deep .btn {\n  padding: 10px 24px;\n  border-radius: 8px;\n  font-family: "Poppins", sans-serif;\n  font-size: 14px;\n  font-weight: 600;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  border: none;\n  cursor: pointer;\n  transition: all 0.3s ease;\n}\n::ng-deep .btn:hover {\n  transform: translateY(-2px);\n}\n::ng-deep .btn:active {\n  transform: translateY(0);\n}\n@media (max-width: 480px) {\n  ::ng-deep .btn {\n    padding: 8px 16px;\n    font-size: 12px;\n    flex: 1;\n  }\n}\n::ng-deep .btn-primary {\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  color: #ffffff;\n  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);\n}\n::ng-deep .btn-primary:hover {\n  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);\n}\n::ng-deep .btn-secondary {\n  background: rgba(255, 255, 255, 0.1);\n  color: rgba(255, 255, 255, 0.8);\n  border: 1px solid rgba(255, 255, 255, 0.3);\n}\n::ng-deep .btn-secondary:hover {\n  background: rgba(255, 255, 255, 0.15);\n  border-color: rgba(255, 255, 255, 0.5);\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes slideUp {\n  from {\n    opacity: 0;\n    transform: translateY(20px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n/*# sourceMappingURL=settings-modal.component.css.map */\n'] }]
-  }], () => [{ type: ZodiacService }], { close: [{
+    args: [{ selector: "app-settings-modal", standalone: true, imports: [CommonModule, FormsModule], template: `<div class="modal-overlay" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h2>{{ ui?.settings?.title || '\u2699\uFE0F Settings' }}</h2>
+      <button class="close-btn" (click)="closeModal()">\u2715</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="form-group">
+        <label for="zodiacType">{{ ui?.settings?.zodiacTypeLabel || 'Zodiac Type:' }}</label>
+        <select
+          id="zodiacType"
+          [(ngModel)]="zodiacType"
+          (change)="onZodiacTypeChange()"
+          class="form-control"
+        >
+          <option value="western">{{ ui?.settings?.zodiacTypeOptions?.western || 'Western Zodiac' }}</option>
+          <option value="indian">{{ ui?.settings?.zodiacTypeOptions?.indian || 'Indian/Vedic Zodiac' }}</option>
+          <option value="chinese">{{ ui?.settings?.zodiacTypeOptions?.chinese || 'Chinese Zodiac' }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="zodiacSign">{{ ui?.settings?.zodiacSignLabel || 'Your Sign:' }}</label>
+        <select
+          id="zodiacSign"
+          [(ngModel)]="selectedSign"
+          class="form-control"
+        >
+          <option *ngFor="let sign of zodiacOptions" [value]="sign">
+            {{ sign }}
+          </option>
+        </select>
+      </div>
+
+      <div class="info-text">
+        <p>{{ ui?.settings?.infoText || '\u{1F31F} Your cosmic profile will update immediately!' }}</p>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-secondary" (click)="closeModal()">{{ ui?.settings?.cancel || 'Cancel' }}</button>
+      <button class="btn btn-primary" (click)="saveSelection()">{{ ui?.settings?.save || 'Save Changes' }}</button>
+    </div>
+  </div>
+</div>
+`, styles: ['/* src/app/components/settings-modal/settings-modal.component.scss */\n::ng-deep .modal-overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: rgba(0, 0, 0, 0.7);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  z-index: 1000;\n  animation: fadeIn 0.3s ease;\n}\n::ng-deep .modal-content {\n  background:\n    linear-gradient(\n      135deg,\n      #1a1a2e 0%,\n      #16213e 100%);\n  border-radius: 20px;\n  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);\n  max-width: 500px;\n  width: 90%;\n  animation: slideUp 0.3s ease;\n  border: 1px solid rgba(255, 255, 255, 0.1);\n}\n@media (max-width: 480px) {\n  ::ng-deep .modal-content {\n    border-radius: 15px;\n    width: 95%;\n  }\n}\n::ng-deep .modal-header {\n  padding: 30px;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.1);\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n::ng-deep .modal-header h2 {\n  margin: 0;\n  font-size: 24px;\n  font-family: "Orbitron", sans-serif;\n  color: #ffffff;\n}\n@media (max-width: 480px) {\n  ::ng-deep .modal-header h2 {\n    font-size: 20px;\n  }\n}\n@media (max-width: 480px) {\n  ::ng-deep .modal-header {\n    padding: 20px;\n  }\n}\n::ng-deep .close-btn {\n  background: none;\n  border: none;\n  color: rgba(255, 255, 255, 0.6);\n  font-size: 24px;\n  cursor: pointer;\n  transition: all 0.3s ease;\n}\n::ng-deep .close-btn:hover {\n  color: #ffffff;\n  transform: rotate(90deg);\n}\n::ng-deep .modal-body {\n  padding: 30px;\n}\n@media (max-width: 480px) {\n  ::ng-deep .modal-body {\n    padding: 20px;\n  }\n}\n::ng-deep .form-group {\n  margin-bottom: 20px;\n}\n::ng-deep .form-group label {\n  display: block;\n  color: rgba(255, 255, 255, 0.8);\n  font-size: 14px;\n  font-weight: 600;\n  margin-bottom: 8px;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n}\n::ng-deep .form-group .form-control {\n  width: 100%;\n  padding: 12px 15px;\n  background: rgba(255, 255, 255, 0.05);\n  border: 2px solid rgba(102, 126, 234, 0.3);\n  border-radius: 8px;\n  color: #ffffff;\n  font-family: "Poppins", sans-serif;\n  font-size: 14px;\n  transition: all 0.3s ease;\n}\n::ng-deep .form-group .form-control:focus {\n  outline: none;\n  border-color: #667eea;\n  background: rgba(102, 126, 234, 0.1);\n  box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);\n}\n::ng-deep .form-group .form-control option {\n  background: #1a1a2e;\n  color: #ffffff;\n}\n::ng-deep .info-text {\n  background: rgba(102, 126, 234, 0.1);\n  border-left: 4px solid #667eea;\n  padding: 15px;\n  border-radius: 8px;\n  margin-top: 20px;\n}\n::ng-deep .info-text p {\n  margin: 0;\n  color: rgba(255, 255, 255, 0.8);\n  font-size: 14px;\n  line-height: 1.5;\n}\n::ng-deep .modal-footer {\n  padding: 20px 30px;\n  border-top: 1px solid rgba(255, 255, 255, 0.1);\n  display: flex;\n  justify-content: flex-end;\n  gap: 10px;\n}\n@media (max-width: 480px) {\n  ::ng-deep .modal-footer {\n    padding: 15px 20px;\n    gap: 8px;\n  }\n}\n::ng-deep .btn {\n  padding: 10px 24px;\n  border-radius: 8px;\n  font-family: "Poppins", sans-serif;\n  font-size: 14px;\n  font-weight: 600;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  border: none;\n  cursor: pointer;\n  transition: all 0.3s ease;\n}\n::ng-deep .btn:hover {\n  transform: translateY(-2px);\n}\n::ng-deep .btn:active {\n  transform: translateY(0);\n}\n@media (max-width: 480px) {\n  ::ng-deep .btn {\n    padding: 8px 16px;\n    font-size: 12px;\n    flex: 1;\n  }\n}\n::ng-deep .btn-primary {\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  color: #ffffff;\n  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);\n}\n::ng-deep .btn-primary:hover {\n  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);\n}\n::ng-deep .btn-secondary {\n  background: rgba(255, 255, 255, 0.1);\n  color: rgba(255, 255, 255, 0.8);\n  border: 1px solid rgba(255, 255, 255, 0.3);\n}\n::ng-deep .btn-secondary:hover {\n  background: rgba(255, 255, 255, 0.15);\n  border-color: rgba(255, 255, 255, 0.5);\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes slideUp {\n  from {\n    opacity: 0;\n    transform: translateY(20px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n/*# sourceMappingURL=settings-modal.component.css.map */\n'] }]
+  }], () => [{ type: ZodiacService }, { type: LanguageService }], { close: [{
     type: Output
   }] });
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(SettingsModalComponent, { className: "SettingsModalComponent", filePath: "src/app/components/settings-modal/settings-modal.component.ts", lineNumber: 14 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(SettingsModalComponent, { className: "SettingsModalComponent", filePath: "src/app/components/settings-modal/settings-modal.component.ts", lineNumber: 16 });
 })();
 
 // src/app/app.ts
-function App_app_settings_modal_9_Template(rf, ctx) {
+function App_option_8_Template(rf, ctx) {
   if (rf & 1) {
-    const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "app-settings-modal", 7);
-    \u0275\u0275listener("close", function App_app_settings_modal_9_Template_app_settings_modal_close_0_listener() {
-      \u0275\u0275restoreView(_r1);
+    \u0275\u0275elementStart(0, "option", 11);
+    \u0275\u0275text(1);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const code_r1 = ctx.$implicit;
+    const ctx_r1 = \u0275\u0275nextContext();
+    \u0275\u0275property("value", code_r1);
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate1(" ", ctx_r1.languageService.getDisplayName(code_r1), " ");
+  }
+}
+function App_app_settings_modal_13_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r3 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "app-settings-modal", 12);
+    \u0275\u0275listener("close", function App_app_settings_modal_13_Template_app_settings_modal_close_0_listener() {
+      \u0275\u0275restoreView(_r3);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.closeSettings());
     });
@@ -49089,47 +49368,81 @@ function App_app_settings_modal_9_Template(rf, ctx) {
   }
 }
 var App = class _App {
+  languageService;
   title = signal("astro-transition", ...ngDevMode ? [{ debugName: "title" }] : []);
   showSettings = false;
+  currentLanguage = "EN";
+  availableLanguages = [];
+  settingsLabel = "Settings";
+  constructor(languageService) {
+    this.languageService = languageService;
+    this.languageService.language$.subscribe((l) => this.currentLanguage = l);
+  }
+  ngOnInit() {
+    this.availableLanguages = this.languageService.getAvailable();
+    this.settingsLabel = TRANSLATIONS2[this.currentLanguage]?.settings?.title || "Settings";
+    this.languageService.language$.subscribe((l) => {
+      this.settingsLabel = TRANSLATIONS2[l]?.settings?.title || "Settings";
+    });
+  }
   openSettings() {
     this.showSettings = true;
   }
   closeSettings() {
     this.showSettings = false;
   }
+  cycleLanguage() {
+    this.languageService.cycleLanguage();
+  }
+  setLanguage(code) {
+    this.languageService.setLanguage(code);
+  }
   static \u0275fac = function App_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _App)();
+    return new (__ngFactoryType__ || _App)(\u0275\u0275directiveInject(LanguageService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _App, selectors: [["app-root"]], decls: 12, vars: 1, consts: [[1, "app-container"], [1, "app-header"], [1, "header-logo"], [1, "logo-text"], ["title", "Settings", 1, "settings-btn", 3, "click"], [1, "app-main"], [3, "close", 4, "ngIf"], [3, "close"]], template: function App_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _App, selectors: [["app-root"]], decls: 16, vars: 4, consts: [[1, "app-container"], [1, "app-header"], [1, "header-logo"], [1, "logo-text"], [1, "header-actions"], [1, "lang-select"], [3, "change", "value"], [3, "value", 4, "ngFor", "ngForOf"], [1, "settings-btn", 3, "click", "title"], [1, "app-main"], [3, "close", 4, "ngIf"], [3, "value"], [3, "close"]], template: function App_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 0)(1, "header", 1)(2, "div", 2)(3, "h1", 3);
       \u0275\u0275text(4, "\u2728 Astro-Transition \u2728");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(5, "button", 4);
-      \u0275\u0275listener("click", function App_Template_button_click_5_listener() {
+      \u0275\u0275elementStart(5, "div", 4)(6, "label", 5)(7, "select", 6);
+      \u0275\u0275listener("change", function App_Template_select_change_7_listener($event) {
+        return ctx.setLanguage($event.target.value);
+      });
+      \u0275\u0275template(8, App_option_8_Template, 2, 2, "option", 7);
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(9, "button", 8);
+      \u0275\u0275listener("click", function App_Template_button_click_9_listener() {
         return ctx.openSettings();
       });
-      \u0275\u0275text(6, " \u2699\uFE0F ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(7, "main", 5);
-      \u0275\u0275element(8, "app-card-deck");
+      \u0275\u0275text(10, " \u2699\uFE0F ");
+      \u0275\u0275elementEnd()()();
+      \u0275\u0275elementStart(11, "main", 9);
+      \u0275\u0275element(12, "app-card-deck");
       \u0275\u0275elementEnd();
-      \u0275\u0275template(9, App_app_settings_modal_9_Template, 1, 0, "app-settings-modal", 6);
-      \u0275\u0275element(10, "router-outlet");
+      \u0275\u0275template(13, App_app_settings_modal_13_Template, 1, 0, "app-settings-modal", 10);
+      \u0275\u0275element(14, "router-outlet");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(11, "router-outlet");
+      \u0275\u0275element(15, "router-outlet");
     }
     if (rf & 2) {
-      \u0275\u0275advance(9);
+      \u0275\u0275advance(7);
+      \u0275\u0275property("value", ctx.currentLanguage);
+      \u0275\u0275advance();
+      \u0275\u0275property("ngForOf", ctx.availableLanguages);
+      \u0275\u0275advance();
+      \u0275\u0275property("title", ctx.settingsLabel);
+      \u0275\u0275advance(4);
       \u0275\u0275property("ngIf", ctx.showSettings);
     }
   }, dependencies: [
     CommonModule,
+    NgForOf,
     NgIf,
     RouterOutlet,
     CardDeckComponent,
     SettingsModalComponent
-  ], styles: ['\n\n  * {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n  html, \n  body {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n}\n  body {\n  background:\n    linear-gradient(\n      135deg,\n      #0f0c29 0%,\n      #302b63 50%,\n      #24243e 100%);\n  background-attachment: fixed;\n  font-family: "Poppins", sans-serif;\n  color: #ffffff;\n  overflow: hidden;\n}\n  app-root {\n  display: flex;\n  width: 100%;\n  height: 100%;\n}\n  .app-container {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  height: 100vh;\n  background:\n    linear-gradient(\n      135deg,\n      #0f0c29 0%,\n      #302b63 50%,\n      #24243e 100%);\n}\n  .app-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 20px 30px;\n  background: rgba(0, 0, 0, 0.3);\n  border-bottom: 1px solid rgba(255, 255, 255, 0.1);\n  -webkit-backdrop-filter: blur(10px);\n  backdrop-filter: blur(10px);\n  position: relative;\n  z-index: 100;\n}\n@media (max-width: 768px) {\n    .app-header {\n    padding: 15px 20px;\n  }\n}\n@media (max-width: 480px) {\n    .app-header {\n    padding: 12px 15px;\n  }\n}\n  .header-logo {\n  flex: 1;\n}\n  .logo-text {\n  font-size: 28px;\n  font-family: "Orbitron", sans-serif;\n  font-weight: 700;\n  letter-spacing: 2px;\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n  margin: 0;\n  text-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);\n}\n@media (max-width: 768px) {\n    .logo-text {\n    font-size: 20px;\n    letter-spacing: 1px;\n  }\n}\n@media (max-width: 480px) {\n    .logo-text {\n    font-size: 16px;\n    letter-spacing: 0.5px;\n  }\n}\n  .settings-btn {\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  border: none;\n  border-radius: 50%;\n  width: 50px;\n  height: 50px;\n  font-size: 24px;\n  cursor: pointer;\n  transition: all 0.3s ease;\n  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n  .settings-btn:hover {\n  transform: scale(1.1) rotate(20deg);\n  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);\n}\n  .settings-btn:active {\n  transform: scale(0.95);\n}\n@media (max-width: 480px) {\n    .settings-btn {\n    width: 42px;\n    height: 42px;\n    font-size: 20px;\n  }\n}\n  .app-main {\n  flex: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 20px;\n  overflow: hidden;\n}\n@media (max-width: 768px) {\n    .app-main {\n    padding: 15px;\n  }\n}\n@media (max-width: 480px) {\n    .app-main {\n    padding: 10px;\n  }\n}\n  .app-main app-card-deck {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n/*# sourceMappingURL=app.css.map */', '\n\n[_nghost-%COMP%] {\n  --bright-blue: oklch(51.01% 0.274 263.83);\n  --electric-violet: oklch(53.18% 0.28 296.97);\n  --french-violet: oklch(47.66% 0.246 305.88);\n  --vivid-pink: oklch(69.02% 0.277 332.77);\n  --hot-red: oklch(61.42% 0.238 15.34);\n  --orange-red: oklch(63.32% 0.24 31.68);\n  --gray-900: oklch(19.37% 0.006 300.98);\n  --gray-700: oklch(36.98% 0.014 302.71);\n  --gray-400: oklch(70.9% 0.015 304.04);\n  --red-to-pink-to-purple-vertical-gradient:\n    linear-gradient(\n      \n      180deg,\n      var(--orange-red) 0%,\n      var(--vivid-pink) 50%,\n      var(--electric-violet) 100% );\n  --red-to-pink-to-purple-horizontal-gradient:\n    linear-gradient(\n      \n      90deg,\n      var(--orange-red) 0%,\n      var(--vivid-pink) 50%,\n      var(--electric-violet) 100% );\n  --pill-accent: var(--bright-blue);\n  font-family:\n    "Inter",\n    -apple-system,\n    BlinkMacSystemFont,\n    "Segoe UI",\n    Roboto,\n    Helvetica,\n    Arial,\n    sans-serif,\n    "Apple Color Emoji",\n    "Segoe UI Emoji",\n    "Segoe UI Symbol";\n  box-sizing: border-box;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\nh1[_ngcontent-%COMP%] {\n  font-size: 3.125rem;\n  color: var(--gray-900);\n  font-weight: 500;\n  line-height: 100%;\n  letter-spacing: -0.125rem;\n  margin: 0;\n  font-family:\n    "Inter Tight",\n    -apple-system,\n    BlinkMacSystemFont,\n    "Segoe UI",\n    Roboto,\n    Helvetica,\n    Arial,\n    sans-serif,\n    "Apple Color Emoji",\n    "Segoe UI Emoji",\n    "Segoe UI Symbol";\n}\np[_ngcontent-%COMP%] {\n  margin: 0;\n  color: var(--gray-700);\n}\nmain[_ngcontent-%COMP%] {\n  width: 100%;\n  min-height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 1rem;\n  box-sizing: inherit;\n  position: relative;\n}\n.angular-logo[_ngcontent-%COMP%] {\n  max-width: 9.2rem;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-around;\n  width: 100%;\n  max-width: 700px;\n  margin-bottom: 3rem;\n}\n.content[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  margin-top: 1.75rem;\n}\n.content[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  margin-top: 1.5rem;\n}\n.divider[_ngcontent-%COMP%] {\n  width: 1px;\n  background: var(--red-to-pink-to-purple-vertical-gradient);\n  margin-inline: 0.5rem;\n}\n.pill-group[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: start;\n  flex-wrap: wrap;\n  gap: 1.25rem;\n}\n.pill[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  --pill-accent: var(--bright-blue);\n  background: color-mix(in srgb, var(--pill-accent) 5%, transparent);\n  color: var(--pill-accent);\n  padding-inline: 0.75rem;\n  padding-block: 0.375rem;\n  border-radius: 2.75rem;\n  border: 0;\n  transition: background 0.3s ease;\n  font-family: var(--inter-font);\n  font-size: 0.875rem;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 1.4rem;\n  letter-spacing: -0.00875rem;\n  text-decoration: none;\n  white-space: nowrap;\n}\n.pill[_ngcontent-%COMP%]:hover {\n  background: color-mix(in srgb, var(--pill-accent) 15%, transparent);\n}\n.pill-group[_ngcontent-%COMP%]   .pill[_ngcontent-%COMP%]:nth-child(6n+1) {\n  --pill-accent: var(--bright-blue);\n}\n.pill-group[_ngcontent-%COMP%]   .pill[_ngcontent-%COMP%]:nth-child(6n+2) {\n  --pill-accent: var(--electric-violet);\n}\n.pill-group[_ngcontent-%COMP%]   .pill[_ngcontent-%COMP%]:nth-child(6n+3) {\n  --pill-accent: var(--french-violet);\n}\n.pill-group[_ngcontent-%COMP%]   .pill[_ngcontent-%COMP%]:nth-child(6n+4), \n.pill-group[_ngcontent-%COMP%]   .pill[_ngcontent-%COMP%]:nth-child(6n+5), \n.pill-group[_ngcontent-%COMP%]   .pill[_ngcontent-%COMP%]:nth-child(6n+6) {\n  --pill-accent: var(--hot-red);\n}\n.pill-group[_ngcontent-%COMP%]   svg[_ngcontent-%COMP%] {\n  margin-inline-start: 0.25rem;\n}\n.social-links[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 0.73rem;\n  margin-top: 1.5rem;\n}\n.social-links[_ngcontent-%COMP%]   path[_ngcontent-%COMP%] {\n  transition: fill 0.3s ease;\n  fill: var(--gray-400);\n}\n.social-links[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover   svg[_ngcontent-%COMP%]   path[_ngcontent-%COMP%] {\n  fill: var(--gray-900);\n}\n@media screen and (max-width: 650px) {\n  .content[_ngcontent-%COMP%] {\n    flex-direction: column;\n    width: max-content;\n  }\n  .divider[_ngcontent-%COMP%] {\n    height: 1px;\n    width: 100%;\n    background: var(--red-to-pink-to-purple-horizontal-gradient);\n    margin-block: 1.5rem;\n  }\n}\n/*# sourceMappingURL=app.css.map */'] });
+  ], styles: ['\n\n  * {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n  html, \n  body {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n}\n  body {\n  background:\n    linear-gradient(\n      135deg,\n      #0f0c29 0%,\n      #302b63 50%,\n      #24243e 100%);\n  background-attachment: fixed;\n  font-family: "Poppins", sans-serif;\n  color: #ffffff;\n  overflow: hidden;\n}\n  app-root {\n  display: flex;\n  width: 100%;\n  height: 100%;\n}\n  .app-container {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  height: 100vh;\n  background:\n    linear-gradient(\n      135deg,\n      #0f0c29 0%,\n      #302b63 50%,\n      #24243e 100%);\n}\n  .app-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 20px 30px;\n  background: rgba(0, 0, 0, 0.3);\n  border-bottom: 1px solid rgba(255, 255, 255, 0.1);\n  -webkit-backdrop-filter: blur(10px);\n  backdrop-filter: blur(10px);\n  position: relative;\n  z-index: 100;\n}\n@media (max-width: 768px) {\n    .app-header {\n    padding: 15px 20px;\n  }\n}\n@media (max-width: 480px) {\n    .app-header {\n    padding: 12px 15px;\n  }\n}\n  .header-logo {\n  flex: 1;\n}\n  .logo-text {\n  font-size: 28px;\n  font-family: "Orbitron", sans-serif;\n  font-weight: 700;\n  letter-spacing: 2px;\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n  margin: 0;\n  text-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);\n}\n@media (max-width: 768px) {\n    .logo-text {\n    font-size: 20px;\n    letter-spacing: 1px;\n  }\n}\n@media (max-width: 480px) {\n    .logo-text {\n    font-size: 16px;\n    letter-spacing: 0.5px;\n  }\n}\n  .settings-btn {\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  border: none;\n  border-radius: 50%;\n  width: 50px;\n  height: 50px;\n  font-size: 24px;\n  cursor: pointer;\n  transition: all 0.3s ease;\n  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n  .settings-btn:hover {\n  transform: scale(1.1) rotate(20deg);\n  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);\n}\n  .settings-btn:active {\n  transform: scale(0.95);\n}\n@media (max-width: 480px) {\n    .settings-btn {\n    width: 42px;\n    height: 42px;\n    font-size: 20px;\n  }\n}\n  .header-actions {\n  display: flex;\n  gap: 12px;\n  align-items: center;\n  margin-left: auto;\n}\n  .lang-btn {\n  background: transparent;\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  color: #fff;\n  padding: 8px 12px;\n  border-radius: 999px;\n  font-weight: 600;\n  cursor: pointer;\n  transition: transform 0.18s ease, box-shadow 0.18s ease;\n}\n  .lang-btn:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);\n}\n@media (max-width: 480px) {\n    .lang-btn {\n    padding: 6px 8px;\n    font-size: 12px;\n  }\n}\n  .lang-select select {\n  background: rgba(255, 255, 255, 0.06);\n  color: #fff;\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  padding: 8px 12px;\n  border-radius: 999px;\n  font-weight: 600;\n  cursor: pointer;\n  appearance: none;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n}\n  .lang-select {\n  display: inline-block;\n  overflow: hidden;\n  border-radius: 999px;\n}\n  .app-main {\n  flex: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 20px;\n  overflow: hidden;\n}\n@media (max-width: 768px) {\n    .app-main {\n    padding: 15px;\n  }\n}\n@media (max-width: 480px) {\n    .app-main {\n    padding: 10px;\n  }\n}\n  .app-main app-card-deck {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n/*# sourceMappingURL=app.css.map */', '\n\n[_nghost-%COMP%] {\n  --bright-blue: oklch(51.01% 0.274 263.83);\n  --electric-violet: oklch(53.18% 0.28 296.97);\n  --french-violet: oklch(47.66% 0.246 305.88);\n  --vivid-pink: oklch(69.02% 0.277 332.77);\n  --hot-red: oklch(61.42% 0.238 15.34);\n  --orange-red: oklch(63.32% 0.24 31.68);\n  --gray-900: oklch(19.37% 0.006 300.98);\n  --gray-700: oklch(36.98% 0.014 302.71);\n  --gray-400: oklch(70.9% 0.015 304.04);\n  --red-to-pink-to-purple-vertical-gradient:\n    linear-gradient(\n      \n      180deg,\n      var(--orange-red) 0%,\n      var(--vivid-pink) 50%,\n      var(--electric-violet) 100% );\n  --red-to-pink-to-purple-horizontal-gradient:\n    linear-gradient(\n      \n      90deg,\n      var(--orange-red) 0%,\n      var(--vivid-pink) 50%,\n      var(--electric-violet) 100% );\n  --pill-accent: var(--bright-blue);\n  font-family:\n    "Inter",\n    -apple-system,\n    BlinkMacSystemFont,\n    "Segoe UI",\n    Roboto,\n    Helvetica,\n    Arial,\n    sans-serif,\n    "Apple Color Emoji",\n    "Segoe UI Emoji",\n    "Segoe UI Symbol";\n  box-sizing: border-box;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\nh1[_ngcontent-%COMP%] {\n  font-size: 3.125rem;\n  color: var(--gray-900);\n  font-weight: 500;\n  line-height: 100%;\n  letter-spacing: -0.125rem;\n  margin: 0;\n  font-family:\n    "Inter Tight",\n    -apple-system,\n    BlinkMacSystemFont,\n    "Segoe UI",\n    Roboto,\n    Helvetica,\n    Arial,\n    sans-serif,\n    "Apple Color Emoji",\n    "Segoe UI Emoji",\n    "Segoe UI Symbol";\n}\np[_ngcontent-%COMP%] {\n  margin: 0;\n  color: var(--gray-700);\n}\nmain[_ngcontent-%COMP%] {\n  width: 100%;\n  min-height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 1rem;\n  box-sizing: inherit;\n  position: relative;\n}\n.angular-logo[_ngcontent-%COMP%] {\n  max-width: 9.2rem;\n}\n.content[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-around;\n  width: 100%;\n  max-width: 700px;\n  margin-bottom: 3rem;\n}\n.content[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  margin-top: 1.75rem;\n}\n.content[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  margin-top: 1.5rem;\n}\n.divider[_ngcontent-%COMP%] {\n  width: 1px;\n  background: var(--red-to-pink-to-purple-vertical-gradient);\n  margin-inline: 0.5rem;\n}\n.pill-group[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: start;\n  flex-wrap: wrap;\n  gap: 1.25rem;\n}\n.pill[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  --pill-accent: var(--bright-blue);\n  background: color-mix(in srgb, var(--pill-accent) 5%, transparent);\n  color: var(--pill-accent);\n  padding-inline: 0.75rem;\n  padding-block: 0.375rem;\n  border-radius: 2.75rem;\n  border: 0;\n  transition: background 0.3s ease;\n  font-family: var(--inter-font);\n  font-size: 0.875rem;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 1.4rem;\n  letter-spacing: -0.00875rem;\n  text-decoration: none;\n  white-space: nowrap;\n}\n.pill[_ngcontent-%COMP%]:hover {\n  background: color-mix(in srgb, var(--pill-accent) 15%, transparent);\n}\n.pill-group[_ngcontent-%COMP%]   .pill[_ngcontent-%COMP%]:nth-child(6n+1) {\n  --pill-accent: var(--bright-blue);\n}\n.pill-group[_ngcontent-%COMP%]   .pill[_ngcontent-%COMP%]:nth-child(6n+2) {\n  --pill-accent: var(--electric-violet);\n}\n.pill-group[_ngcontent-%COMP%]   .pill[_ngcontent-%COMP%]:nth-child(6n+3) {\n  --pill-accent: var(--french-violet);\n}\n.pill-group[_ngcontent-%COMP%]   .pill[_ngcontent-%COMP%]:nth-child(6n+4), \n.pill-group[_ngcontent-%COMP%]   .pill[_ngcontent-%COMP%]:nth-child(6n+5), \n.pill-group[_ngcontent-%COMP%]   .pill[_ngcontent-%COMP%]:nth-child(6n+6) {\n  --pill-accent: var(--hot-red);\n}\n.pill-group[_ngcontent-%COMP%]   svg[_ngcontent-%COMP%] {\n  margin-inline-start: 0.25rem;\n}\n.social-links[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 0.73rem;\n  margin-top: 1.5rem;\n}\n.social-links[_ngcontent-%COMP%]   path[_ngcontent-%COMP%] {\n  transition: fill 0.3s ease;\n  fill: var(--gray-400);\n}\n.social-links[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover   svg[_ngcontent-%COMP%]   path[_ngcontent-%COMP%] {\n  fill: var(--gray-900);\n}\n@media screen and (max-width: 650px) {\n  .content[_ngcontent-%COMP%] {\n    flex-direction: column;\n    width: max-content;\n  }\n  .divider[_ngcontent-%COMP%] {\n    height: 1px;\n    width: 100%;\n    background: var(--red-to-pink-to-purple-horizontal-gradient);\n    margin-block: 1.5rem;\n  }\n}\n/*# sourceMappingURL=app.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(App, [{
@@ -49320,9 +49633,19 @@ var App = class _App {
     <div class="header-logo">
       <h1 class="logo-text">\u2728 Astro-Transition \u2728</h1>
     </div>
-    <button class="settings-btn" (click)="openSettings()" title="Settings">
-      \u2699\uFE0F
-    </button>
+    <div class="header-actions">
+      <label class="lang-select">
+        <select [value]="currentLanguage" (change)="setLanguage($any($event.target).value)">
+          <option *ngFor="let code of availableLanguages" [value]="code">
+            {{ languageService.getDisplayName(code) }}
+          </option>
+        </select>
+      </label>
+
+      <button class="settings-btn" (click)="openSettings()" [title]="settingsLabel">
+        \u2699\uFE0F
+      </button>
+    </div>
   </header>
 
   <!-- Main Content -->
@@ -49495,11 +49818,11 @@ var App = class _App {
 
 
 <router-outlet />
-`, styles: ['/* src/app/app.scss */\n::ng-deep * {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n::ng-deep html,\n::ng-deep body {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n}\n::ng-deep body {\n  background:\n    linear-gradient(\n      135deg,\n      #0f0c29 0%,\n      #302b63 50%,\n      #24243e 100%);\n  background-attachment: fixed;\n  font-family: "Poppins", sans-serif;\n  color: #ffffff;\n  overflow: hidden;\n}\n::ng-deep app-root {\n  display: flex;\n  width: 100%;\n  height: 100%;\n}\n::ng-deep .app-container {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  height: 100vh;\n  background:\n    linear-gradient(\n      135deg,\n      #0f0c29 0%,\n      #302b63 50%,\n      #24243e 100%);\n}\n::ng-deep .app-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 20px 30px;\n  background: rgba(0, 0, 0, 0.3);\n  border-bottom: 1px solid rgba(255, 255, 255, 0.1);\n  -webkit-backdrop-filter: blur(10px);\n  backdrop-filter: blur(10px);\n  position: relative;\n  z-index: 100;\n}\n@media (max-width: 768px) {\n  ::ng-deep .app-header {\n    padding: 15px 20px;\n  }\n}\n@media (max-width: 480px) {\n  ::ng-deep .app-header {\n    padding: 12px 15px;\n  }\n}\n::ng-deep .header-logo {\n  flex: 1;\n}\n::ng-deep .logo-text {\n  font-size: 28px;\n  font-family: "Orbitron", sans-serif;\n  font-weight: 700;\n  letter-spacing: 2px;\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n  margin: 0;\n  text-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);\n}\n@media (max-width: 768px) {\n  ::ng-deep .logo-text {\n    font-size: 20px;\n    letter-spacing: 1px;\n  }\n}\n@media (max-width: 480px) {\n  ::ng-deep .logo-text {\n    font-size: 16px;\n    letter-spacing: 0.5px;\n  }\n}\n::ng-deep .settings-btn {\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  border: none;\n  border-radius: 50%;\n  width: 50px;\n  height: 50px;\n  font-size: 24px;\n  cursor: pointer;\n  transition: all 0.3s ease;\n  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n::ng-deep .settings-btn:hover {\n  transform: scale(1.1) rotate(20deg);\n  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);\n}\n::ng-deep .settings-btn:active {\n  transform: scale(0.95);\n}\n@media (max-width: 480px) {\n  ::ng-deep .settings-btn {\n    width: 42px;\n    height: 42px;\n    font-size: 20px;\n  }\n}\n::ng-deep .app-main {\n  flex: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 20px;\n  overflow: hidden;\n}\n@media (max-width: 768px) {\n  ::ng-deep .app-main {\n    padding: 15px;\n  }\n}\n@media (max-width: 480px) {\n  ::ng-deep .app-main {\n    padding: 10px;\n  }\n}\n::ng-deep .app-main app-card-deck {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n/*# sourceMappingURL=app.css.map */\n', '/* angular:styles/component:css;d8fe8198e65b0c18131230681389a0914ddda9b27b7aad5d0d266afa6da26f01;/home/runner/work/DailySign_Angular/DailySign_Angular/astro-transition/src/app/app.html */\n:host {\n  --bright-blue: oklch(51.01% 0.274 263.83);\n  --electric-violet: oklch(53.18% 0.28 296.97);\n  --french-violet: oklch(47.66% 0.246 305.88);\n  --vivid-pink: oklch(69.02% 0.277 332.77);\n  --hot-red: oklch(61.42% 0.238 15.34);\n  --orange-red: oklch(63.32% 0.24 31.68);\n  --gray-900: oklch(19.37% 0.006 300.98);\n  --gray-700: oklch(36.98% 0.014 302.71);\n  --gray-400: oklch(70.9% 0.015 304.04);\n  --red-to-pink-to-purple-vertical-gradient:\n    linear-gradient(\n      \n      180deg,\n      var(--orange-red) 0%,\n      var(--vivid-pink) 50%,\n      var(--electric-violet) 100% );\n  --red-to-pink-to-purple-horizontal-gradient:\n    linear-gradient(\n      \n      90deg,\n      var(--orange-red) 0%,\n      var(--vivid-pink) 50%,\n      var(--electric-violet) 100% );\n  --pill-accent: var(--bright-blue);\n  font-family:\n    "Inter",\n    -apple-system,\n    BlinkMacSystemFont,\n    "Segoe UI",\n    Roboto,\n    Helvetica,\n    Arial,\n    sans-serif,\n    "Apple Color Emoji",\n    "Segoe UI Emoji",\n    "Segoe UI Symbol";\n  box-sizing: border-box;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\nh1 {\n  font-size: 3.125rem;\n  color: var(--gray-900);\n  font-weight: 500;\n  line-height: 100%;\n  letter-spacing: -0.125rem;\n  margin: 0;\n  font-family:\n    "Inter Tight",\n    -apple-system,\n    BlinkMacSystemFont,\n    "Segoe UI",\n    Roboto,\n    Helvetica,\n    Arial,\n    sans-serif,\n    "Apple Color Emoji",\n    "Segoe UI Emoji",\n    "Segoe UI Symbol";\n}\np {\n  margin: 0;\n  color: var(--gray-700);\n}\nmain {\n  width: 100%;\n  min-height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 1rem;\n  box-sizing: inherit;\n  position: relative;\n}\n.angular-logo {\n  max-width: 9.2rem;\n}\n.content {\n  display: flex;\n  justify-content: space-around;\n  width: 100%;\n  max-width: 700px;\n  margin-bottom: 3rem;\n}\n.content h1 {\n  margin-top: 1.75rem;\n}\n.content p {\n  margin-top: 1.5rem;\n}\n.divider {\n  width: 1px;\n  background: var(--red-to-pink-to-purple-vertical-gradient);\n  margin-inline: 0.5rem;\n}\n.pill-group {\n  display: flex;\n  flex-direction: column;\n  align-items: start;\n  flex-wrap: wrap;\n  gap: 1.25rem;\n}\n.pill {\n  display: flex;\n  align-items: center;\n  --pill-accent: var(--bright-blue);\n  background: color-mix(in srgb, var(--pill-accent) 5%, transparent);\n  color: var(--pill-accent);\n  padding-inline: 0.75rem;\n  padding-block: 0.375rem;\n  border-radius: 2.75rem;\n  border: 0;\n  transition: background 0.3s ease;\n  font-family: var(--inter-font);\n  font-size: 0.875rem;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 1.4rem;\n  letter-spacing: -0.00875rem;\n  text-decoration: none;\n  white-space: nowrap;\n}\n.pill:hover {\n  background: color-mix(in srgb, var(--pill-accent) 15%, transparent);\n}\n.pill-group .pill:nth-child(6n+1) {\n  --pill-accent: var(--bright-blue);\n}\n.pill-group .pill:nth-child(6n+2) {\n  --pill-accent: var(--electric-violet);\n}\n.pill-group .pill:nth-child(6n+3) {\n  --pill-accent: var(--french-violet);\n}\n.pill-group .pill:nth-child(6n+4),\n.pill-group .pill:nth-child(6n+5),\n.pill-group .pill:nth-child(6n+6) {\n  --pill-accent: var(--hot-red);\n}\n.pill-group svg {\n  margin-inline-start: 0.25rem;\n}\n.social-links {\n  display: flex;\n  align-items: center;\n  gap: 0.73rem;\n  margin-top: 1.5rem;\n}\n.social-links path {\n  transition: fill 0.3s ease;\n  fill: var(--gray-400);\n}\n.social-links a:hover svg path {\n  fill: var(--gray-900);\n}\n@media screen and (max-width: 650px) {\n  .content {\n    flex-direction: column;\n    width: max-content;\n  }\n  .divider {\n    height: 1px;\n    width: 100%;\n    background: var(--red-to-pink-to-purple-horizontal-gradient);\n    margin-block: 1.5rem;\n  }\n}\n/*# sourceMappingURL=app.css.map */\n'] }]
-  }], null, null);
+`, styles: ['/* src/app/app.scss */\n::ng-deep * {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n::ng-deep html,\n::ng-deep body {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n}\n::ng-deep body {\n  background:\n    linear-gradient(\n      135deg,\n      #0f0c29 0%,\n      #302b63 50%,\n      #24243e 100%);\n  background-attachment: fixed;\n  font-family: "Poppins", sans-serif;\n  color: #ffffff;\n  overflow: hidden;\n}\n::ng-deep app-root {\n  display: flex;\n  width: 100%;\n  height: 100%;\n}\n::ng-deep .app-container {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  height: 100vh;\n  background:\n    linear-gradient(\n      135deg,\n      #0f0c29 0%,\n      #302b63 50%,\n      #24243e 100%);\n}\n::ng-deep .app-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 20px 30px;\n  background: rgba(0, 0, 0, 0.3);\n  border-bottom: 1px solid rgba(255, 255, 255, 0.1);\n  -webkit-backdrop-filter: blur(10px);\n  backdrop-filter: blur(10px);\n  position: relative;\n  z-index: 100;\n}\n@media (max-width: 768px) {\n  ::ng-deep .app-header {\n    padding: 15px 20px;\n  }\n}\n@media (max-width: 480px) {\n  ::ng-deep .app-header {\n    padding: 12px 15px;\n  }\n}\n::ng-deep .header-logo {\n  flex: 1;\n}\n::ng-deep .logo-text {\n  font-size: 28px;\n  font-family: "Orbitron", sans-serif;\n  font-weight: 700;\n  letter-spacing: 2px;\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n  margin: 0;\n  text-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);\n}\n@media (max-width: 768px) {\n  ::ng-deep .logo-text {\n    font-size: 20px;\n    letter-spacing: 1px;\n  }\n}\n@media (max-width: 480px) {\n  ::ng-deep .logo-text {\n    font-size: 16px;\n    letter-spacing: 0.5px;\n  }\n}\n::ng-deep .settings-btn {\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  border: none;\n  border-radius: 50%;\n  width: 50px;\n  height: 50px;\n  font-size: 24px;\n  cursor: pointer;\n  transition: all 0.3s ease;\n  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n::ng-deep .settings-btn:hover {\n  transform: scale(1.1) rotate(20deg);\n  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);\n}\n::ng-deep .settings-btn:active {\n  transform: scale(0.95);\n}\n@media (max-width: 480px) {\n  ::ng-deep .settings-btn {\n    width: 42px;\n    height: 42px;\n    font-size: 20px;\n  }\n}\n::ng-deep .header-actions {\n  display: flex;\n  gap: 12px;\n  align-items: center;\n  margin-left: auto;\n}\n::ng-deep .lang-btn {\n  background: transparent;\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  color: #fff;\n  padding: 8px 12px;\n  border-radius: 999px;\n  font-weight: 600;\n  cursor: pointer;\n  transition: transform 0.18s ease, box-shadow 0.18s ease;\n}\n::ng-deep .lang-btn:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);\n}\n@media (max-width: 480px) {\n  ::ng-deep .lang-btn {\n    padding: 6px 8px;\n    font-size: 12px;\n  }\n}\n::ng-deep .lang-select select {\n  background: rgba(255, 255, 255, 0.06);\n  color: #fff;\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  padding: 8px 12px;\n  border-radius: 999px;\n  font-weight: 600;\n  cursor: pointer;\n  appearance: none;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n}\n::ng-deep .lang-select {\n  display: inline-block;\n  overflow: hidden;\n  border-radius: 999px;\n}\n::ng-deep .app-main {\n  flex: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 20px;\n  overflow: hidden;\n}\n@media (max-width: 768px) {\n  ::ng-deep .app-main {\n    padding: 15px;\n  }\n}\n@media (max-width: 480px) {\n  ::ng-deep .app-main {\n    padding: 10px;\n  }\n}\n::ng-deep .app-main app-card-deck {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n/*# sourceMappingURL=app.css.map */\n', '/* angular:styles/component:css;d8fe8198e65b0c18131230681389a0914ddda9b27b7aad5d0d266afa6da26f01;/home/runner/work/DailySign_Angular/DailySign_Angular/astro-transition/src/app/app.html */\n:host {\n  --bright-blue: oklch(51.01% 0.274 263.83);\n  --electric-violet: oklch(53.18% 0.28 296.97);\n  --french-violet: oklch(47.66% 0.246 305.88);\n  --vivid-pink: oklch(69.02% 0.277 332.77);\n  --hot-red: oklch(61.42% 0.238 15.34);\n  --orange-red: oklch(63.32% 0.24 31.68);\n  --gray-900: oklch(19.37% 0.006 300.98);\n  --gray-700: oklch(36.98% 0.014 302.71);\n  --gray-400: oklch(70.9% 0.015 304.04);\n  --red-to-pink-to-purple-vertical-gradient:\n    linear-gradient(\n      \n      180deg,\n      var(--orange-red) 0%,\n      var(--vivid-pink) 50%,\n      var(--electric-violet) 100% );\n  --red-to-pink-to-purple-horizontal-gradient:\n    linear-gradient(\n      \n      90deg,\n      var(--orange-red) 0%,\n      var(--vivid-pink) 50%,\n      var(--electric-violet) 100% );\n  --pill-accent: var(--bright-blue);\n  font-family:\n    "Inter",\n    -apple-system,\n    BlinkMacSystemFont,\n    "Segoe UI",\n    Roboto,\n    Helvetica,\n    Arial,\n    sans-serif,\n    "Apple Color Emoji",\n    "Segoe UI Emoji",\n    "Segoe UI Symbol";\n  box-sizing: border-box;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\nh1 {\n  font-size: 3.125rem;\n  color: var(--gray-900);\n  font-weight: 500;\n  line-height: 100%;\n  letter-spacing: -0.125rem;\n  margin: 0;\n  font-family:\n    "Inter Tight",\n    -apple-system,\n    BlinkMacSystemFont,\n    "Segoe UI",\n    Roboto,\n    Helvetica,\n    Arial,\n    sans-serif,\n    "Apple Color Emoji",\n    "Segoe UI Emoji",\n    "Segoe UI Symbol";\n}\np {\n  margin: 0;\n  color: var(--gray-700);\n}\nmain {\n  width: 100%;\n  min-height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 1rem;\n  box-sizing: inherit;\n  position: relative;\n}\n.angular-logo {\n  max-width: 9.2rem;\n}\n.content {\n  display: flex;\n  justify-content: space-around;\n  width: 100%;\n  max-width: 700px;\n  margin-bottom: 3rem;\n}\n.content h1 {\n  margin-top: 1.75rem;\n}\n.content p {\n  margin-top: 1.5rem;\n}\n.divider {\n  width: 1px;\n  background: var(--red-to-pink-to-purple-vertical-gradient);\n  margin-inline: 0.5rem;\n}\n.pill-group {\n  display: flex;\n  flex-direction: column;\n  align-items: start;\n  flex-wrap: wrap;\n  gap: 1.25rem;\n}\n.pill {\n  display: flex;\n  align-items: center;\n  --pill-accent: var(--bright-blue);\n  background: color-mix(in srgb, var(--pill-accent) 5%, transparent);\n  color: var(--pill-accent);\n  padding-inline: 0.75rem;\n  padding-block: 0.375rem;\n  border-radius: 2.75rem;\n  border: 0;\n  transition: background 0.3s ease;\n  font-family: var(--inter-font);\n  font-size: 0.875rem;\n  font-style: normal;\n  font-weight: 500;\n  line-height: 1.4rem;\n  letter-spacing: -0.00875rem;\n  text-decoration: none;\n  white-space: nowrap;\n}\n.pill:hover {\n  background: color-mix(in srgb, var(--pill-accent) 15%, transparent);\n}\n.pill-group .pill:nth-child(6n+1) {\n  --pill-accent: var(--bright-blue);\n}\n.pill-group .pill:nth-child(6n+2) {\n  --pill-accent: var(--electric-violet);\n}\n.pill-group .pill:nth-child(6n+3) {\n  --pill-accent: var(--french-violet);\n}\n.pill-group .pill:nth-child(6n+4),\n.pill-group .pill:nth-child(6n+5),\n.pill-group .pill:nth-child(6n+6) {\n  --pill-accent: var(--hot-red);\n}\n.pill-group svg {\n  margin-inline-start: 0.25rem;\n}\n.social-links {\n  display: flex;\n  align-items: center;\n  gap: 0.73rem;\n  margin-top: 1.5rem;\n}\n.social-links path {\n  transition: fill 0.3s ease;\n  fill: var(--gray-400);\n}\n.social-links a:hover svg path {\n  fill: var(--gray-900);\n}\n@media screen and (max-width: 650px) {\n  .content {\n    flex-direction: column;\n    width: max-content;\n  }\n  .divider {\n    height: 1px;\n    width: 100%;\n    background: var(--red-to-pink-to-purple-horizontal-gradient);\n    margin-block: 1.5rem;\n  }\n}\n/*# sourceMappingURL=app.css.map */\n'] }]
+  }], () => [{ type: LanguageService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(App, { className: "App", filePath: "src/app/app.ts", lineNumber: 18 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(App, { className: "App", filePath: "src/app/app.ts", lineNumber: 20 });
 })();
 
 // src/main.ts

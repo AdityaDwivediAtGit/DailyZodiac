@@ -132,6 +132,49 @@
     font-size: 20px;
   }
 }
+  .header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-left: auto;
+}
+  .lang-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+  .lang-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+@media (max-width: 480px) {
+    .lang-btn {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
+  .lang-select select {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+  .lang-select {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 999px;
+}
   .app-main {
   flex: 1;
   display: flex;
@@ -159,7 +202,7 @@
 }
 /*# sourceMappingURL=/DailyZodiac/app.css.map */</style><style ng-app-id="ng">
 
-[_nghost-ng-c874911564] {
+[_nghost-ng-c1626474287] {
   --bright-blue: oklch(51.01% 0.274 263.83);
   --electric-violet: oklch(53.18% 0.28 296.97);
   --french-violet: oklch(47.66% 0.246 305.88);
@@ -200,7 +243,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-h1[_ngcontent-ng-c874911564] {
+h1[_ngcontent-ng-c1626474287] {
   font-size: 3.125rem;
   color: var(--gray-900);
   font-weight: 500;
@@ -220,11 +263,11 @@ h1[_ngcontent-ng-c874911564] {
     "Segoe UI Emoji",
     "Segoe UI Symbol";
 }
-p[_ngcontent-ng-c874911564] {
+p[_ngcontent-ng-c1626474287] {
   margin: 0;
   color: var(--gray-700);
 }
-main[_ngcontent-ng-c874911564] {
+main[_ngcontent-ng-c1626474287] {
   width: 100%;
   min-height: 100%;
   display: flex;
@@ -234,35 +277,35 @@ main[_ngcontent-ng-c874911564] {
   box-sizing: inherit;
   position: relative;
 }
-.angular-logo[_ngcontent-ng-c874911564] {
+.angular-logo[_ngcontent-ng-c1626474287] {
   max-width: 9.2rem;
 }
-.content[_ngcontent-ng-c874911564] {
+.content[_ngcontent-ng-c1626474287] {
   display: flex;
   justify-content: space-around;
   width: 100%;
   max-width: 700px;
   margin-bottom: 3rem;
 }
-.content[_ngcontent-ng-c874911564]   h1[_ngcontent-ng-c874911564] {
+.content[_ngcontent-ng-c1626474287]   h1[_ngcontent-ng-c1626474287] {
   margin-top: 1.75rem;
 }
-.content[_ngcontent-ng-c874911564]   p[_ngcontent-ng-c874911564] {
+.content[_ngcontent-ng-c1626474287]   p[_ngcontent-ng-c1626474287] {
   margin-top: 1.5rem;
 }
-.divider[_ngcontent-ng-c874911564] {
+.divider[_ngcontent-ng-c1626474287] {
   width: 1px;
   background: var(--red-to-pink-to-purple-vertical-gradient);
   margin-inline: 0.5rem;
 }
-.pill-group[_ngcontent-ng-c874911564] {
+.pill-group[_ngcontent-ng-c1626474287] {
   display: flex;
   flex-direction: column;
   align-items: start;
   flex-wrap: wrap;
   gap: 1.25rem;
 }
-.pill[_ngcontent-ng-c874911564] {
+.pill[_ngcontent-ng-c1626474287] {
   display: flex;
   align-items: center;
   --pill-accent: var(--bright-blue);
@@ -282,45 +325,45 @@ main[_ngcontent-ng-c874911564] {
   text-decoration: none;
   white-space: nowrap;
 }
-.pill[_ngcontent-ng-c874911564]:hover {
+.pill[_ngcontent-ng-c1626474287]:hover {
   background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
 }
-.pill-group[_ngcontent-ng-c874911564]   .pill[_ngcontent-ng-c874911564]:nth-child(6n+1) {
+.pill-group[_ngcontent-ng-c1626474287]   .pill[_ngcontent-ng-c1626474287]:nth-child(6n+1) {
   --pill-accent: var(--bright-blue);
 }
-.pill-group[_ngcontent-ng-c874911564]   .pill[_ngcontent-ng-c874911564]:nth-child(6n+2) {
+.pill-group[_ngcontent-ng-c1626474287]   .pill[_ngcontent-ng-c1626474287]:nth-child(6n+2) {
   --pill-accent: var(--electric-violet);
 }
-.pill-group[_ngcontent-ng-c874911564]   .pill[_ngcontent-ng-c874911564]:nth-child(6n+3) {
+.pill-group[_ngcontent-ng-c1626474287]   .pill[_ngcontent-ng-c1626474287]:nth-child(6n+3) {
   --pill-accent: var(--french-violet);
 }
-.pill-group[_ngcontent-ng-c874911564]   .pill[_ngcontent-ng-c874911564]:nth-child(6n+4), 
-.pill-group[_ngcontent-ng-c874911564]   .pill[_ngcontent-ng-c874911564]:nth-child(6n+5), 
-.pill-group[_ngcontent-ng-c874911564]   .pill[_ngcontent-ng-c874911564]:nth-child(6n+6) {
+.pill-group[_ngcontent-ng-c1626474287]   .pill[_ngcontent-ng-c1626474287]:nth-child(6n+4), 
+.pill-group[_ngcontent-ng-c1626474287]   .pill[_ngcontent-ng-c1626474287]:nth-child(6n+5), 
+.pill-group[_ngcontent-ng-c1626474287]   .pill[_ngcontent-ng-c1626474287]:nth-child(6n+6) {
   --pill-accent: var(--hot-red);
 }
-.pill-group[_ngcontent-ng-c874911564]   svg[_ngcontent-ng-c874911564] {
+.pill-group[_ngcontent-ng-c1626474287]   svg[_ngcontent-ng-c1626474287] {
   margin-inline-start: 0.25rem;
 }
-.social-links[_ngcontent-ng-c874911564] {
+.social-links[_ngcontent-ng-c1626474287] {
   display: flex;
   align-items: center;
   gap: 0.73rem;
   margin-top: 1.5rem;
 }
-.social-links[_ngcontent-ng-c874911564]   path[_ngcontent-ng-c874911564] {
+.social-links[_ngcontent-ng-c1626474287]   path[_ngcontent-ng-c1626474287] {
   transition: fill 0.3s ease;
   fill: var(--gray-400);
 }
-.social-links[_ngcontent-ng-c874911564]   a[_ngcontent-ng-c874911564]:hover   svg[_ngcontent-ng-c874911564]   path[_ngcontent-ng-c874911564] {
+.social-links[_ngcontent-ng-c1626474287]   a[_ngcontent-ng-c1626474287]:hover   svg[_ngcontent-ng-c1626474287]   path[_ngcontent-ng-c1626474287] {
   fill: var(--gray-900);
 }
 @media screen and (max-width: 650px) {
-  .content[_ngcontent-ng-c874911564] {
+  .content[_ngcontent-ng-c1626474287] {
     flex-direction: column;
     width: max-content;
   }
-  .divider[_ngcontent-ng-c874911564] {
+  .divider[_ngcontent-ng-c1626474287] {
     height: 1px;
     width: 100%;
     background: var(--red-to-pink-to-purple-horizontal-gradient);
@@ -715,8 +758,8 @@ main[_ngcontent-ng-c874911564] {
 }
 /*# sourceMappingURL=/DailyZodiac/card.component.css.map */</style></head>
 <body><!--nghm--><script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
-</script><script>window.__jsaction_bootstrap(document.body,"ng",["click","keydown","touchstart","touchend"],[]);</script>
-  <app-root ng-version="21.1.5" _nghost-ng-c874911564="" ngh="2" ng-server-context="ssg"><div _ngcontent-ng-c874911564="" class="app-container"><header _ngcontent-ng-c874911564="" class="app-header"><div _ngcontent-ng-c874911564="" class="header-logo"><h1 _ngcontent-ng-c874911564="" class="logo-text">✨ Astro-Transition ✨</h1></div><button _ngcontent-ng-c874911564="" title="Settings" class="settings-btn" jsaction="click:;"> ⚙️ </button></header><main _ngcontent-ng-c874911564="" class="app-main"><app-card-deck _ngcontent-ng-c874911564="" _nghost-ng-c2063496966="" class="ng-tns-c2063496966-0" ngh="1"><div _ngcontent-ng-c2063496966="" class="deck-container ng-tns-c2063496966-0" tabindex="0" jsaction="keydown:;touchstart:;touchend:;"><div _ngcontent-ng-c2063496966="" class="card-wrapper ng-tns-c2063496966-0 ng-star-inserted"><app-card _ngcontent-ng-c2063496966="" class="ng-tns-c2063496966-0" _nghost-ng-c3171206121="" ngh="0"><div _ngcontent-ng-c3171206121="" class="card-container" style="background-color: #A9CCE3; background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1462332420958-a05d1e7413413?auto=format&amp;fit=crop&amp;w=400&amp;q=80'); background-size: cover; background-position: center;"><div _ngcontent-ng-c3171206121="" class="card-content"><div _ngcontent-ng-c3171206121="" class="card-header"><span _ngcontent-ng-c3171206121="" class="progress-indicator">1/8</span><span _ngcontent-ng-c3171206121="" class="card-icon ng-star-inserted">✨</span><!--container--></div><div _ngcontent-ng-c3171206121="" class="card-body"><h2 _ngcontent-ng-c3171206121="" class="card-title" style="color: #ffffff;"> Welcome, ♈ </h2><p _ngcontent-ng-c3171206121="" class="card-text ng-star-inserted" style="color: #ffffff;"> Hello Libra! Today brings new cosmic energy your way. Embrace the opportunities that unfold. </p><!--container--><!--container--><!--container--></div></div></div></app-card><!--ng-container--></div><!--container--><div _ngcontent-ng-c2063496966="" class="controls ng-tns-c2063496966-0"><button _ngcontent-ng-c2063496966="" title="Previous card (← or swipe right)" class="nav-btn prev-btn ng-tns-c2063496966-0" jsaction="click:;"> ← PREV </button><div _ngcontent-ng-c2063496966="" class="progress-dots ng-tns-c2063496966-0"><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 active ng-star-inserted" aria-label="Go to card 1" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 2" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 3" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 4" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 5" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 6" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 7" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 8" jsaction="click:;"></button><!--container--></div><button _ngcontent-ng-c2063496966="" title="Next card (→ or swipe left)" class="nav-btn next-btn ng-tns-c2063496966-0" jsaction="click:;"> NEXT → </button></div><p _ngcontent-ng-c2063496966="" class="swipe-hint ng-tns-c2063496966-0">← Swipe or click buttons →</p></div></app-card-deck></main><!--container--><router-outlet _ngcontent-ng-c874911564=""></router-outlet><!--container--></div><router-outlet _ngcontent-ng-c874911564=""></router-outlet><!--container--></app-root>
+</script><script>window.__jsaction_bootstrap(document.body,"ng",["change","click","keydown","touchstart","touchend"],[]);</script>
+  <app-root ng-version="21.1.5" _nghost-ng-c1626474287="" ngh="2" ng-server-context="ssg"><div _ngcontent-ng-c1626474287="" class="app-container"><header _ngcontent-ng-c1626474287="" class="app-header"><div _ngcontent-ng-c1626474287="" class="header-logo"><h1 _ngcontent-ng-c1626474287="" class="logo-text">✨ Astro-Transition ✨</h1></div><div _ngcontent-ng-c1626474287="" class="header-actions"><label _ngcontent-ng-c1626474287="" class="lang-select"><select _ngcontent-ng-c1626474287="" jsaction="change:;"><option _ngcontent-ng-c1626474287="" value="EN" class="ng-star-inserted"> English </option><option _ngcontent-ng-c1626474287="" value="ES" class="ng-star-inserted"> Español </option><option _ngcontent-ng-c1626474287="" value="HI" class="ng-star-inserted"> हिन्दी </option><option _ngcontent-ng-c1626474287="" value="ZH" class="ng-star-inserted"> 中文 </option><!--container--></select></label><button _ngcontent-ng-c1626474287="" class="settings-btn" title="⚙️ Settings" jsaction="click:;"> ⚙️ </button></div></header><main _ngcontent-ng-c1626474287="" class="app-main"><app-card-deck _ngcontent-ng-c1626474287="" _nghost-ng-c2063496966="" class="ng-tns-c2063496966-0" ngh="1"><div _ngcontent-ng-c2063496966="" class="deck-container ng-tns-c2063496966-0" tabindex="0" jsaction="keydown:;touchstart:;touchend:;"><div _ngcontent-ng-c2063496966="" class="card-wrapper ng-tns-c2063496966-0 ng-star-inserted"><app-card _ngcontent-ng-c2063496966="" class="ng-tns-c2063496966-0" _nghost-ng-c3171206121="" ngh="0"><div _ngcontent-ng-c3171206121="" class="card-container" style="background-color: #F8B88B; background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1543722530-d2c3201371e7?auto=format&amp;fit=crop&amp;w=400&amp;q=80'); background-size: cover; background-position: center;"><div _ngcontent-ng-c3171206121="" class="card-content"><div _ngcontent-ng-c3171206121="" class="card-header"><span _ngcontent-ng-c3171206121="" class="progress-indicator">1/8</span><span _ngcontent-ng-c3171206121="" class="card-icon ng-star-inserted">✨</span><!--container--></div><div _ngcontent-ng-c3171206121="" class="card-body"><h2 _ngcontent-ng-c3171206121="" class="card-title" style="color: #ffffff;"> Welcome, ♈ </h2><p _ngcontent-ng-c3171206121="" class="card-text ng-star-inserted" style="color: #ffffff;"> Hello Sagittarius! Today brings new cosmic energy your way. Embrace the opportunities that unfold. </p><!--container--><!--container--><!--container--></div></div></div></app-card><!--ng-container--></div><!--container--><div _ngcontent-ng-c2063496966="" class="controls ng-tns-c2063496966-0"><button _ngcontent-ng-c2063496966="" title="Previous card (← or swipe right)" class="nav-btn prev-btn ng-tns-c2063496966-0" jsaction="click:;"> ← PREV </button><div _ngcontent-ng-c2063496966="" class="progress-dots ng-tns-c2063496966-0"><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 active ng-star-inserted" aria-label="Go to card 1" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 2" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 3" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 4" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 5" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 6" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 7" jsaction="click:;"></button><button _ngcontent-ng-c2063496966="" class="dot ng-tns-c2063496966-0 ng-star-inserted" aria-label="Go to card 8" jsaction="click:;"></button><!--container--></div><button _ngcontent-ng-c2063496966="" title="Next card (→ or swipe left)" class="nav-btn next-btn ng-tns-c2063496966-0" jsaction="click:;"> NEXT → </button></div><p _ngcontent-ng-c2063496966="" class="swipe-hint ng-tns-c2063496966-0">← Swipe or click buttons →</p></div></app-card-deck></main><!--container--><router-outlet _ngcontent-ng-c1626474287=""></router-outlet><!--container--></div><router-outlet _ngcontent-ng-c1626474287=""></router-outlet><!--container--></app-root>
 <script src="main.js" type="module"></script>
 
-<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"5":"t1","9":"t2","10":"t3","11":"t4"},"c":{"5":[{"i":"t1","r":1}],"9":[{"i":"t2","r":1}],"10":[],"11":[]}},{"t":{"1":"t0","6":"t5"},"c":{"1":[{"i":"t0","r":1,"e":{"1":1}}],"6":[{"i":"t5","r":1,"x":8}]}},{"t":{"9":"t6"},"c":{"9":[],"10":[],"11":[]}}]}</script></body></html>
+<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"5":"t2","9":"t3","10":"t4","11":"t5"},"c":{"5":[{"i":"t2","r":1}],"9":[{"i":"t3","r":1}],"10":[],"11":[]}},{"t":{"1":"t1","6":"t6"},"c":{"1":[{"i":"t1","r":1,"e":{"1":1}}],"6":[{"i":"t6","r":1,"x":8}]}},{"t":{"8":"t0","13":"t7"},"c":{"8":[{"i":"t0","r":1,"x":4}],"13":[],"14":[],"15":[]}}]}</script></body></html>
